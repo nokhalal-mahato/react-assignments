@@ -1,0 +1,36 @@
+.technology-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4faff;
+    height: inherit;
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: 340px 340px;
+    grid-gap: 40px;
+  }
+  .main-description{
+    color: #64748b;
+    max-width: 580px;
+  }
+  .technology-cards .main-header{
+    color: #171f46;
+    font-size: 42px;
+  }
+  @media(max-width:728px){
+    .technology-cards{
+      justify-content: flex-start;
+    }
+    .card-container{
+      grid-template-columns: auto;
+      width: 80%;
+      max-width: 470px;
+    }
+    .main-description{
+      margin-bottom: 30px;
+      width: 90%;
+    }
+  }
