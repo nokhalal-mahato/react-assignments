@@ -1,0 +1,32 @@
+:root{
+    --mode-bg:white;
+    --mode-header:black;
+}
+
+.dark{
+    --mode-bg:black;
+    --mode-header:white;
+}
+
+.lightdark-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.lightdark-content{
+    border:1px solid black;
+    padding:15px;
+    border-radius: 8px;
+    background-color: var(--mode-bg);
+}
+.lightdark-header{
+    color: var(--mode-header);
+}
+.lightdark-btn{
+    padding:10px;
+    border-radius: 8px;
+    border:2px solid black;
+}
