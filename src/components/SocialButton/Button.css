@@ -1,11 +1,11 @@
-button{
+.social-btn{
     border:0px;
     padding:10px 25px;
     margin:20px;
     border-radius: 12px;
 }
 @media(max-width:768px){
-    button{
+    .social-btn{
         font-size: 16px;
         padding:12px 25px;
     }

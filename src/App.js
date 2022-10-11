@@ -3,6 +3,7 @@ import './App.css';
 import CongratsCard from './components/CongratsCard';
 import SocialButton from './components/SocialButton';
 import NotificationPage from './components/Notification';
+import BannerPage from './components/Banners';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <Superover/> */}
       {/* <CongratsCard/> */}
       {/* <SocialButton/> */}
-      <NotificationPage/>
+      {/* <NotificationPage/> */}
+      <BannerPage/>
     </div>
   );
 }
