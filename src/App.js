@@ -5,6 +5,7 @@ import SocialButton from './components/SocialButton';
 import NotificationPage from './components/Notification';
 import BannerPage from './components/Banners';
 import TechnologyCard from './components/TechnologyCard';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <SocialButton/> */}
       {/* <NotificationPage/> */}
       {/* <BannerPage/> */}
-      <TechnologyCard/>
+      {/* <TechnologyCard/> */}
+      <Welcome/>
     </div>
   );
 }
