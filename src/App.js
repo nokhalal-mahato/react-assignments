@@ -6,6 +6,7 @@ import NotificationPage from './components/Notification';
 import BannerPage from './components/Banners';
 import TechnologyCard from './components/TechnologyCard';
 import Welcome from './components/Welcome';
+import LightDark from './components/LightDark';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <NotificationPage/> */}
       {/* <BannerPage/> */}
       {/* <TechnologyCard/> */}
-      <Welcome/>
+      {/* <Welcome/> */}
+      <LightDark/>
     </div>
   );
 }
