@@ -1,0 +1,13 @@
+.banner-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+@media(max-width:720px){
+    .banner-page{
+        justify-content: flex-start;
+    }
+}
