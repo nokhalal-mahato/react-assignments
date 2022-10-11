@@ -1,0 +1,22 @@
+.notification-item{
+    color:white;
+    display: flex;
+    padding:20px;
+    align-items: center;
+    width: 400px;
+    margin-bottom:30px
+}
+.notification-item img{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.notification-item p{
+    margin:0px;
+}
+@media(max-width:460px){
+    .notification-item{
+        width: 80%;
+        padding: 25px 20px;
+    }
+}
