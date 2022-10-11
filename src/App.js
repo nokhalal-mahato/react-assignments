@@ -8,6 +8,7 @@ import TechnologyCard from './components/TechnologyCard';
 import Welcome from './components/Welcome';
 import LightDark from './components/LightDark';
 import Login from './components/Login';
+import FruitCounter from './components/FruitCounter';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <TechnologyCard/> */}
       {/* <Welcome/> */}
       {/* <LightDark/> */}
-      <Login/>
+      {/* <Login/> */}
+      <FruitCounter/>
     </div>
   );
 }
