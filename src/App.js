@@ -4,6 +4,7 @@ import CongratsCard from './components/CongratsCard';
 import SocialButton from './components/SocialButton';
 import NotificationPage from './components/Notification';
 import BannerPage from './components/Banners';
+import TechnologyCard from './components/TechnologyCard';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <CongratsCard/> */}
       {/* <SocialButton/> */}
       {/* <NotificationPage/> */}
-      <BannerPage/>
+      {/* <BannerPage/> */}
+      <TechnologyCard/>
     </div>
   );
 }
