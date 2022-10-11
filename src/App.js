@@ -9,6 +9,7 @@ import Welcome from './components/Welcome';
 import LightDark from './components/LightDark';
 import Login from './components/Login';
 import FruitCounter from './components/FruitCounter';
+import DestinationSearch from './components/DestinationSearch';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <Welcome/> */}
       {/* <LightDark/> */}
       {/* <Login/> */}
-      <FruitCounter/>
+      {/* <FruitCounter/> */}
+      <DestinationSearch/>
     </div>
   );
 }
