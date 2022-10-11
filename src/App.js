@@ -7,6 +7,7 @@ import BannerPage from './components/Banners';
 import TechnologyCard from './components/TechnologyCard';
 import Welcome from './components/Welcome';
 import LightDark from './components/LightDark';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <BannerPage/> */}
       {/* <TechnologyCard/> */}
       {/* <Welcome/> */}
-      <LightDark/>
+      {/* <LightDark/> */}
+      <Login/>
     </div>
   );
 }
