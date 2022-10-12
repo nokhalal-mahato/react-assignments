@@ -41,7 +41,7 @@ class BrowzerHistory extends Component{
                     </div>
                 </nav>
                 <div className="history-container">
-                    {historyList.length ===0 && <p>There is no history to show</p>}
+                    {historyList.length ===0 && <h1 className="no-history">There is no history to show</h1>}
                     {historyList.map((item)=><HistoryItem id={item.id} key={item.id} time={item.time} url={item.url} name={item.name} onDelete={this.onDelete}/>)}
                 </div>
             </div>
