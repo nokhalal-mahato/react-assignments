@@ -1,0 +1,59 @@
+.cash-page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cash-content{
+    background-color: #382f5a;
+    padding:30px;
+    border-radius: 12px;
+    color: #d4d2db;
+}
+.cash-user{
+    display: flex;
+}
+.cash-user-profile{
+    background-color: #c7d2fe;
+    color: #7c3aed;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cash-user-name{
+    margin-left: 15px;
+}
+.cash-balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.balance-text{
+    color: #585076;
+}
+.cash-amount{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.in-rupees{
+    text-align: right;
+    margin-top: 0px;
+    font-size: 12px;
+    margin-right: 10px;
+    color: #585076;
+}
+
+
+.choose-sum{
+    color: #585076;
+    font-size: 14px;
+}
+.denomination-section{
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-gap: 10px;
+}
