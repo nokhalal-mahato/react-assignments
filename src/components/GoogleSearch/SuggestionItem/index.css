@@ -1,0 +1,13 @@
+.suggestion-item{
+    margin:0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+}
+
+.suggestion-item img{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}

@@ -1,0 +1,53 @@
+.google-search-page{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #64748b;
+}
+.google-logo{
+    margin-top: 250px;
+    width: 350px;
+}
+.google-search{
+    border-radius: 16px;
+    box-shadow: 1px -1px 17px 0px rgba(0,0,0,0.35);
+    padding:20px 10px;
+    margin-top: 50px;
+    width: 40%;
+
+}
+.search-cross{
+    align-self: flex-end;
+}
+.google-input-field{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.google-input-field img{
+    width: 25px;
+    margin-right: 10px;
+}
+.google-input{
+    border: 0px;
+    width: 90%;
+    color: #64748b;
+}
+
+.google-input:focus{
+    outline: 0px;
+}
+
+::placeholder{
+    color: #bfbfbf;
+}
+@media(max-width:768px){
+    .google-search{
+        width: 80%;    
+    }
+    .google-logo{
+        margin-top: 250px;
+        width: 200px;
+    }
+}
