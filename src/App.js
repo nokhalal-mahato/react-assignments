@@ -13,6 +13,7 @@ import DestinationSearch from './components/DestinationSearch';
 import SimpleTodos from './components/SimpleTodos';
 import CashWithdrawal from './components/CashWithdrawal';
 import GoogleSearch from './components/GoogleSearch';
+import BrowzerHistory from './components/BrowserHistory';
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
       {/* <DestinationSearch/> */}
       {/* <SimpleTodos/> */}
       {/* <CashWithdrawal/> */}
-      <GoogleSearch/>
+      {/* <GoogleSearch/> */}
+      <BrowzerHistory/>
     </div>
   );
 }
