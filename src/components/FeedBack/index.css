@@ -1,0 +1,29 @@
+.feedback-page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #ffeeee , #ffc0bb);
+}
+.feedback-content{
+    background-color: white;
+    width: 75%;
+    max-width: 560px;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 12px;
+    color: #1e293b;
+}
+.feedback-emoji-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.feedback-thankyou{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.feedback-response{
+    width: 80%;
+    margin:auto;
+}

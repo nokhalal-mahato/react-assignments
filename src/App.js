@@ -14,6 +14,7 @@ import SimpleTodos from './components/SimpleTodos';
 import CashWithdrawal from './components/CashWithdrawal';
 import GoogleSearch from './components/GoogleSearch';
 import BrowzerHistory from './components/BrowserHistory';
+import FeedBack from './components/FeedBack';
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <SimpleTodos/> */}
       {/* <CashWithdrawal/> */}
       {/* <GoogleSearch/> */}
-      <BrowzerHistory/>
+      {/* <BrowzerHistory/> */}
+      <FeedBack/>
     </div>
   );
 }
