@@ -10,6 +10,7 @@ import LightDark from './components/LightDark';
 import Login from './components/Login';
 import FruitCounter from './components/FruitCounter';
 import DestinationSearch from './components/DestinationSearch';
+import SimpleTodos from './components/SimpleTodos';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <LightDark/> */}
       {/* <Login/> */}
       {/* <FruitCounter/> */}
-      <DestinationSearch/>
+      {/* <DestinationSearch/> */}
+      <SimpleTodos/>
     </div>
   );
 }
