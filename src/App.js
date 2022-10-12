@@ -12,6 +12,7 @@ import FruitCounter from './components/FruitCounter';
 import DestinationSearch from './components/DestinationSearch';
 import SimpleTodos from './components/SimpleTodos';
 import CashWithdrawal from './components/CashWithdrawal';
+import GoogleSearch from './components/GoogleSearch';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       {/* <FruitCounter/> */}
       {/* <DestinationSearch/> */}
       {/* <SimpleTodos/> */}
-      <CashWithdrawal/>
+      {/* <CashWithdrawal/> */}
+      <GoogleSearch/>
     </div>
   );
 }
