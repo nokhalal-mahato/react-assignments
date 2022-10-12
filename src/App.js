@@ -11,6 +11,7 @@ import Login from './components/Login';
 import FruitCounter from './components/FruitCounter';
 import DestinationSearch from './components/DestinationSearch';
 import SimpleTodos from './components/SimpleTodos';
+import CashWithdrawal from './components/CashWithdrawal';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
       {/* <Login/> */}
       {/* <FruitCounter/> */}
       {/* <DestinationSearch/> */}
-      <SimpleTodos/>
+      {/* <SimpleTodos/> */}
+      <CashWithdrawal/>
     </div>
   );
 }
