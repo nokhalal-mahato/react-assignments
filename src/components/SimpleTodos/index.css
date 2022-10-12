@@ -1,0 +1,35 @@
+.todos-page{
+    background-color: #ffc2a0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todos-content{
+    background-color: white;
+    border-radius: 12px;
+    padding:60px;
+    text-align: center;
+}
+.todo-header{
+    color: #ff8542;
+    margin-top: 0px;
+}
+.todo-container{
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .todos-content{
+        background-color: white;
+        border-radius: 12px;
+        padding:30px;
+        text-align: center;
+        width: 75%;
+    }
+    .todo-container{
+        text-align: left;
+    }
+}
