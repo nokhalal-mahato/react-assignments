@@ -16,6 +16,7 @@ import GoogleSearch from './components/GoogleSearch';
 import BrowzerHistory from './components/BrowserHistory';
 import FeedBack from './components/FeedBack';
 import Gallery from './components/Gallery';
+import Capital from './components/Capitals';
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
       {/* <GoogleSearch/> */}
       {/* <BrowzerHistory/> */}
       {/* <FeedBack/> */}
-      <Gallery/>
+      {/* <Gallery/> */}
+      <Capital/>
     </div>
   );
 }

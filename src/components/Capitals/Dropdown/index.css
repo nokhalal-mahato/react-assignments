@@ -1,0 +1,11 @@
+.capital-dropdown{
+    margin-right: 10px;
+    padding:10px;
+    box-shadow: 1px -1px 12px 0px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+}
+.capital-dropdown:focus{
+    outline: 0px;
+}
