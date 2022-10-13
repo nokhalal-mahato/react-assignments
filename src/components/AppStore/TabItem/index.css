@@ -1,0 +1,15 @@
+.tabitem{
+    border-bottom: 1px solid #7b8794;
+    padding:10px;
+}
+.tabitem-name{
+    margin-bottom: 0px;
+}
+.apptab-active{
+    border-bottom: 2px solid #2563eb;
+    color: #2563eb;
+    padding-bottom: 13px;
+}
+.apptab-active p{
+    margin-top: 0px;
+}
