@@ -1,0 +1,20 @@
+.gallery-page{
+    height: 90%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+.gallery-content{
+    width: 90%;
+}
+.gallery-tagline{
+    color: #64748b;
+}
+
+.gallery-header{
+    align-self: flex-start;
+}
+.thumbnail-container{
+    display: flex;
+    flex-flow: row wrap;
+}
