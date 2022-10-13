@@ -19,6 +19,7 @@ import Gallery from './components/Gallery';
 import Capital from './components/Capitals';
 import AppStore from './components/AppStore';
 import CoinToss from './components/CoinToss';
+import Review from './components/Review';
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
       {/* <Gallery/> */}
       {/* <Capital/> */}
       {/* <AppStore/> */}
-      <CoinToss/>
+      {/* <CoinToss/> */}
+      <Review/>
     </div>
   );
 }
