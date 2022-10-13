@@ -15,6 +15,7 @@ import CashWithdrawal from './components/CashWithdrawal';
 import GoogleSearch from './components/GoogleSearch';
 import BrowzerHistory from './components/BrowserHistory';
 import FeedBack from './components/FeedBack';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <CashWithdrawal/> */}
       {/* <GoogleSearch/> */}
       {/* <BrowzerHistory/> */}
-      <FeedBack/>
+      {/* <FeedBack/> */}
+      <Gallery/>
     </div>
   );
 }
