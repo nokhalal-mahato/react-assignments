@@ -9,9 +9,12 @@ class ThumbnailItem extends Component{
     }
 
     render(){
-        const {id,imageurl}=this.props;
+        const {id,imageurl,isActive}=this.props;
+        if(isActive){
+            console.log(id);
+        }
         return(
-            <div className="thumbnail-item" id={id} onClick={this.setSelectedPictureHandler}>
+            <div className={`thumbnail-item ${isActive ? "active":''}`} id={id} onClick={this.setSelectedPictureHandler}>
                 <img src={imageurl} alt={id}/>
             </div>
         );

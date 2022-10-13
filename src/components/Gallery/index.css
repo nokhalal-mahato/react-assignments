@@ -7,16 +7,10 @@
 .gallery-content{
     width: 90%;
 }
-.gallery-main-image{
-    max-width: 1100px;
-}
 .gallery-tagline{
     color: #64748b;
 }
-.gallery-main-image img{
-    width: 100%;
-    border-radius: 24px;
-}
+
 .gallery-header{
     align-self: flex-start;
 }
