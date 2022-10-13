@@ -17,6 +17,7 @@ import BrowzerHistory from './components/BrowserHistory';
 import FeedBack from './components/FeedBack';
 import Gallery from './components/Gallery';
 import Capital from './components/Capitals';
+import AppStore from './components/AppStore';
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/* <BrowzerHistory/> */}
       {/* <FeedBack/> */}
       {/* <Gallery/> */}
-      <Capital/>
+      {/* <Capital/> */}
+      <AppStore/>
     </div>
   );
 }
