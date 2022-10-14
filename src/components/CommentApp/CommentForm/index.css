@@ -1,0 +1,32 @@
+.comment-form{
+    margin-right: 10px;
+}
+.comment-form p{
+    color: #1e293b;
+}
+.comment-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.comment-form input{
+    padding:5px 10px;
+    border: 1px solid #cbd2d9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.comment-form textarea{
+    padding: 5px 10px;
+    border: 1px solid #cbd2d9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.commentform-btn{
+    border:0px;
+    background-color: #0284c7;
+    padding:10px;
+    color: white;
+    border-radius: 8px;
+}   

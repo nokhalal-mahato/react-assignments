@@ -1,0 +1,41 @@
+.comment-page{
+    display: flex;
+    justify-content: center;
+}
+.comment-page-content{
+    max-width: 1000px;
+    padding:10px;
+}
+.comment-page-header{
+    font-size: 48px;
+}
+.comment-top-section{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-main-image{
+    width: 50%;
+    max-width: 400px;
+}
+.comment-main-image img{
+    width: 100%;
+}
+.comment-count{
+    background-color:  #0284c7;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    color: white;
+}
+.comment-page-content hr{
+    margin-bottom: 20px;
+}
+
+.comment-contianer{
+    margin-top: 20px;
+}
+@media(max-width:568px){
+    .comment-top-section{
+        flex-direction: column-reverse;
+    }
+}
