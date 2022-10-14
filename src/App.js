@@ -22,6 +22,7 @@ import CoinToss from './components/CoinToss';
 import Review from './components/Review';
 import CommentApp from './components/CommentApp';
 import Appointment from './components/Appointment';
+import MoneyTracker from './components/MoneyTracker';
 
 function App() {
   return (
@@ -48,7 +49,8 @@ function App() {
       {/* <CoinToss/> */}
       {/* <Review/> */}
       {/* <CommentApp/> */}
-      <Appointment/>
+      {/* <Appointment/> */}
+      <MoneyTracker/>
     </div>
   );
 }
