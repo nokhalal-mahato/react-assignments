@@ -1,0 +1,24 @@
+.moneydetail-item{
+    border-radius: 12px;
+    padding:15px 10px 15px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.moneydetail-content{
+    margin-left: 20px;
+}
+.moneydetail-item img{
+    width: 60px;
+}
+.moneydetail-item-name{
+    font-size: 14px;
+    margin-top: 0px;
+}
+.moneydetail-item-balance{
+    font-weight: 400;
+    margin:0px;
+}
