@@ -1,0 +1,19 @@
+.appointItem{
+    margin-right: 20px;
+    border: 1px solid #b5b7c4;
+    padding: 0px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+.appointer-item-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #171f46;
+}
+.appointment-item-date{
+    margin-top: 0px;
+    color: #b5b7c4;
+}
