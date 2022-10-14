@@ -21,6 +21,7 @@ import AppStore from './components/AppStore';
 import CoinToss from './components/CoinToss';
 import Review from './components/Review';
 import CommentApp from './components/CommentApp';
+import Appointment from './components/Appointment';
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
       {/* <AppStore/> */}
       {/* <CoinToss/> */}
       {/* <Review/> */}
-      <CommentApp/>
+      {/* <CommentApp/> */}
+      <Appointment/>
     </div>
   );
 }
