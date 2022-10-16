@@ -65,3 +65,19 @@
     text-align: center;
     border-bottom: 1px solid #cbd5e1;
 }
+@media(max-width:740px){
+    .moneytracker-page-content{
+        max-width: 500px;
+        width: 90%;
+    }
+    .money-details-container{
+        flex-direction: column;
+    }
+    .moneytracker-bottom-section{
+        flex-direction: column;
+    }
+    .moneytracker-form-container{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+}
