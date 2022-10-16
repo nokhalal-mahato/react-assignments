@@ -39,7 +39,41 @@ class MoneyTracker extends Component {
       }));
     }
   };
+
+  onRemovetransaction=(data)=>{
+    this.setState((prevState) => ({
+      transactionList: [...prevState.transactionList, data],
+    }));
+    if (data.type == "Income") {
+      this.setState((prevState) => ({
+        moneydetailList: prevState.moneydetailList.map((item) => {
+          if (item.id == "total") {
+            return { ...item, balance: item.balance - +data.amount };
+          }
+          if (item.id == "income") {
+            return { ...item, balance: item.balance - +data.amount };
+          }
+          return item;
+        }),
+      }));
+    } else {
+      this.setState((prevState) => ({
+        moneydetailList: prevState.moneydetailList.map((item) => {
+          if (item.id == "expense") {
+            return { ...item, balance: item.balance - +data.amount };
+          }
+          if (item.id == "total") {
+            return { ...item, balance: item.balance + +data.amount };
+          }
+          return item;
+        }),
+      }));
+    }
+  }
   onDeleteTransaction = (id) => {
+    const {transactionList,moneydetailList}=this.state;
+    const tranaction=transactionList.find((item)=>item.id==id);
+    this.onRemovetransaction(tranaction);
     this.setState((prevState) => {
       const filteredArray = prevState.transactionList.filter(
         (item) => item.id !== id
@@ -63,7 +97,7 @@ class MoneyTracker extends Component {
           </div>
           <div className="money-details-container">
             {moneydetailList.map((item) => (
-              <MoneyDetails data={item} />
+              <MoneyDetails data={item} key={item.id}/>
             ))}
           </div>
           <div className="moneytracker-bottom-section">
@@ -85,6 +119,7 @@ class MoneyTracker extends Component {
                     <TransactionItem
                       data={item}
                       onDeleteTransaction={this.onDeleteTransaction}
+                      key={item.id}
                     />
                   ))}
                 </tbody>
