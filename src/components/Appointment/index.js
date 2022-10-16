@@ -29,7 +29,7 @@ class Appointment extends Component {
   render() {
     const { appointmentList, starfilter } = this.state;
     const appointmentList1 = appointmentList.map((item) => (
-      <AppointmentItem data={item} onStar={this.onStar} />
+      <AppointmentItem data={item} onStar={this.onStar} key={item.id}/>
     ));
     const appointmentList2 = appointmentList
       .filter((item) => item.star === true)

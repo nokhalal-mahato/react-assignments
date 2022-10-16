@@ -6,8 +6,9 @@
     width: 200px;
     border: 1px solid black;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
+
 .moneydetail-content{
     margin-left: 20px;
 }
@@ -21,4 +22,9 @@
 .moneydetail-item-balance{
     font-weight: 400;
     margin:0px;
+}
+@media(max-width:740px){
+    .moneydetail-item{
+        width: 92%;
+    }
 }
