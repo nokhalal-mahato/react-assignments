@@ -1,0 +1,19 @@
+.emojiCard {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.198);
+  margin: 10px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.298);
+}
+.emojiCard img {
+  width: 100px;
+}
+@media (max-width: 500px) {
+  .emojiCard {
+    padding: 10px;
+    margin: 10px;
+  }
+  .emojiCard img {
+    width: 60px;
+  }
+}
