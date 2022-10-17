@@ -1,0 +1,20 @@
+.digital-timer-page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to right,white,#cffcf1);
+}
+.digital-timer-content{
+    display: flex;
+    margin-top: 70px;
+    align-items: center;
+}
+.delete-timer-btn,.add-timer-btn{
+    background-image: linear-gradient(to right,#07c092,#4ce3bd);
+    border-radius: 12px;
+    padding: 5px 20px;
+    border: 0px;
+    margin-bottom: 20px;
+}

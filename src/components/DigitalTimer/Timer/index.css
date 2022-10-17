@@ -1,0 +1,28 @@
+.digital-timer{
+    background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+    width: 500px;
+    height: 500px;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digitalTimer-content{
+    background-color: white;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.digitaltimer-status{
+    margin-top: 0px;
+}
+.digitaltimer-time{
+    margin-bottom: 10px;
+    color: #34d0a9;
+}

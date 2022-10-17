@@ -1,0 +1,20 @@
+.changeTimer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.changeTimer-container{
+    text-align: center;
+}
+.changeTimer-content h1{
+    margin:0px 15px;
+}
+.changeTimer{
+    background-image: linear-gradient(to right,#07c092,#4ce3bd);
+    border-radius: 12px;
+    padding: 5px 20px;
+}
+.changeTimer h2{
+    margin:0px
+}

@@ -1,0 +1,16 @@
+.timer-action-btns{
+    display: flex;
+}
+.timer-action-btns img{
+    width: 30px;
+    margin:0px 10px
+}
+.digital-timer-start-field{
+    display: flex;
+    align-items: center;
+}
+.digital-timer-Reset-field{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
