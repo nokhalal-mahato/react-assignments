@@ -24,6 +24,8 @@ import CommentApp from './components/CommentApp';
 import Appointment from './components/Appointment';
 import MoneyTracker from './components/MoneyTracker';
 import EmojiGame from './components/EmojiGame';
+import DigitalTimer from './components/DigitalTimer';
+import DigitalTimerPage from './components/DigitalTimer/DigitalTimerPage';
 
 function App() {
   return (
@@ -52,7 +54,9 @@ function App() {
       {/* <CommentApp/> */}
       {/* <Appointment/> */}
       {/* <MoneyTracker/> */}
-      <EmojiGame/>
+      {/* <EmojiGame/> */}
+      {/* <DigitalTimer/> */}
+      <DigitalTimerPage/>
     </div>
   );
 }
