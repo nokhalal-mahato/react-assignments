@@ -23,6 +23,7 @@ import Review from './components/Review';
 import CommentApp from './components/CommentApp';
 import Appointment from './components/Appointment';
 import MoneyTracker from './components/MoneyTracker';
+import EmojiGame from './components/EmojiGame';
 
 function App() {
   return (
@@ -50,7 +51,8 @@ function App() {
       {/* <Review/> */}
       {/* <CommentApp/> */}
       {/* <Appointment/> */}
-      <MoneyTracker/>
+      {/* <MoneyTracker/> */}
+      <EmojiGame/>
     </div>
   );
 }

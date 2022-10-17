@@ -1,0 +1,64 @@
+.emoji-winloss {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.198);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.298);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 450px;
+}
+.emoji-winloss-content {
+  color: white;
+  width: 300px;
+  text-align: center;
+}
+.emoji-winloss-heading {
+  font-size: 62px;
+  margin-top: 0px;
+}
+.emoji-winloss-score-text {
+  margin-bottom: 0px;
+}
+.emoji-winloss-score {
+  color: #6a59ff;
+  font-size: 48px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.emoji-playagain-btn {
+  border: 0px;
+  background-color: #ffce27;
+  border-radius: 12px;
+  padding: 15px;
+  font-weight: bold;
+}
+.emoji-winloss-image {
+  width: 50%;
+}
+.emoji-winloss-image img {
+  width: 100%;
+}
+@media (max-width: 500px) {
+    .emoji-winloss{
+        width: 80%;
+    }
+  .emoji-winloss-content {
+    color: white;
+    width: 180px;
+    text-align: center;
+  }
+  .emoji-winloss-heading {
+    font-size: 32px;
+    margin-top: 0px;
+  }
+  .emoji-winloss-score-text {
+    margin-bottom: 0px;
+  }
+  .emoji-winloss-score {
+    font-size: 28px;
+  }
+  .emoji-playagain-btn {
+  padding: 10px;
+}
+}

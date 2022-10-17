@@ -1,0 +1,23 @@
+.emojigame-page{
+    height: 100%;
+    background-image: linear-gradient(to bottom right,#9796f0,#fbc7d4);
+}
+
+
+.emojigame-page-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+.emojicard-container{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 700px;
+    justify-content: center;
+}
+@media(max-width:500px){
+    .emojicard-container{
+        max-width: 400px;
+    }
+}
