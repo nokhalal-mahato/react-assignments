@@ -42,23 +42,12 @@
 @media (max-width: 500px) {
     .emoji-winloss{
         width: 80%;
+        flex-direction: column-reverse;
     }
-  .emoji-winloss-content {
-    color: white;
-    width: 180px;
-    text-align: center;
-  }
   .emoji-winloss-heading {
-    font-size: 32px;
-    margin-top: 0px;
-  }
-  .emoji-winloss-score-text {
-    margin-bottom: 0px;
+    font-size: 48px;
   }
   .emoji-winloss-score {
-    font-size: 28px;
+    font-size: 36px;
   }
-  .emoji-playagain-btn {
-  padding: 10px;
-}
 }
