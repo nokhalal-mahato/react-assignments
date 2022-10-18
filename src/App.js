@@ -26,6 +26,7 @@ import MoneyTracker from './components/MoneyTracker';
 import EmojiGame from './components/EmojiGame';
 import DigitalTimer from './components/DigitalTimer';
 import DigitalTimerPage from './components/DigitalTimer/DigitalTimerPage';
+import FaqApp from './components/FaqApp';
 
 function App() {
   return (
@@ -56,7 +57,8 @@ function App() {
       {/* <MoneyTracker/> */}
       {/* <EmojiGame/> */}
       {/* <DigitalTimer/> */}
-      <DigitalTimerPage/>
+      {/* <DigitalTimerPage/> */}
+      <FaqApp/>
     </div>
   );
 }

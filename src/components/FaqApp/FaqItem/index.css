@@ -1,0 +1,18 @@
+.faq-item{
+    border: 1px solid #d7dae6;
+    border-radius: 12px;
+    padding:10px;
+    margin-bottom: 15px;
+}
+.faq-question-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-itme-question{
+    margin:5px 0px;
+    color: #52606d;
+}
+.faq-item-answer{
+    color:#52606d;
+}
