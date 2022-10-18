@@ -27,6 +27,7 @@ import EmojiGame from './components/EmojiGame';
 import DigitalTimer from './components/DigitalTimer';
 import DigitalTimerPage from './components/DigitalTimer/DigitalTimerPage';
 import FaqApp from './components/FaqApp';
+import PasswordManager from './components/PasswordManager';
 
 function App() {
   return (
@@ -58,7 +59,8 @@ function App() {
       {/* <EmojiGame/> */}
       {/* <DigitalTimer/> */}
       {/* <DigitalTimerPage/> */}
-      <FaqApp/>
+      {/* <FaqApp/> */}
+      <PasswordManager/>
     </div>
   );
 }

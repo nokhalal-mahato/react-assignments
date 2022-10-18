@@ -1,0 +1,45 @@
+.password-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #454f84;
+    border-radius: 12px;
+    padding: 20px;
+}
+.passowrd-form-header{
+    color: white;
+}
+.password-manager-field{
+    background-color: white;
+    margin:auto;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.password-manager-input-container{
+    padding:5px 10px;
+    width: 100%;
+}
+.password-manager-logo{
+    border-right: 1px solid #94a3b8;
+    padding:5px 10px;
+}
+.password-manager-logo img{
+    width: 20px;
+}
+
+.password-manager-input{
+    background-color: transparent;
+    border:0px;
+}
+.password-manager-input:focus{
+    outline:0px
+}
+.passwordform-btn{
+    background-color: #0b69ff;
+    border: 0px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-left: 200px;
+}

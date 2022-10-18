@@ -1,0 +1,25 @@
+
+.password-search-field{
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.password-search-input{
+    max-width: 150px;
+}
+.password-search-logo{
+    border-right: 1px solid #94a3b8;
+    padding:2px 10px;
+}
+.password-search-logo img{
+    width: 20px;
+}
+
+.password-input{
+    background-color: transparent;
+    border:0px;
+    padding-bottom: 5px;
+}
+.password-input:focus{
+    outline:0px
+}
