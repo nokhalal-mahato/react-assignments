@@ -16,7 +16,7 @@ class FaqItem extends Component {
     return (
       <div className="faq-item">
         <div className="faq-question-section">
-          <h2>{data.question}</h2>
+          <h2 className="faq-itme-question">{data.question}</h2>
           {show ? (
             <img
               src="https://assets.ccbp.in/frontend/react-js/faqs-minus-icon-img.png"
@@ -32,7 +32,7 @@ class FaqItem extends Component {
         {show && (
           <>
             <hr />
-            <p>{data.answer}</p>
+            <p className="faq-item-answer">{data.answer}</p>
           </>
         )}
       </div>
