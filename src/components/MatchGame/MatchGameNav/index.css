@@ -1,0 +1,32 @@
+.match-game-nav{
+    background-color: #2c0e3a;
+    padding:20px 40px ;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #fec653;
+}
+.match-game-image img{
+    width: 150px;
+}
+.match-game-nav-contnt{
+    display: flex;
+    align-items: center;
+}
+.match-game-timer{
+    display: flex;
+    align-items: center;
+}
+.match-game-timer img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.matchgame-nav-text{
+    margin: 0px;
+    margin-right: 20px;
+}
+.matchgame-nav-text span{
+    color: white;
+    font-size: 18px;
+}

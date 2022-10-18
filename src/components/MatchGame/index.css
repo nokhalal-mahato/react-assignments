@@ -1,0 +1,29 @@
+.matchgame-page{
+    min-height: 100%;
+    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-bg.png');
+    background-size: cover;
+}
+.matchgame-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.matchgame-main-image{
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+.matchgame-main-image img{
+    width: 100%;
+}
+.matchgame-tab-container{
+    display: flex;
+}
+.matchItem-container{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    max-width: 700px;
+}

@@ -1,0 +1,30 @@
+.match-finish-card{
+    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
+    background-size: cover;
+    width: 450px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.match-finish-card h1{
+    margin:10px 0px;
+    color: white;
+}
+.match-tropy-image{
+    width: 250px;
+}
+.match-play-again-btn{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+    background-color: #cf60c8;
+    border-radius: 12px;
+    padding:10px;
+    color: white;
+    font-size: 24px;
+}
+.match-play-again-btn img{
+    margin-right: 10px;
+}
