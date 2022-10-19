@@ -30,6 +30,7 @@ import FaqApp from './components/FaqApp';
 import PasswordManager from './components/PasswordManager';
 import MatchGame from './components/MatchGame';
 import BlogList from './components/BlogList';
+import FetchAndRoute from './components/FetchAndRoute';
 
 
 const App=() =>{
@@ -65,7 +66,8 @@ const App=() =>{
       {/* <FaqApp/> */}
       {/* <PasswordManager/> */}
       {/* <MatchGame/> */}
-      <BlogList/>
+      {/* <BlogList/> */}
+      <FetchAndRoute/>
     </div>
   );
 }

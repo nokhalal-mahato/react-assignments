@@ -1,0 +1,22 @@
+.blog-detail-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+.blog-detail-header{
+    font-size: 36px;
+    text-align: center;
+}
+.bloglist-item-main-image{
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 10px 0px;
+}
+.bloglist-item-main-image img{
+    width: 100%;
+}
+.bloglist-detail-content{
+    font-size: 18px;
+}

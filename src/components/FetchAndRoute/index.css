@@ -1,0 +1,19 @@
+.bloglist-page{    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.bloglist-content{
+    margin: 50px auto;
+    border: 3px solid #6d396b;
+    max-width: 900px;
+    width: 70%;
+    border-radius: 12px;
+    padding: 20px 20px;
+}
+@media(max-width:460px){
+    .bloglist-content{
+        width: 85%;
+    }
+}
