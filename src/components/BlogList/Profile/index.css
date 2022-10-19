@@ -1,0 +1,16 @@
+.bloglist-profile{
+    margin-top: 40px;
+    text-align: center;
+}
+.bloglist-avatar{
+    max-width: 200px;
+}
+.bloglist-avatar img{
+    width: 100%;
+}
+.bloglist-profile-name{
+    color: #12022f;
+}
+.bloglist-profile-description{
+    color: #9aa5b1;
+}

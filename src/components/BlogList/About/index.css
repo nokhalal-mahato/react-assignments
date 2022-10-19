@@ -1,0 +1,16 @@
+.bloglist-about{
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.bloglist-about-image{
+    max-width:250px ;
+}
+.bloglist-about-image img{
+    width: 100%;
+}
+.bloglist-about-title{
+    color: #6d396b;
+}
