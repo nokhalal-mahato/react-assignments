@@ -27,3 +27,8 @@
     margin-top: 30px;
     max-width: 700px;
 }
+@media(max-width:576px){
+    .matchgame-main-image{
+        width: 90%;
+    }
+}

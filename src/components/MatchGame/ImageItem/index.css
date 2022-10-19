@@ -3,3 +3,10 @@
     height: 100px;
     margin:10px;
 }
+@media(max-width:568px){
+    .match-imageitem{
+    width: 70px;
+    height: 70px;
+    margin:10px;
+}
+}
