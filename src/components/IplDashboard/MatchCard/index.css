@@ -1,0 +1,27 @@
+.team-card {
+  background-color: #1e293b;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.team-card-team {
+  height: 50px;
+}
+.team-card-status {
+  color: #e31a1a;
+}
+.wonClass {
+  color: #18ed66;
+}
+@media (max-width: 860px) {
+  .team-card {
+    padding: 15px;
+  }
+  .team-card-team {
+    height: 50px;
+  }
+}

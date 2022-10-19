@@ -1,0 +1,20 @@
+.team-card-container {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 860px) {
+  .team-card-container {
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 673px) {
+  .team-card-container {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-gap: 30px;
+    justify-content: center;
+  }
+}
