@@ -1,0 +1,16 @@
+.bloglist-contact {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.bloglist-contact-image {
+  max-width: 400px;
+}
+.bloglist-contact-image img {
+  width: 100%;
+}
+.bloglist-contact-title {
+  color: #6d396b;
+}

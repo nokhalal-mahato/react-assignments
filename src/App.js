@@ -29,8 +29,10 @@ import DigitalTimerPage from './components/DigitalTimer/DigitalTimerPage';
 import FaqApp from './components/FaqApp';
 import PasswordManager from './components/PasswordManager';
 import MatchGame from './components/MatchGame';
+import BlogList from './components/BlogList';
 
-function App() {
+
+const App=() =>{
   return (
     <div className="App">
       {/* <Superover/> */}
@@ -62,7 +64,8 @@ function App() {
       {/* <DigitalTimerPage/> */}
       {/* <FaqApp/> */}
       {/* <PasswordManager/> */}
-      <MatchGame/>
+      {/* <MatchGame/> */}
+      <BlogList/>
     </div>
   );
 }
