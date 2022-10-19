@@ -31,6 +31,7 @@ import PasswordManager from './components/PasswordManager';
 import MatchGame from './components/MatchGame';
 import BlogList from './components/BlogList';
 import FetchAndRoute from './components/FetchAndRoute';
+import CryptoTracker from './components/CryptoTracker';
 
 
 const App=() =>{
@@ -67,7 +68,8 @@ const App=() =>{
       {/* <PasswordManager/> */}
       {/* <MatchGame/> */}
       {/* <BlogList/> */}
-      <FetchAndRoute/>
+      {/* <FetchAndRoute/> */}
+      <CryptoTracker/>
     </div>
   );
 }

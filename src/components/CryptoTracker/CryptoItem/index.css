@@ -1,0 +1,26 @@
+.crypto-item{
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.crypto-item-logo{
+    display: flex;
+    align-items: center;
+}
+.crypto-item-logo img{
+    width: 35px;
+    margin-right: 10px;
+}
+
+@media(max-width:550px){
+    .crypto-item-logo img{
+    width: 25px;
+    margin-right: 10px;
+}
+.crypto-item{
+    padding: 10px 10px;
+}
+    .cryptoitem-name{
+        font-size: 12px;
+    }
+}

@@ -9,30 +9,37 @@ class BlogItemDetail extends Component {
   }
   fetchBlogData = async () => {
     const params = this.props.match.params.id;
-    console.log(params)
-    const response = await fetch("https://apis.ccbp.in/blogs/"+params);
-    if (!response.ok) {
+    try {
+      const response = await fetch("https://apis.ccbp.in/blogs/" + params);
+      if (!response.ok) {
+        this.setState({ isLoading: false, error: true });
+        return;
+      }
+      const data = await response.json();
+      if(!data.id){
+        this.setState({ isLoading: false, error: true });
+        return;
+      }
+      const updatedData = {
+        id: data.id,
+        title: data.title,
+        imageUrl: data.image_url,
+        avatarUrl: data.avatar_url,
+        author: data.author,
+        content: data.content,
+        topic: data.topic,
+      };
+      this.setState({ blogData: updatedData, isLoading: false });
+    } catch (err) {
       this.setState({ isLoading: false, error: true });
-      return;
     }
-    const data = await response.json();
-    const updatedData = {
-      id: data.id,
-      title: data.title,
-      imageUrl: data.image_url,
-      avatarUrl: data.avatar_url,
-      author: data.author,
-      content:data.content,
-      topic: data.topic,
-    };
-    this.setState({ blogData: updatedData, isLoading: false });
   };
 
   render() {
     const { isLoading, error, blogData } = this.state;
     return (
       <div className="blog-detail-page">
-        {!isLoading && (
+        {!isLoading && !error && (
           <div className="blog-detail">
             <h2 className="blog-detail-header">{blogData.title}</h2>
             <div className="bloglist-item-author-container">
@@ -48,7 +55,7 @@ class BlogItemDetail extends Component {
           </div>
         )}
         {isLoading && <TailSpin />}
-        {error && <h1>Error</h1>}
+        {error && <h1>404 Not Found</h1>}
       </div>
     );
   }

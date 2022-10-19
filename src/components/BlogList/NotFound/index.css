@@ -1,13 +1,14 @@
-.notfound{
+.notfound-page{
     text-align: center;
-    max-width:400px ;
+    
     margin-top: 50px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
 }
-
-.notfound img{
+.notfound-content{
+    max-width:400px ;
+}
+.notfound-page img{
     width: 100%;
 }
 .notfound-title{
