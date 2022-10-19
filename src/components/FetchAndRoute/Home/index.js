@@ -18,6 +18,10 @@ class Home extends Component {
         return;
       }
       const data = await response.json();
+      if(data.length===0){
+        this.setState({ isLoading: false, error: true });
+        return;
+      }
       const updatedData = data.map((item) => ({
         id: item.id,
         title: item.title,
@@ -37,10 +41,10 @@ class Home extends Component {
       <div className="bloglist-home">
         <Profile />
         <div className="bloglist-container">
-          {!isLoading &&
+          {!isLoading && !error &&
             blogList.map((item) => <BlogItem key={item.id} data={item} />)}
           {isLoading && <TailSpin />}
-          {error && <h1>Error</h1>}
+          {error && <h1>404 Not Found</h1>}
         </div>
       </div>
     );

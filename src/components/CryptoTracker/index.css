@@ -1,0 +1,63 @@
+.crypto-page {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000;
+  align-items: center;
+  padding: 30px;
+}
+.crypto-main-header {
+  color: #00e7ff;
+  text-align: center;
+}
+.crypto-main-image {
+  width: auto;
+}
+.crypto-main-image img {
+  width: 100%;
+}
+.cryptolist-container {
+  color: white;
+  border-radius: 12px;
+  border: 3px solid #00e7ff;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 900px;
+  font-weight: bold;
+}
+.cryptolist-header {
+  background-color: #092e33be;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+.cryptolist-currency-container {
+  display: flex;
+}
+.cryptolist-currency {
+  width: 70px;
+  text-align: right;
+}
+.cryptolist-currency:first-of-type {
+  margin-right: 20px;
+}
+@media (max-width: 550px) {
+  .crypto-page {
+    padding: 10px;
+  }
+  .cryptolist-header {
+    padding: 10px 10px;
+  }
+  .cryptolist-currency {
+    width: 50px;
+    font-size: 12px;
+  }
+  .crypto-coin-type {
+    font-size: 12px;
+  }
+  .cryptolist-currency:first-of-type {
+    margin-right: 10px;
+  }
+}

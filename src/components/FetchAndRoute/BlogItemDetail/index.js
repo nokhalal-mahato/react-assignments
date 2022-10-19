@@ -16,6 +16,10 @@ class BlogItemDetail extends Component {
         return;
       }
       const data = await response.json();
+      if(!data.id){
+        this.setState({ isLoading: false, error: true });
+        return;
+      }
       const updatedData = {
         id: data.id,
         title: data.title,
@@ -35,7 +39,7 @@ class BlogItemDetail extends Component {
     const { isLoading, error, blogData } = this.state;
     return (
       <div className="blog-detail-page">
-        {!isLoading && (
+        {!isLoading && !error && (
           <div className="blog-detail">
             <h2 className="blog-detail-header">{blogData.title}</h2>
             <div className="bloglist-item-author-container">
@@ -51,7 +55,7 @@ class BlogItemDetail extends Component {
           </div>
         )}
         {isLoading && <TailSpin />}
-        {error && <h1>Error</h1>}
+        {error && <h1>404 Not Found</h1>}
       </div>
     );
   }
