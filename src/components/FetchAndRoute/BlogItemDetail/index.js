@@ -9,23 +9,26 @@ class BlogItemDetail extends Component {
   }
   fetchBlogData = async () => {
     const params = this.props.match.params.id;
-    console.log(params)
-    const response = await fetch("https://apis.ccbp.in/blogs/"+params);
-    if (!response.ok) {
+    try {
+      const response = await fetch("https://apis.ccbp.in/blogs/" + params);
+      if (!response.ok) {
+        this.setState({ isLoading: false, error: true });
+        return;
+      }
+      const data = await response.json();
+      const updatedData = {
+        id: data.id,
+        title: data.title,
+        imageUrl: data.image_url,
+        avatarUrl: data.avatar_url,
+        author: data.author,
+        content: data.content,
+        topic: data.topic,
+      };
+      this.setState({ blogData: updatedData, isLoading: false });
+    } catch (err) {
       this.setState({ isLoading: false, error: true });
-      return;
     }
-    const data = await response.json();
-    const updatedData = {
-      id: data.id,
-      title: data.title,
-      imageUrl: data.image_url,
-      avatarUrl: data.avatar_url,
-      author: data.author,
-      content:data.content,
-      topic: data.topic,
-    };
-    this.setState({ blogData: updatedData, isLoading: false });
   };
 
   render() {
