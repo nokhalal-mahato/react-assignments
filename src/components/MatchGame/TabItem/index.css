@@ -1,0 +1,11 @@
+.match-tabitem{
+    color: white;
+    margin:0px 10px;
+}
+.matchtab-active{
+    color: #fec653;
+    border-bottom: 3px solid #fec653;
+}
+.match-tabitem-name{
+    margin: 10px;
+}

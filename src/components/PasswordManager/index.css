@@ -1,0 +1,74 @@
+.password-manager-page{
+    background-color: #9ba9eb;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.password-manager-content{
+    padding: 40px 0px;
+}
+.password-manager-header img{
+    width: 180px;
+}
+.password-manager-form-container{
+    margin: 20px 0px;
+    border-radius: 12px;
+    background-color: #5763a5;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-manager-form-image{
+    max-width: 300px;
+    margin-left: 20px;
+}
+.password-manager-form-image img{
+    width: 100%;
+}
+.password-manager-bottom-section{
+    border-radius: 12px;
+    background-color: #5763a5;
+    padding: 20px 30px;
+}
+.password-manager-bottom--top-section{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.your-password{
+    display: flex;
+    align-items: baseline;
+}
+.your-password h3{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: white;
+    margin-right: 10px;
+}
+.your-password h4{
+    margin: 0px;
+    font-size: 12px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 0px 10px;
+}
+.password-container{
+    display: flex;
+}
+.password-manager-showpassword{
+    color: white;
+    text-align: right;
+}
+.nopassword-container{
+    max-width: 300px;
+}
+.nopassword-container{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.nopassword-container img{
+    width: 100%;
+}
