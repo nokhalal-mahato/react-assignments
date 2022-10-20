@@ -5,13 +5,16 @@ class LoginForm extends Component {
   state = {
     username: "",
     password: "",
+    error:false,
   };
 
   onSubmitSuccess = () => {
     const { history } = this.props;
     history.replace("/");
   };
-  onSubmitFail = () => {};
+  onSubmitFail = () => {
+    this.setState({error:true});
+  };
 
   submitForm = async (event) => {
     event.preventDefault();
@@ -43,45 +46,44 @@ class LoginForm extends Component {
   };
 
   render() {
-    const { username, password } = this.state;
+    const { username, password ,error} = this.state;
     return (
-      <div className="nxttrendz-login-form-container">
-        <form className="nxttrendz-form-container" onSubmit={this.submitForm}>
-          <div className="nxttrendz-login-website-logo">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-              alt="website logo"
-            />
-          </div>
-          <div className="input-container">
-            <label className="input-label" htmlFor="username">
-              USERNAME
-            </label>
-            <input
-              type="text"
-              id="username"
-              className="username-input-filed"
-              value={username}
-              onChange={this.onChangeUsername}
-            />
-          </div>
-          <div className="input-container">
-            <label className="input-label" htmlFor="password">
-              PASSWORD
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="password-input-filed"
-              value={password}
-              onChange={this.onChangePassword}
-            />
-          </div>
-          <button type="submit" className="nxttrendz-login-button">
-            Login
-          </button>
-        </form>
-      </div>
+      <form className="nxttrendz-form-container" onSubmit={this.submitForm}>
+        <div className="nxttrendz-login-website-logo">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+            alt="website logo"
+          />
+        </div>
+        <div className="nxttrendz-input-container">
+          <label className="nxttrendz-input-label">USERNAME</label>
+          <input
+            type="text"
+            id="username"
+            className="nxttrendz-input-filed"
+            value={username}
+            onChange={this.onChangeUsername}
+          />
+        </div>
+        <div className="nxttrendz-input-container">
+          <label className="nxttrendz-input-label">PASSWORD</label>
+          <input
+            type="password"
+            id="password"
+            className="nxttrendz-input-filed"
+            value={password}
+            onChange={this.onChangePassword}
+          />
+        </div>
+        {error && (
+          <p className="nxttrendz-error-message">
+            *Username and password didn't match
+          </p>
+        )}
+        <button type="submit" className="nxttrendz-login-button">
+          Login
+        </button>
+      </form>
     );
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Link,useRouteMatch, withRouter } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
 import "./index.css";
 
 class TeamCard extends Component {
