@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: flex-start;
     border-radius: 12px;
-    padding:40px;
+    padding:20px 40px 20px;
 }
 .registration-form-header{
     color: #ea580c;
@@ -21,28 +21,49 @@
     font-weight: bold;
     font-size: 12px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 .registration-form-input-field{
-    background-color: #d7dfe9;
-    border: 0px;
+    background-color: transparent;
+    border: 1px solid #9aa5b1;
     padding: 10px;
+    width: 250px;
     border-radius:6px;
-    margin-bottom: 20px;
+}
+.registration-form-input-field:focus{
+    outline: none;
 }
 
 .registration-form-error-message{
     color: red;
     font-size: 11px;
+    margin-bottom: 0px;
 }
 .registration-form-login-button{
     border-radius: 8px;
-    background-color: #0b69ff;
+    background-color: #ea580c;
     color: white;
     font-weight: bold;
     border: 0px;
     padding:10px;
-    margin: auto;
+    margin:20px auto 10px;
 }
 .registration-form-input-error{
+    border: 1px solid #ff0b37;
+    background-color: #fef2f4;
+}
+.registration-form-success-container{
+    box-shadow: 1px -1px 17px 0px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    padding:30px;
+    text-align: center;
+}
 
+@media(max-width:450px){
+    .registration-form-input-field{
+    width: 200px;
+}
 }
