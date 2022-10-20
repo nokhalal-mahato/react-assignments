@@ -1,9 +1,10 @@
 import { Component } from "react";
 import "./index.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class BlogNav extends Component {
   render() {
+    const url=this.props.match.url;
     return (
       <div className="blog-nav">
         <div className="blog-nav-logo">
@@ -15,17 +16,17 @@ class BlogNav extends Component {
         </div>
         <ul className="blognav-list">
           <li>
-            <Link to="/" className="blognav-item">
+            <Link to={url} className="blognav-item">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="blognav-item">
+            <Link to={`${url}/about`} className="blognav-item">
               About
             </Link>
           </li>
           <li>
-            <Link to="/Contact" className="blognav-item">
+            <Link to={`${url}/Contact`} className="blognav-item">
               Contact
             </Link>
           </li>
@@ -34,4 +35,4 @@ class BlogNav extends Component {
     );
   }
 }
-export default BlogNav;
+export default withRouter(BlogNav);

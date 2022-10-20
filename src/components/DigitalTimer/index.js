@@ -99,5 +99,9 @@ class DigitalTimer extends Component {
     );
   }
 }
-
+DigitalTimer.defaultProps = {
+  time: 25*60,
+  start: true,
+  timer: 0,
+};
 export default DigitalTimer;

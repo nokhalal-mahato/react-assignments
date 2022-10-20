@@ -5,12 +5,12 @@ class BlogItem extends Component {
   render() {
     const {data}=this.props;
     return (
-      <div className="bloglist-item">
-        <div className="bloglist-item-top-setion">
-          <h3 className="bloglist-item-title">{data.title}</h3>
-          <p className="bloglist-item-date">{data.date}</p>
+      <div className="bloglist1-item">
+        <div className="bloglist1-item-top-setion">
+          <h3 className="bloglist1-item-title">{data.title}</h3>
+          <p className="bloglist1-item-date">{data.date}</p>
         </div>
-        <p className="bloglist-item-description">{data.description}</p>
+        <p className="bloglist1-item-description">{data.description}</p>
       </div>
     );
   }

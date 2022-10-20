@@ -1,17 +1,17 @@
-.bloglist-item{
+.bloglist1-item{
     border-bottom: 1px solid #9aa5b1;
 }
-.bloglist-item-top-setion{
+.bloglist1-item-top-setion{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.bloglist-item-title{
+.bloglist1-item-title{
 
 }
-.bloglist-item-date{
+.bloglist1-item-date{
     color: #616e7c;
 }
-.bloglist-item-description{
+.bloglist1-item-description{
     color: #616e7c
 }
