@@ -32,6 +32,7 @@ import MatchGame from './components/MatchGame';
 import BlogList from './components/BlogList';
 import FetchAndRoute from './components/FetchAndRoute';
 import CryptoTracker from './components/CryptoTracker';
+import IplDashboard from './components/IplDashboard';
 
 
 const App=() =>{
@@ -69,7 +70,8 @@ const App=() =>{
       {/* <MatchGame/> */}
       {/* <BlogList/> */}
       {/* <FetchAndRoute/> */}
-      <CryptoTracker/>
+      {/* <CryptoTracker/> */}
+      <IplDashboard/>
     </div>
   );
 }

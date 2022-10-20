@@ -1,0 +1,42 @@
+.ipldashboard-page {
+  background-image: url("https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png");
+  min-height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ipldashboard-main-image {
+  display: flex;
+  align-items: center;
+}
+.ipldashboard-main-image img {
+  width: 50px;
+  margin-right: 10px;
+}
+.teams-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-gap: 20px;
+}
+.ipldashboard-main-header {
+  font-size: 48px;
+}
+@media (max-width: 630px) {
+  .ipldashboard-page {
+    background-image: url("https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png");
+  }
+  .ipldashboard-main-image img {
+    width: 30px;
+    margin-right: 5px;
+  }
+  .teams-container {
+    grid-template-columns: 160px 160px;
+    grid-gap: 10px;
+  }
+  .ipldashboard-main-header {
+    font-size: 24px;
+  }
+}

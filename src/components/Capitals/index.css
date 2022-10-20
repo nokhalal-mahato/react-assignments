@@ -13,7 +13,7 @@
 }
 
 @media(max-width:568px){
-    h1{
+    .capital-page h1{
         font-size: 26px;
     }
     .capital-page-content{
