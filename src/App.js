@@ -36,6 +36,7 @@ import IplDashboard from './components/IplDashboard';
 import { Switch,Route } from "react-router-dom";
 import MainApp from './main';
 import NxtTrendz from './components/NxtTrendz';
+import RegistrationForm from './components/RegistrationForm';
 
 
 const App=() =>{
@@ -78,6 +79,7 @@ const App=() =>{
         <Route exact path="/CryptoTracker" component={CryptoTracker} />
         <Route path="/IplDashboard" component={IplDashboard} />
         <Route path="/NxtTrendz" component={NxtTrendz} />
+        <Route path="/RegitrationForm" component={RegistrationForm} />
       </Switch>
     </div>
   );
