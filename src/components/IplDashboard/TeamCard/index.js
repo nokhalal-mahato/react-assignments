@@ -1,12 +1,16 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link,useRouteMatch, withRouter } from "react-router-dom";
 import "./index.css";
 
 class TeamCard extends Component {
   render() {
     const { data } = this.props;
+    const url=this.props.match.url;
     return (
-      <Link className="ipldashboard-teamcard" to={`/team/` + data.id}>
+      <Link
+        className="ipldashboard-teamcard"
+        to={`${url}/team/` + data.id}
+      >
         <div className="team-card-image">
           <img src={data.teamImageUrl} alt={data.name} />
         </div>
@@ -16,4 +20,4 @@ class TeamCard extends Component {
   }
 }
 
-export default TeamCard;
+export default withRouter(TeamCard);
