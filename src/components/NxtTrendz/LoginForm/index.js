@@ -55,34 +55,32 @@ class LoginForm extends Component {
             alt="website logo"
           />
         </div>
-        <div className="nxttrendz-input-container">
-          <label className="nxttrendz-input-label">USERNAME</label>
-          <input
-            type="text"
-            id="username"
-            className="nxttrendz-input-filed"
-            value={username}
-            onChange={this.onChangeUsername}
-          />
-        </div>
-        <div className="nxttrendz-input-container">
-          <label className="nxttrendz-input-label">PASSWORD</label>
-          <input
-            type="password"
-            id="password"
-            className="nxttrendz-input-filed"
-            value={password}
-            onChange={this.onChangePassword}
-          />
-        </div>
+        <label className="nxttrendz-input-label">USERNAME</label>
+        <input
+          type="text"
+          id="username"
+          className="nxttrendz-input-field"
+          value={username}
+          placeholder="Username"
+          onChange={this.onChangeUsername}
+        />
+        <label className="nxttrendz-input-label">PASSWORD</label>
+        <input
+          type="password"
+          id="password"
+          className="nxttrendz-input-field"
+          value={password}
+          placeholder="Password"
+          onChange={this.onChangePassword}
+        />
+        <button type="submit" className="nxttrendz-login-button">
+          Login
+        </button>
         {error && (
           <p className="nxttrendz-error-message">
             *Username and password didn't match
           </p>
         )}
-        <button type="submit" className="nxttrendz-login-button">
-          Login
-        </button>
       </form>
     );
   }

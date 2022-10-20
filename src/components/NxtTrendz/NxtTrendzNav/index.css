@@ -1,0 +1,71 @@
+.nxttrendz-nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+.nxttrendz-website-logo {
+  width: 150px;
+  height: 40px;
+}
+.nxttrendz-nav-menu {
+  display: flex;
+  list-style: none;
+}
+.nxttrendz-nav-link {
+  margin: 0px 20px;
+  text-decoration: none;
+  color: #1e293b;
+}
+.nxttrendz-nav-right {
+  display: flex;
+
+  align-items: center;
+}
+.nxttrendz-logout-desktop-btn {
+  border-radius: 4px;
+  background-color: #0b69ff;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  border: 0px;
+  padding: 10px 15px;
+}
+.nxttrendz-logout-mobile-btn {
+  display: none;
+}
+.mobile-nav {
+  display: none;
+}
+@media (max-width: 578px) {
+  .nxttrendz-nav-menu {
+    display: none;
+  }
+  .nxttrendz-logout-desktop-btn {
+    display: none;
+  }
+  .nxttrendz-logout-mobile-btn {
+    display: block;
+    background-color: white;
+    border: 0px;
+  }
+  .nxttrendz-logout-mobile-btn img {
+    width: 20px;
+  }
+  .nxttrendz-nav-content {
+    padding: 20px 10px;
+  }
+  .nxttrendz-website-logo {
+    width: 100px;
+    height: 25px;
+  }
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e6f6ff;
+    padding: 20px 0px;
+  }
+  .mobile-nav img {
+    width: 20px;
+  }
+}

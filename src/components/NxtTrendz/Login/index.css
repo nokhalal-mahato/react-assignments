@@ -1,0 +1,27 @@
+.nxttrendz-login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.nxttrendz-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+}
+.nxttrendz-login-iamge{
+    max-width: 500px;
+}
+.nxttrendz-login-iamge img{
+    width: 100%;
+}
+@media(max-width:568px){
+   .nxttrendz-login{
+    flex-direction: column;
+   } 
+   .nxttrendz-login-iamge{
+    margin-bottom: 20px;
+}
+}
