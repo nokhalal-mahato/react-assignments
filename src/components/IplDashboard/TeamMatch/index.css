@@ -1,20 +1,30 @@
-.team-card-container {
-  display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-gap: 30px;
+.team-match-page{
+  display: flex;
   justify-content: center;
+  padding: 60px 0px;
+  background-color: blue;
 }
-@media (max-width: 860px) {
-  .team-card-container {
-    grid-template-columns: 200px 200px 200px;
-    grid-gap: 20px;
-  }
+.team-match-content{
+  width: 90%;
+  color: white;
 }
-@media (max-width: 673px) {
+.team-banner{
+  width: 100%;
+}
+.team-banner img{
+  width: 100%;
+}
+.team-card-container {
+  margin: 30px auto;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+@media (max-width: 600px) {
   .team-card-container {
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
-    grid-gap: 30px;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
   }
 }

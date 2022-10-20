@@ -11,6 +11,10 @@
 .team-card-team {
   height: 50px;
 }
+.team-card-image img{
+      width: 100%;
+      height: 100%;
+  }
 .team-card-status {
   color: #e31a1a;
 }
@@ -22,6 +26,30 @@
     padding: 15px;
   }
   .team-card-team {
+    height: 60px;
+  }
+  .team-card-result{
+    height: 46px;
+  }
+}
+@media (max-width: 600px) {
+    .team-card {
+    padding: 10px;
+  }
+  .team-card-image{
+    width: 50px;
     height: 50px;
+  }
+  .team-card-team{
+    font-size: 16px;
+    height: 45px;
+  }
+  .team-card-result{
+    font-size: 13px;
+    height: 46px;
+    margin: 10px 0px;
+  }
+  .team-card-status{
+    margin: 0px 0px 0px;
   }
 }
