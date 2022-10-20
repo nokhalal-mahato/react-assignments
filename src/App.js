@@ -35,6 +35,7 @@ import CryptoTracker from './components/CryptoTracker';
 import IplDashboard from './components/IplDashboard';
 import { Switch,Route } from "react-router-dom";
 import MainApp from './main';
+import NxtTrendz from './components/NxtTrendz';
 
 
 const App=() =>{
