@@ -108,6 +108,9 @@ const MainApp=()=>{
         <li>
           <Link to="/NxtTrendz">NxtTrendz</Link>
         </li>
+        <li>
+          <Link to="/RegitrationForm">Regitration Form</Link>
+        </li>
       </ol>
     );
 }
