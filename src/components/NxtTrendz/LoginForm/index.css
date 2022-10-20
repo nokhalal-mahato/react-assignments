@@ -1,27 +1,44 @@
 .nxttrendz-form-container{
-
+    box-shadow: 1px -1px 17px 0px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding:40px;
+}
+.nxttrendz-login-website-logo img{
+    max-width: 180px;
 }
 .nxttrendz-login-website-logo{
-
+    align-self: center;
+    margin-bottom: 20px;
 }
 .nxttrendz-input-container{
 
 }
 .nxttrendz-input-label{
-
+    color: #1e293b;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
-.nxttrendz-input-filed{
-
+.nxttrendz-input-field{
+    background-color: #d7dfe9;
+    border: 0px;
+    padding: 10px;
+    border-radius:6px;
+    margin-bottom: 20px;
 }
-.nxttrendz-input-container{
 
-}
-.nxttrendz-input-label{
-
-}
 .nxttrendz-error-message{
-
+    color: red;
+    font-size: 11px;
 }
 .nxttrendz-login-button{
-    
+    border-radius: 8px;
+    background-color: #0b69ff;
+    color: white;
+    font-weight: bold;
+    border: 0px;
+    padding:10px;
+    width: 250px;
 }

@@ -13,20 +13,23 @@ class NxtTrendzNav extends Component {
             src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
             alt="website logo"
           />
-          <ul className="nxttrendz-nav-menu">
-            <Link to={url} className="nxttrendz-nav-link">
-              <li>Home</li>
-            </Link>
-            <Link to={`${url}/products`} className="nxttrendz-nav-link">
-              <li>Products</li>
-            </Link>
-            <Link to={`${url}/cart`} className="nxttrendz-nav-link">
-              <li>Cart</li>
-            </Link>
-          </ul>
-          <button type="button" className="nxttrendz-logout-desktop-btn">
-            Logout
-          </button>
+          <div className="nxttrendz-nav-right">
+            <ul className="nxttrendz-nav-menu">
+              <Link to={url} className="nxttrendz-nav-link">
+                <li>Home</li>
+              </Link>
+              <Link to={`${url}/products`} className="nxttrendz-nav-link">
+                <li>Products</li>
+              </Link>
+              <Link to={`${url}/cart`} className="nxttrendz-nav-link">
+                <li>Cart</li>
+              </Link>
+            </ul>
+            <button type="button" className="nxttrendz-logout-desktop-btn">
+              Logout
+            </button>
+          </div>
+
           <button type="button" className="nxttrendz-logout-mobile-btn">
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
@@ -34,6 +37,18 @@ class NxtTrendzNav extends Component {
               className="logout-icon"
             />
           </button>
+        </div>
+        <div className="mobile-nav">
+          <Link to={url}>
+            <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png" />
+          </Link>
+
+          <Link to={`${url}/products`}>
+            <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png" />
+          </Link>
+          <Link to={`${url}/cart`}>
+            <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png" />
+          </Link>
         </div>
       </nav>
     );

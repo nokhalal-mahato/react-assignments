@@ -1,0 +1,61 @@
+.nxttrendz-home-page {
+  max-width: 1200px;
+  margin: auto;
+  width: 90%;
+}
+.nxttrendz-home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.nxttrendz-home-content {
+  max-width: 565px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.nxttrendz-home-heading {
+  font-size: 42px;
+}
+.nxttrendz-home-mobile-img {
+  display: none;
+}
+.nxttrendz-home-description {
+  font-size: 18px;
+  line-height: 24px;
+  color: #64748b;
+}
+.nxttrendz-shop-now-btn {
+  border-radius: 4px;
+  background-color: #0967d2;
+  color: white;
+  font-size: 16px;
+  border: 0px;
+  padding: 10px 20px;
+}
+.nxttrendz-home-large-img {
+  margin-left: 20px;
+  max-width: 400px;
+  min-width: 250px;
+}
+.nxttrendz-home-large-img img {
+  width: 100%;
+}
+@media (max-width: 578px) {
+  .nxttrendz-home-mobile-img {
+    display: block;
+    max-width: 400px;
+  }
+  .nxttrendz-home-mobile-img img{
+    width: 100%;
+  }
+  .nxttrendz-home-large-img {
+    display: none;
+  }
+  .nxttrendz-home-content {
+    text-align: center;
+    align-items: center;
+  }
+}
