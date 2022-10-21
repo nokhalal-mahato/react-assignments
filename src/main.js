@@ -111,6 +111,9 @@ const MainApp=()=>{
         <li>
           <Link to="/RegitrationForm">Regitration Form</Link>
         </li>
+        <li>
+          <Link to="/EventsApp">Events App</Link>
+        </li>
       </ol>
     );
 }

@@ -37,6 +37,7 @@ import { Switch,Route } from "react-router-dom";
 import MainApp from './main';
 import NxtTrendz from './components/NxtTrendz';
 import RegistrationForm from './components/RegistrationForm';
+import EventsApp from './components/EventApp/Routes/EventRoute';
 
 
 const App=() =>{
@@ -80,6 +81,7 @@ const App=() =>{
         <Route path="/IplDashboard" component={IplDashboard} />
         <Route path="/NxtTrendz" component={NxtTrendz} />
         <Route path="/RegitrationForm" component={RegistrationForm} />
+        <Route path="/EventsApp" component={EventsApp} />
       </Switch>
     </div>
   );
