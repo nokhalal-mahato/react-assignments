@@ -29,7 +29,7 @@ class RegistrationForm extends Component {
   };
 
   onChangeFirstName = (event) => {
-    this.setState({ firstname: event.target.value,firstnameError:false });
+    this.setState({ firstname: event.target.value, firstnameError: false });
   };
 
   onChangeLastName = (event) => {
@@ -47,6 +47,15 @@ class RegistrationForm extends Component {
       this.setState({ lastNameError: true });
     }
   };
+  submitAnotherResponse=()=>{
+    this.setState({
+      firstname: "",
+      lastName: "",
+      // lastNameError: false,
+      // firstnameError: false,
+      submitSuccess: false,
+    });
+  }
 
   render() {
     const {
@@ -96,6 +105,20 @@ class RegistrationForm extends Component {
               Submit
             </button>
           </form>
+        )}
+        {submitSuccess && (
+          <div className="registration-form-success-container">
+            <div className="registration-form-success-image">
+              <img src="https://assets.ccbp.in/frontend/react-js/success-icon-img.png" alt="success"/>
+            </div>
+            <h2>Submitted Successfully</h2>
+            <button
+              className="registration-form-login-button"
+              onClick={this.submitAnotherResponse}
+            >
+              Submit Another Response
+            </button>
+          </div>
         )}
       </div>
     );
