@@ -1,0 +1,18 @@
+.event-page{
+    display: flex;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.event-content{
+    background-color: #475569;
+   padding: 0px 40px;
+}
+.event-heading{
+    color: white;
+}
+.event-item-container{
+     display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}

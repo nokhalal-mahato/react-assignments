@@ -1,0 +1,52 @@
+.event-registration-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+.registration-closed-image{
+    width: 200px;
+}
+.registration-closed-image img{
+    width: 100%;
+}
+.registration-open-image{
+    width: 200px;
+}
+.registration-open-image img{
+    width: 100%;
+}
+.registration-registered-image{
+    width: 150px;
+}
+.registration-registered-image img{
+    width: 100%;
+}
+.event-registration-title{
+ color: #323f4b;
+}
+.event-registration-description{
+    color: #64748b;
+}
+.event-registration-close-description{
+    color: #323f4b;
+    font-size: 18px;
+    width: 70%;
+    margin: 0px;
+}
+.event-register-btn{
+ border-radius: 4px;
+  background-color: #0967d2;
+  color: white;
+  font-size: 16px;
+  border: 0px;
+  padding: 10px 20px;
+  margin-top: 20px;
+
+}
+.event-no-event{
+    padding: 0px 30px;
+}
