@@ -1,19 +1,23 @@
 import { Component } from "react";
 import "./index.css";
+import Cookies from "js-cookie";
+import {Redirect,withRouter} from 'react-router-dom';
 
 class LoginForm extends Component {
   state = {
     username: "",
     password: "",
     error:false,
+    error_msg:''
   };
 
-  onSubmitSuccess = () => {
+  onSubmitSuccess = (jwt_token) => {
+    Cookies.set('jwt_token',jwt_token,{expires:1});
     const { history } = this.props;
-    history.replace("/");
+    history.replace("/NxtTrendz");
   };
-  onSubmitFail = () => {
-    this.setState({error:true});
+  onSubmitFail = (error_msg) => {
+    this.setState({error:true,error_msg:error_msg});
   };
 
   submitForm = async (event) => {
@@ -27,9 +31,9 @@ class LoginForm extends Component {
       });
       const data = await response.json();
       if (response.ok) {
-        this.onSubmitSuccess();
+        this.onSubmitSuccess(data.jwt_token);
       } else {
-        this.onSubmitFail();
+        this.onSubmitFail(data.error_msg);
       }
     } catch (err) {
       console.log(err);
@@ -46,7 +50,10 @@ class LoginForm extends Component {
   };
 
   render() {
-    const { username, password ,error} = this.state;
+    if(Cookies.get('jwt_token')){
+      return <Redirect to='/NxtTrendz' />;
+    }
+    const { username, password, error, error_msg } = this.state;
     return (
       <form className="nxttrendz-form-container" onSubmit={this.submitForm}>
         <div className="nxttrendz-login-website-logo">
@@ -78,7 +85,7 @@ class LoginForm extends Component {
         </button>
         {error && (
           <p className="nxttrendz-error-message">
-            *Username and password didn't match
+            *{error_msg}
           </p>
         )}
       </form>
@@ -86,4 +93,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);
