@@ -1,10 +1,14 @@
 import { Component } from "react";
 import "./index.css";
 import {Link, withRouter} from 'react-router-dom';
+import Cookies from "js-cookie";
 
 class NxtTrendzNav extends Component {
+  logoutHandler=()=>{
+    Cookies.remove('jwt_token');
+    this.props.history.replace('/NxtTrendz/login');
+  }
   render() {
-    const url=this.props.match.url;
     return (
       <nav className="nxttrendz-nav-header">
         <div className="nxttrendz-nav-content">
@@ -15,22 +19,30 @@ class NxtTrendzNav extends Component {
           />
           <div className="nxttrendz-nav-right">
             <ul className="nxttrendz-nav-menu">
-              <Link to={url} className="nxttrendz-nav-link">
+              <Link to="/NxtTrendz" className="nxttrendz-nav-link">
                 <li>Home</li>
               </Link>
-              <Link to={`${url}/products`} className="nxttrendz-nav-link">
+              <Link to="/NxtTrendz/products" className="nxttrendz-nav-link">
                 <li>Products</li>
               </Link>
-              <Link to={`${url}/cart`} className="nxttrendz-nav-link">
+              <Link to="/NxtTrendz/cart" className="nxttrendz-nav-link">
                 <li>Cart</li>
               </Link>
             </ul>
-            <button type="button" className="nxttrendz-logout-desktop-btn">
+            <button
+              type="button"
+              className="nxttrendz-logout-desktop-btn"
+              onClick={this.logoutHandler}
+            >
               Logout
             </button>
           </div>
 
-          <button type="button" className="nxttrendz-logout-mobile-btn">
+          <button
+            type="button"
+            className="nxttrendz-logout-mobile-btn"
+            onClick={this.logoutHandler}
+          >
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
               alt="logout icon"
@@ -39,14 +51,14 @@ class NxtTrendzNav extends Component {
           </button>
         </div>
         <div className="mobile-nav">
-          <Link to={url}>
+          <Link to="/NxtTrendz">
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png" />
           </Link>
 
-          <Link to={`${url}/products`}>
+          <Link to="/NxtTrendz/cart">
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png" />
           </Link>
-          <Link to={`${url}/cart`}>
+          <Link to="/NxtTrendz/cart">
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png" />
           </Link>
         </div>

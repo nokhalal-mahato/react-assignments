@@ -28,7 +28,9 @@
     border-radius:6px;
     margin-bottom: 20px;
 }
-
+.nxttrendz-input-field:focus{
+    outline: none;
+}
 .nxttrendz-error-message{
     color: red;
     font-size: 11px;
