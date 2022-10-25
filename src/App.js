@@ -38,6 +38,7 @@ import MainApp from './main';
 import NxtTrendz from './components/NxtTrendz';
 import RegistrationForm from './components/RegistrationForm';
 import EventsApp from './components/EventApp/Routes/EventRoute';
+import GitPopularRepo from './components/GitPopularRepo/Routes/GitHomeRoute';
 
 
 const App=() =>{
@@ -82,6 +83,7 @@ const App=() =>{
         <Route path="/NxtTrendz" component={NxtTrendz} />
         <Route path="/RegitrationForm" component={RegistrationForm} />
         <Route path="/EventsApp" component={EventsApp} />
+        <Route path="/GitPopularRepo" component={GitPopularRepo} />
       </Switch>
     </div>
   );

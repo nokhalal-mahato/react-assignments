@@ -114,6 +114,9 @@ const MainApp=()=>{
         <li>
           <Link to="/EventsApp">Events App</Link>
         </li>
+        <li>
+          <Link to="/GitPopularRepo">Git Popular Repo</Link>
+        </li>
       </ol>
     );
 }

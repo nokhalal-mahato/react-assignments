@@ -1,12 +1,14 @@
 .event-page{
     display: flex;
     min-height: 100%;
-    max-width: 1200px;
-    margin: auto;
 }
 .event-content{
     background-color: #475569;
    padding: 0px 40px;
+   width: 40%;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
 }
 .event-heading{
     color: white;
