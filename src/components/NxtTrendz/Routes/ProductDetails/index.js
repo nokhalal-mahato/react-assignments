@@ -49,7 +49,7 @@ class ProductDetails extends Component {
       };
       this.setState({
         productDetail: updatedData,
-        apiStatus: ApiStatusConstant.failed,
+        apiStatus: ApiStatusConstant.success,
       });
     } else {
       this.setState({
