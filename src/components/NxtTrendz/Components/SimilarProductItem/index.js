@@ -1,6 +1,6 @@
 import { Component } from "react";
 import './index.css';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class SimilarProducts extends Component {
   render() {
@@ -33,4 +33,4 @@ class SimilarProducts extends Component {
     );
   }
 }
-export default SimilarProducts;
+export default withRouter(SimilarProducts);
