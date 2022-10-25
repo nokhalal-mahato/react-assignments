@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: auto;
   width: 100%;
+  min-height: 100%;
 }
 .nxttendz-product-detail{
   margin-top: 30px;
@@ -73,6 +74,19 @@
   border: 0px;
   padding: 10px 20px;
   text-decoration: none;
+}
+.nxttendz-prodcut-detail-failure{
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+.nxttendz-prodcut-detail-failure-image img{
+  width: 100%;
+}
+.nxttendz-products-loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media(max-width:768px){
   .nxttendz-product-detail{
