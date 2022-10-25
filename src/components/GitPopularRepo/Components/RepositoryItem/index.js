@@ -4,8 +4,8 @@ import "./index.css";
 class RepositoryItem extends Component {
   render() {
     return (
-    <div className="">
-
+    <div className="git-popular-repository-item">
+      
     </div>
     );
   }
