@@ -1,11 +1,10 @@
 import { Route, Switch} from "react-router-dom";
-import Login from './Login';
-import Home from './Home';
-import NotFound from './NotFound';
-
-import Cart from './Cart';
-import Product from "./Product";
 import ProtectedRoute from "./ProtectedRoute";
+import Cart from "./Routes/Cart";
+import Home from "./Routes/Home";
+import Login from "./Routes/Login";
+import NotFound from "./Routes/NotFound";
+import Product from "./Routes/Product";
 
 const NxtTrendz=()=>{   
     return (

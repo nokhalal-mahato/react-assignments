@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import NxtTrendzNav from "../NxtTrendzNav";
 import "./index.css";
 
@@ -26,9 +27,11 @@ class Home extends Component {
               and heard that way you are. So, celebrate the seasons new and
               exciting fashion in your own way.
             </p>
-            <button type="button" className="nxttrendz-shop-now-btn">
-              Shop Now
-            </button>
+            <Link to="/NxtTrendz/products">
+              <button type="button" className="nxttrendz-shop-now-btn">
+                Shop Now
+              </button>
+            </Link>
           </div>
           <div className="nxttrendz-home-large-img">
             <img

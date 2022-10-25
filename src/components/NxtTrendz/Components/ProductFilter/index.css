@@ -1,0 +1,50 @@
+.nxttrendz-product-filter{
+    margin-right: 30px;
+    color: #475569;
+}
+
+.nxttrendz-input{
+    color: #475569;
+}
+
+.nxttrendz-input-field img {
+    width: 20px;
+}
+
+.nxttrendz-input {
+    border: 0px;
+    background-color: transparent;
+    margin-left: 10px;
+    color: #0f172a;
+}
+
+.nxttrendz-input:focus {
+    outline: 0px;
+}
+
+.nxttrendz-input-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #f1f5f9;
+    margin: 25px 0px;
+}
+
+::placeholder {
+    color: #0f172a;
+}
+.nxttrend-star-icon{
+    color: #0967d2;
+}
+.nxttrendz-clear-filter-btn{
+    border: 1px solid #0967d2;
+    color: #0967d2;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.active-category{
+    color:#0967d2 ;
+}
