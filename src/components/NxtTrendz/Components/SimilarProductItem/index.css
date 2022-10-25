@@ -1,11 +1,10 @@
-.NxtTrendz-product-item {
-  margin-right: 15px;
+.NxtTrendz-similar-item {
+  margin-right: 45px;
   margin-bottom: 25px;
-  width: 350px;
   text-decoration: none;
 }
-.NxtTrendz-product-thumbnail {
-  width: 100%;
+.NxtTrendz-similar-item-thumbnail {
+  width: 250px;
   border-radius: 6px;
 }
 .NxtTrendz-product-title {
@@ -43,13 +42,8 @@
   height: 20px;
   width: 20px;
 }
-@media (max-width: 1200px) {
-  .NxtTrendz-product-item {
-    width: 280px;
-  }
-}
 @media (max-width: 930px) {
-  .NxtTrendz-product-item {
+  .NxtTrendz-similar-item-thumbnail {
     width: 210px;
   }
 }
