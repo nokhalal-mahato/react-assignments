@@ -1,17 +1,20 @@
 import { Component } from "react";
+import './index.css';
 import { Link } from "react-router-dom";
-import "./index.css";
 
-class ProductItem extends Component {
+class SimilarProducts extends Component {
   render() {
     const { productData } = this.props;
 
     return (
-      <Link to={"/NxtTrendz/products/"+productData.id} className="NxtTrendz-product-item">
+      <Link
+      to={"/NxtTrendz/products/" + productData.id}
+        className="NxtTrendz-similar-item"
+      >
         <img
-          src={productData.imageUrl}
+          src={productData.image_url}
           alt="product"
-          className="NxtTrendz-product-thumbnail"
+          className="NxtTrendz-similar-item-thumbnail"
         />
         <h3 className="NxtTrendz-product-title">{productData.title}</h3>
         <p className="NxtTrendz-product-brand">by {productData.brand}</p>
@@ -30,4 +33,4 @@ class ProductItem extends Component {
     );
   }
 }
-export default ProductItem;
+export default SimilarProducts;

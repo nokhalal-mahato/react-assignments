@@ -5,6 +5,7 @@ import Home from "./Routes/Home";
 import Login from "./Routes/Login";
 import NotFound from "./Routes/NotFound";
 import Product from "./Routes/Product";
+import ProductDetails from "./Routes/ProductDetails";
 
 const NxtTrendz=()=>{   
     return (
@@ -17,6 +18,7 @@ const NxtTrendz=()=>{
           component={Product}
         />
         <ProtectedRoute exact path={`/NxtTrendz/cart`} component={Cart} />
+        <ProtectedRoute exact path={`/NxtTrendz/products/:id`} component={ProductDetails} />
         {/* <Route exact path="/NxtTrendz" component={Home} />
         <Route exact path="/NxtTrendz/products" component={Product} />
         <Route exact path="/NxtTrendz/cart" component={Cart} /> */}

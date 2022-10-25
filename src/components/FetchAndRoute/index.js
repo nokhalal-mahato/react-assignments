@@ -18,7 +18,7 @@ const FetchAndRoute = () => {
           <Route exact path={`${path}/`} component={Home} />
           <Route exact path={`${path}/about`} component={About} />
           <Route exact path={`${path}/contact`} component={Contact} />
-          <Route exact path={`${path}/contact/blog/:id`} component={BlogItemDetail} />
+          <Route exact path={`${path}/blog/:id`} component={BlogItemDetail} />
           <Route component={NotFound} />
         </Switch>
       </div>

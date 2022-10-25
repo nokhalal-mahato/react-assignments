@@ -5,6 +5,7 @@
 }
 .nxttrendz-home-container {
   display: flex;
+  padding-left: 30px;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
@@ -45,11 +46,14 @@
   width: 100%;
 }
 @media (max-width: 578px) {
+  .nxttrendz-home-container {
+    padding-left: 10px;
+  }
   .nxttrendz-home-mobile-img {
     display: block;
     max-width: 400px;
   }
-  .nxttrendz-home-mobile-img img{
+  .nxttrendz-home-mobile-img img {
     width: 100%;
   }
   .nxttrendz-home-large-img {
