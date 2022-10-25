@@ -60,6 +60,7 @@ class GitPopularRepo extends Component {
           <img
             src="https://assets.ccbp.in/frontend/react-js/api-failure-view.png"
             alt="failure"
+            className="git-failure-image"
           />
         );
       case ApiStatusConstant.success:

@@ -1,0 +1,54 @@
+.NxtTrendz-product-item {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  width: 350px;
+}
+.NxtTrendz-product-thumbnail {
+  width: 100%;
+  border-radius: 6px;
+}
+.NxtTrendz-product-title {
+  color: #475569;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.NxtTrendz-product-brand {
+  color: #64748b;
+  font-size: 14px;
+  margin: 10px 0px;
+}
+.NxtTrendz-product-details {
+  color: #475569;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.NxtTrendz-product-price {
+  font-weight: bold;
+  font-size: 14px;
+}
+.NxtTrendz-product-rating-container {
+  display: flex;
+  background-color: #0b69ff;
+  align-items: center;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.NxtTrendz-product-rating {
+  color: white;
+  margin: 0px;
+}
+.NxtTrendz-product-star {
+  height: 20px;
+  width: 20px;
+}
+@media (max-width: 1200px) {
+  .NxtTrendz-product-item {
+    width: 280px;
+  }
+}
+@media (max-width: 930px) {
+  .NxtTrendz-product-item {
+    width: 210px;
+  }
+}

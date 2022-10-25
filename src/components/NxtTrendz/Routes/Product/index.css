@@ -1,0 +1,14 @@
+.nxttrendz-products-page {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+.nxttrendz-products-container {
+  margin-top: 30px;
+  padding: 0px 30px;
+}
+@media(max-width:568px){
+  .nxttrendz-products-container {
+  padding: 0px 20px;
+}
+}

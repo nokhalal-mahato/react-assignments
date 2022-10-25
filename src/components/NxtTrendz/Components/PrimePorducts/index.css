@@ -1,0 +1,25 @@
+.nxttendz-primedeals-list-heading {
+  color: #475569;
+}
+
+.nxttendz-products-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nxttendz-register-prime-image {
+  width: 100%;
+}
+.nxttendz-register-prime-image img {
+  width: 100%;
+}
+.nxttendz-products-loader-container {
+  margin: auto;
+  width: 100px;
+  min-height: 300px;
+}
+@media (max-width: 450px) {
+  .nxttendz-primedeals-list-heading {
+    font-size: 24px;
+  }
+}

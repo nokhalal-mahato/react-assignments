@@ -1,0 +1,38 @@
+.nxttrendz-allproducts {
+  display: flex;
+}
+.NxtTrendz-allproducts-container {
+  width: 100%;
+}
+.nxttrend-allproduct-image {
+  margin: 20px auto;
+  width: 400px;
+  text-align: center;
+}
+.nxttrend-allproduct-image img {
+  width: 100%;
+}
+.nxttrend-allproduct-center {
+  margin: auto;
+  width: 100px;
+}
+.NxtTrendz-products-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nxttrend-allproduct-failure-text,
+.nxttrend-allproduct-empty-text {
+  margin-bottom: 0px;
+  margin-top: 3px;
+  color: #475569;
+}
+@media (max-width: 768px) {
+  .nxttrendz-allproducts {
+    flex-direction: column;
+  }
+}
+@media (max-width: 540px) {
+  .nxttrend-allproduct-image {
+  width: 280px;
+}
+}
