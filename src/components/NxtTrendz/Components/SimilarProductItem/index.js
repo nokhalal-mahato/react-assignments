@@ -8,7 +8,7 @@ class SimilarProducts extends Component {
 
     return (
       <Link
-      to={"/NxtTrendz/products/" + productData.id}
+      to={"/NxtTrendz/products/"+productData.id}
         className="NxtTrendz-similar-item"
       >
         <img
