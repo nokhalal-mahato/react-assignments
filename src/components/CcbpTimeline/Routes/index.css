@@ -1,0 +1,12 @@
+.ccbpi-timeline{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 97%;
+    max-width: 1400px;
+    margin: auto;
+}
+.ccbpi-timeline-title{
+    color: #2b237c;
+}
