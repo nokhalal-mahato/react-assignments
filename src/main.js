@@ -126,6 +126,9 @@ const MainApp=()=>{
         <li>
           <Link to="/CcbpTimeline">Ccbp Timeline</Link>
         </li>
+        <li>
+          <Link to="/PlanetApp">Planet App</Link>
+        </li>
       </ol>
     );
 }

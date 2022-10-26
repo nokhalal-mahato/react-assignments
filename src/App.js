@@ -42,6 +42,7 @@ import GitPopularRepo from './components/GitPopularRepo/Routes/GitHomeRoute';
 import AlertNotification from './components/AlertNotification/Routes';
 import DashboardRoute from './components/CowinDashboard/Routes/DashboardRoute';
 import CcbpTimeline from './components/CcbpTimeline/Routes/Timeline';
+import PlanetApp from './components/PlanetApp/Routes/Planet';
 
 
 const App=() =>{
@@ -90,6 +91,7 @@ const App=() =>{
         <Route path="/AlertNotification" component={AlertNotification} />
         <Route path="/CowinDashboard" component={DashboardRoute} />
         <Route path="/CcbpTimeline" component={CcbpTimeline} />
+        <Route path="/PlanetApp" component={PlanetApp} />
       </Switch>
     </div>
   );
