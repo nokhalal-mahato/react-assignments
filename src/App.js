@@ -40,6 +40,7 @@ import RegistrationForm from './components/RegistrationForm';
 import EventsApp from './components/EventApp/Routes/EventRoute';
 import GitPopularRepo from './components/GitPopularRepo/Routes/GitHomeRoute';
 import AlertNotification from './components/AlertNotification/Routes';
+import DashboardRoute from './components/CowinDashboard/Routes/DashboardRoute';
 
 
 const App=() =>{
@@ -86,6 +87,7 @@ const App=() =>{
         <Route path="/EventsApp" component={EventsApp} />
         <Route path="/GitPopularRepo" component={GitPopularRepo} />
         <Route path="/AlertNotification" component={AlertNotification} />
+        <Route path="/CowinDashboard" component={DashboardRoute} />
       </Switch>
     </div>
   );

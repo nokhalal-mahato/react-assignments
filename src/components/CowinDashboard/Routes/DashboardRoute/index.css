@@ -1,0 +1,50 @@
+.cowin-dashboard-page {
+  background-color: #161625;
+  min-height: 100%;
+  color: #cbd5e1;
+}
+.cowin-dashboard-content {
+  max-width: 1200px;
+  padding: 30px 20px;
+  margin: auto;
+}
+.cowin-dashboard-header {
+  display: flex;
+  align-items: center;
+}
+.cowin-dashboard-header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.cowin-dashboard-heading {
+  color: #2cc6c6;
+}
+.cowin-dashboard-main-heading {
+  font-size: 36px;
+}
+.cowin-dashboard-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.cowin-dashboard-failure {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.cowin-dashboard-failure-image {
+    max-width: 400px;
+}
+.cowin-dashboard-failure-image img{
+    width: 100%;
+}
+@media (max-width: 568px) {
+  .cowin-dashboard-main-heading {
+    font-size: 24px;
+  }
+}
