@@ -120,6 +120,9 @@ const MainApp=()=>{
         <li>
           <Link to="/AlertNotification">Alert Notifications</Link>
         </li>
+        <li>
+          <Link to="/CowinDashboard">Cowin Dashboard</Link>
+        </li>
       </ol>
     );
 }
