@@ -29,6 +29,8 @@
 }
 .project-timeline-link {
   text-decoration: none;
+  font-weight: bold;
+  color: #0967d2;
 }
 @media (max-width: 568px) {
   .project-timeline-title {
