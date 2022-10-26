@@ -1,4 +1,4 @@
-import { Route, Switch} from "react-router-dom";
+import { Route, Switch, withRouter} from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import Cart from "./Routes/Cart";
 import Home from "./Routes/Home";
@@ -18,7 +18,7 @@ const NxtTrendz=()=>{
           component={Product}
         />
         <ProtectedRoute exact path={`/NxtTrendz/cart`} component={Cart} />
-        <ProtectedRoute exact path={`/NxtTrendz/products/:id`} component={ProductDetails} />
+        <ProtectedRoute exact path={`/NxtTrendz/products/:id`} component={withRouter(ProductDetails)} />
         {/* <Route exact path="/NxtTrendz" component={Home} />
         <Route exact path="/NxtTrendz/products" component={Product} />
         <Route exact path="/NxtTrendz/cart" component={Cart} /> */}

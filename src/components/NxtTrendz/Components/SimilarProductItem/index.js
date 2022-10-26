@@ -1,6 +1,6 @@
 import { Component } from "react";
 import './index.css';
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class SimilarProducts extends Component {
   render() {
@@ -8,7 +8,7 @@ class SimilarProducts extends Component {
 
     return (
       <Link
-      to={"/NxtTrendz/products/" + productData.id}
+      to={"/NxtTrendz/products/"+productData.id}
         className="NxtTrendz-similar-item"
       >
         <img
@@ -33,4 +33,4 @@ class SimilarProducts extends Component {
     );
   }
 }
-export default withRouter(SimilarProducts);
+export default SimilarProducts;
