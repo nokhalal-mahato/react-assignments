@@ -1,0 +1,14 @@
+.hamburger-header{
+    padding:15px 30px;
+    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger-header img{
+    width: 50px;
+}
+.hamburger-icon{
+    width: 30px;
+    height: 30px;
+}

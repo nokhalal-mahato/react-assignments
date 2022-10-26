@@ -1,0 +1,25 @@
+.hamburger-notfound {
+  min-height: 100%;
+  text-align: center;
+}
+.hamburger-not-found-image {
+  margin: auto;
+  max-width: 400px;
+}
+.hamburger-not-found-image img {
+  width: 90%;
+}
+.hamburger-image-small {
+  display: none;
+}
+@media (max-width: 618px) {
+  .hamburger-image-contianer img {
+    width: 100%;
+  }
+  .hamburger-image-small {
+    display: block;
+  }
+  .hamburger-image-large {
+    display: none;
+  }
+}

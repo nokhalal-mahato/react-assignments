@@ -129,6 +129,9 @@ const MainApp=()=>{
         <li>
           <Link to="/PlanetApp">Planet App</Link>
         </li>
+        <li>
+          <Link to="/HamburgerMenu">Hamburger Menu</Link>
+        </li>
       </ol>
     );
 }
