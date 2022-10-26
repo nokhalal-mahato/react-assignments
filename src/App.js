@@ -41,6 +41,7 @@ import EventsApp from './components/EventApp/Routes/EventRoute';
 import GitPopularRepo from './components/GitPopularRepo/Routes/GitHomeRoute';
 import AlertNotification from './components/AlertNotification/Routes';
 import DashboardRoute from './components/CowinDashboard/Routes/DashboardRoute';
+import CcbpTimeline from './components/CcbpTimeline/Routes/Timeline';
 
 
 const App=() =>{
@@ -88,6 +89,7 @@ const App=() =>{
         <Route path="/GitPopularRepo" component={GitPopularRepo} />
         <Route path="/AlertNotification" component={AlertNotification} />
         <Route path="/CowinDashboard" component={DashboardRoute} />
+        <Route path="/CcbpTimeline" component={CcbpTimeline} />
       </Switch>
     </div>
   );
