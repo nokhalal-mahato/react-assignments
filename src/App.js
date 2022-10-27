@@ -43,6 +43,7 @@ import AlertNotification from './components/AlertNotification/Routes';
 import DashboardRoute from './components/CowinDashboard/Routes/DashboardRoute';
 import CcbpTimeline from './components/CcbpTimeline/Routes/Timeline';
 import PlanetApp from './components/PlanetApp/Routes/Planet';
+import HamburgerMenu from './components/HamburgerMenu';
 
 
 const App=() =>{
@@ -92,6 +93,7 @@ const App=() =>{
         <Route path="/CowinDashboard" component={DashboardRoute} />
         <Route path="/CcbpTimeline" component={CcbpTimeline} />
         <Route path="/PlanetApp" component={PlanetApp} />
+        <Route path="/HamburgerMenu" component={HamburgerMenu} />
       </Switch>
     </div>
   );

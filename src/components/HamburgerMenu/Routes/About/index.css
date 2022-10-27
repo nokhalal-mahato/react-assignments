@@ -1,0 +1,25 @@
+.hamburger-about {
+  min-height: 100%;
+}
+.hamburger-image-contianer {
+  display: flex;
+  justify-content: center;
+}
+.hamburger-image-contianer img {
+  width: 90%;
+  max-width: 1400px;
+}
+.hamburger-image-small {
+  display: none;
+}
+@media (max-width: 618px) {
+  .hamburger-image-contianer img {
+    width: 100%;
+  }
+  .hamburger-image-small {
+    display: block;
+  }
+  .hamburger-image-large {
+    display: none;
+  }
+}
