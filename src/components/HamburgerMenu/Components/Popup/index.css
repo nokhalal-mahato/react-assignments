@@ -1,0 +1,17 @@
+.hamburger-popup-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.hamburger-home-link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+.hamburger-close-icon{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}

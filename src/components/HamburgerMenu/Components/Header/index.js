@@ -14,21 +14,19 @@ class Header extends Component {
           src="https://assets.ccbp.in/frontend/react-js/hamburger-menu-website-logo.png"
           alt="logo"
         />
-        <Popup modal trigger={<GiHamburgerMenu className="hamburger-icon" />}>
+        <Popup
+          modal
+          trigger={
+            <div>
+              <GiHamburgerMenu className="hamburger-icon" />
+            </div>
+          }
+          className="hamburger"
+        >
           {(close) => (
-            <PopupContent/>
-            // <div>
-            //   <div>
-            //     <p>React is a popular and widely used programming language</p>
-            //   </div>
-            //   <button
-            //     type="button"
-            //     className="trigger-button"
-            //     onClick={() => close()}
-            //   >
-            //     Close
-            //   </button>
-            // </div>
+            <div className="hamburger-popup-content">
+              <PopupContent onClose={close} />
+            </div>
           )}
         </Popup>
       </div>
