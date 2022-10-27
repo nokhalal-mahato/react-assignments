@@ -132,6 +132,9 @@ const MainApp=()=>{
         <li>
           <Link to="/HamburgerMenu">Hamburger Menu</Link>
         </li>
+        <li>
+          <Link to="/PrimeVideo">Prime Video</Link>
+        </li>
       </ol>
     );
 }
