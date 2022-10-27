@@ -44,6 +44,7 @@ import DashboardRoute from './components/CowinDashboard/Routes/DashboardRoute';
 import CcbpTimeline from './components/CcbpTimeline/Routes/Timeline';
 import PlanetApp from './components/PlanetApp/Routes/Planet';
 import HamburgerMenu from './components/HamburgerMenu';
+import PrimeVideo from './components/PrimeVideo/Routes/Home';
 
 
 const App=() =>{
@@ -94,6 +95,7 @@ const App=() =>{
         <Route path="/CcbpTimeline" component={CcbpTimeline} />
         <Route path="/PlanetApp" component={PlanetApp} />
         <Route path="/HamburgerMenu" component={HamburgerMenu} />
+        <Route path="/PrimeVideo" component={PrimeVideo} />
       </Switch>
     </div>
   );

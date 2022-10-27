@@ -1,0 +1,35 @@
+.prime-video-movie-item {
+  max-width: 320px;
+  margin: auto;
+}
+.prime-video-movie-image {
+  margin: 0px 10px;
+}
+.prime-video-movie-image img {
+  width: 100%;
+}
+.prime-video-popup-content {
+  border-radius: 16px;
+  padding: 15px 20px;
+  max-width: 700px;
+  width: 70%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.prime-close-popup {
+  align-self: flex-end;
+}
+.prime-video-player {
+  padding: 20px;
+}
+@media (max-width: 568px) {
+  .prime-video-popup-content {
+    padding: 10px 10px;
+    height: 300px;
+  }
+
+  .prime-video-player {
+    padding: 5px 10px;
+  }
+}
