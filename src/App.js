@@ -46,6 +46,7 @@ import PlanetApp from './components/PlanetApp/Routes/Planet';
 import HamburgerMenu from './components/HamburgerMenu';
 import PrimeVideo from './components/PrimeVideo/Routes/Home';
 import JobbyApp from './components/JobbyApp';
+import LayoutBuilder from './components/LayoutBuilder/Routes/Home';
 
 
 const App=() =>{
@@ -98,6 +99,7 @@ const App=() =>{
         <Route path="/HamburgerMenu" component={HamburgerMenu} />
         <Route path="/PrimeVideo" component={PrimeVideo} />
         <Route path="/JobbyApp" component={JobbyApp} />
+        <Route path="/LayoutBuilder" component={LayoutBuilder} />
       </Switch>
     </div>
   );

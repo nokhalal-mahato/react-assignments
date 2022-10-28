@@ -1,0 +1,14 @@
+.right-nav-bar{
+    color: #475569;
+    padding: 20px;
+    background-color: #cbd5e1;
+}
+.right-nav-ads{
+    border: 1px solid #64748b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    min-height: 200px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,18 @@
+.left-nav{
+color: #475569;
+    padding: 20px;
+    background-color: #cbd5e1;
+    margin-right: 10px;
+}
+.left-nav-list{
+    list-style: none;
+    padding-left: 10px;
+}
+.left-nav-list li{
+    margin:20px 0px;
+}
+@media(max-width:578px){
+    .left-nav{
+        margin-right: 0px;
+    }
+}

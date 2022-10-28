@@ -138,6 +138,9 @@ const MainApp=()=>{
         <li>
           <Link to="/JobbyApp">Jobby App</Link>
         </li>
+        <li>
+          <Link to="/LayoutBuilder">Layout Builder</Link>
+        </li>
       </ol>
     );
 }
