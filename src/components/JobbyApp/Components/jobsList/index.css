@@ -1,0 +1,53 @@
+.jobby-joblists-empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.jobby-joblists-empty-container img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.jobby-joblists-empty-text {
+  margin-top: 0px;
+}
+.jobby-joblists-failure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.jobby-joblists-failure-container img {
+  width: 100%;
+  max-width: 500px;
+}
+.jobby-joblists-failure-text {
+  margin-top: 0px;
+}
+.jobby-joblists-failure-heading {
+  font-size: 36;
+}
+.jobby-joblists-retry-btn {
+  border-radius: 3px;
+  background-color: #6366f1;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+  padding: 12px 30px;
+}
+.jobby-joblists-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+@media (max-width: 578px) {
+  .jobby-joblists-loader-container {
+    min-height: 100px;
+  }
+}

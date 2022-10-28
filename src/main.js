@@ -135,6 +135,9 @@ const MainApp=()=>{
         <li>
           <Link to="/PrimeVideo">Prime Video</Link>
         </li>
+        <li>
+          <Link to="/JobbyApp">Jobby App</Link>
+        </li>
       </ol>
     );
 }

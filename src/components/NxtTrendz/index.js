@@ -25,7 +25,6 @@ const NxtTrendz=()=>{
         <Route component={NotFound} />
       </Switch>
     );
-
 }
 
 export default NxtTrendz;
