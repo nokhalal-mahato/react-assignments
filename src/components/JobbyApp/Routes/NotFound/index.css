@@ -1,0 +1,29 @@
+.jobby-notfound-page {
+  background-color: #000000;
+  color: white;
+  min-height: 100%;
+}
+.jobby-notfound-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.jobby-notfound-container img {
+  width: 100%;
+  max-width: 400px;
+}
+.jobby-notfound-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 578px) {
+  .jobby-notfound-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}

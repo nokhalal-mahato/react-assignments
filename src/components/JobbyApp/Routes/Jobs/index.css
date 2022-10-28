@@ -1,0 +1,45 @@
+.jobby-jobs-page {
+  background-color: #000000;
+  color: white;
+  min-height: 100%;
+}
+.jobby-jobs-content {
+  padding: 30px 40px;
+  display: flex;
+  min-height: 100%;
+}
+.jobby-jobs-left-section {
+  margin-right: 30px;
+  min-width: 220px;
+  max-width: 320px;
+}
+.jobby-filter-divider {
+  margin-top: 20px;
+  border-color: #64748b;
+  border-width: 2px;
+}
+.jobby-jobs-right-section {
+  max-width: 1200px;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .jobby-jobs-left-section {
+    margin-right: 20px;
+    min-width: 220px;
+  }
+  .jobby-jobs-content {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 578px) {
+  .jobby-jobs-content {
+    padding: 30px 20px;
+    flex-direction: column;
+  }
+  .jobby-jobs-right-section {
+    margin-top: 20px;
+  }
+  .jobby-jobs-left-section {
+  max-width: none;
+}
+}
