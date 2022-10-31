@@ -7,6 +7,7 @@
 }
 .dark-navbarcontext-header {
   background-color: #333333;
+  border-bottom: 0px;
 }
 .dark-navbarcontext-header a {
   color: white;
