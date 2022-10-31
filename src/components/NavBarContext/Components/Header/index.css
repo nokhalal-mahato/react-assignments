@@ -17,7 +17,10 @@
 .navbarcontext-nav-link {
   text-decoration: none;
   color: #1e293b;
-  margin-right: 10px;
+  margin-right: 20px;
+}
+.navbarcontext-nav-link:last-of-type{
+  margin-right: 0px;
 }
 .navbarcontext-header img {
   width: 40px;
