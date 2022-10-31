@@ -2,11 +2,22 @@ import { Component } from "react";
 import "./index.css";
 import {Link, withRouter} from 'react-router-dom';
 import Cookies from "js-cookie";
+import CartContext from "../../Context/CartContext";
 
 class NxtTrendzNav extends Component {
   logoutHandler=()=>{
     Cookies.remove('jwt_token');
     this.props.history.replace('/NxtTrendz/login');
+  }
+  renderCartItemNumbers=()=>{
+    return(
+      <CartContext.Consumer>
+        {value=>{
+          const {cartList}=value;          
+          return (cartList.length>0?<span className="cart-quantity-nav">{cartList.length}</span>:null)
+        }}
+      </CartContext.Consumer>
+    )
   }
   render() {
     return (
@@ -26,7 +37,7 @@ class NxtTrendzNav extends Component {
                 <li>Products</li>
               </Link>
               <Link to="/NxtTrendz/cart" className="nxttrendz-nav-link">
-                <li>Cart</li>
+                <li>Cart {this.renderCartItemNumbers()}</li>
               </Link>
             </ul>
             <button
@@ -58,8 +69,12 @@ class NxtTrendzNav extends Component {
           <Link to="/NxtTrendz/products">
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png" />
           </Link>
-          <Link to="/NxtTrendz/cart">
+          <Link
+            to="/NxtTrendz/cart"
+            className="nxttrendz-nav-link nxttrendz-nav-cart-link"
+          >
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png" />
+            {this.renderCartItemNumbers()}
           </Link>
         </div>
       </nav>

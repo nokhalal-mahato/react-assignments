@@ -19,7 +19,6 @@ class ProductFilter extends Component {
   }
   render() {
     const {clearFilter,category}=this.props;
-    console.log(category);
     return (
       <div className="nxttrendz-product-filter">
         <div className="nxttrendz-input-field">

@@ -37,6 +37,13 @@
 .mobile-nav {
   display: none;
 }
+.cart-quantity-nav {
+  border-radius: 50%;
+  padding: 2px 5px;
+  color: #0b69ff;
+  background-color: #d6e4fc;
+  margin-left: 5px;
+}
 @media (max-width: 578px) {
   .nxttrendz-nav-menu {
     display: none;
@@ -67,5 +74,9 @@
   }
   .mobile-nav img {
     width: 20px;
+  }
+  .nxttrendz-nav-cart-link {
+    display: flex;
+    align-items: center;
   }
 }

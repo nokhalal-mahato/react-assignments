@@ -1,0 +1,28 @@
+.empty-cart-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.empty-cart-image {
+  max-width: 300px;
+}
+.empty-cart-image img {
+  width: 100%;
+}
+.empty-cart-show-now {
+  border-radius: 4px;
+  background-color: #0967d2;
+  color: white;
+  font-size: 16px;
+  border: 0px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+@media (max-width: 568px) {
+  .empty-cart-image {
+    max-width: 300px;
+    width: 80%;
+  }
+}

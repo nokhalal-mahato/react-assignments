@@ -4,27 +4,31 @@ import NxtTrendzNav from "../NxtTrendzNav";
 import Cookies from "js-cookie";
 import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
-import './index.css';
+import "./index.css";
 import SimilarProducts from "../../Components/SimilarProductItem";
+import CartContext from "../../Context/CartContext";
 
 class ProductDetails extends Component {
   state = {
     productDetail: {},
-    apiStatus: ApiStatusConstant.loading,
-    quantity:1
+    apiStatus: ApiStatusConstant.initial,
+    quantity: 1,
   };
 
   componentDidMount() {
     this.getProductDetails();
   }
-  increaseQuantity=()=>{
-    this.setState((prevState)=>({quantity:prevState.quantity + 1}))
-  }
-  decreaseQuantity=()=>{
-    this.setState((prevState)=>({quantity:prevState.quantity - 1}))
-  }
+  increaseQuantity = () => {
+    this.setState((prevState) => ({ quantity: prevState.quantity + 1 }));
+  };
+  decreaseQuantity = () => {
+    if (this.state.quantity > 1) {
+      this.setState((prevState) => ({ quantity: prevState.quantity - 1 }));
+    }
+  };
 
   getProductDetails = async () => {
+    this.setState({ apiStatus: ApiStatusConstant.loading });
     const params = this.props.match.params.id;
     const jwtToken = Cookies.get("jwt_token");
     const response = await fetch("https://apis.ccbp.in/products/" + params, {
@@ -58,78 +62,94 @@ class ProductDetails extends Component {
     }
   };
 
-  renderProductDetail = () => {
-    const { productDetail,quantity } = this.state;
-    return (
-      <div className="nxttendz-product-detail">
-        <div className="nxttendz-product-detail-top">
-          <div className="nxttendz-product-detail-image">
-            <img src={productDetail.imageUrl} alt={productDetail.title} />
-          </div>
-          <div className="nxttendz-product-detail-content">
-            <h1 className="nxttendz-product-detail-heading">
-              {productDetail.title}
-            </h1>
-            <h2 className="nxttendz-product-detail-price">
-              Rs {productDetail.price}/-
-            </h2>
-            <div className="nxttendz-product-detail-rating-container">
-              <div className="NxtTrendz-product-rating-container">
-                <p className="NxtTrendz-product-rating">
-                  {productDetail.rating}
-                </p>
-                <img
-                  src="https://assets.ccbp.in/frontend/react-js/star-img.png"
-                  alt="star"
-                  className="NxtTrendz-product-star"
-                />
+  renderProductDetail = () => (
+    <CartContext.Consumer>
+      {(value) => {
+        const { productDetail, quantity } = this.state;
+        const { onAddItem } = value;
+        const onClickAddToCart = (event) => {        
+          onAddItem({ ...productDetail, quantity }); 
+        };
+        return (
+          <div className="nxttendz-product-detail">
+            <div className="nxttendz-product-detail-top">
+              <div className="nxttendz-product-detail-image">
+                <img src={productDetail.imageUrl} alt={productDetail.title} />
               </div>
-              <p className="nxttendz-product-detail-reviews">
-                {productDetail.totalReviews} Reviews
-              </p>
+              <div className="nxttendz-product-detail-content">
+                <h1 className="nxttendz-product-detail-heading">
+                  {productDetail.title}
+                </h1>
+                <h2 className="nxttendz-product-detail-price">
+                  Rs {productDetail.price}/-
+                </h2>
+                <div className="nxttendz-product-detail-rating-container">
+                  <div className="NxtTrendz-product-rating-container">
+                    <p className="NxtTrendz-product-rating">
+                      {productDetail.rating}
+                    </p>
+                    <img
+                      src="https://assets.ccbp.in/frontend/react-js/star-img.png"
+                      alt="star"
+                      className="NxtTrendz-product-star"
+                    />
+                  </div>
+                  <p className="nxttendz-product-detail-reviews">
+                    {productDetail.totalReviews} Reviews
+                  </p>
+                </div>
+                <p className="nxttendz-product-detail-description">
+                  {productDetail.description}
+                </p>
+                <p className="nxttendz-product-detail-availability">
+                  <span className="nxttendz-product-detail-bold">
+                    Available:{" "}
+                  </span>
+                  {productDetail.availability}
+                </p>
+                <p className="nxttendz-product-detail-brand">
+                  <span className="nxttendz-product-detail-bold">Brand: </span>
+                  {productDetail.brand}
+                </p>
+                <hr />
+                <button
+                  className="nxttendz-product-quantity"
+                  onClick={this.decreaseQuantity}
+                >
+                  -
+                </button>
+                <span className="nxttendz-product-quantity-value">
+                  {quantity}
+                </span>
+                <button
+                  className="nxttendz-product-quantity"
+                  onClick={this.increaseQuantity}
+                >
+                  +
+                </button>
+                <br />
+                <button
+                  type="button"
+                  className="nxttrendz-shop-now-btn"
+                  onClick={onClickAddToCart}
+                >
+                  Add To Cart
+                </button>
+              </div>
             </div>
-            <p className="nxttendz-product-detail-description">
-              {productDetail.description}
-            </p>
-            <p className="nxttendz-product-detail-availability">
-              <span className="nxttendz-product-detail-bold">Available: </span>
-              {productDetail.availability}
-            </p>
-            <p className="nxttendz-product-detail-brand">
-              <span className="nxttendz-product-detail-bold">Brand: </span>
-              {productDetail.brand}
-            </p>
-            <hr />
-            <button
-              className="nxttendz-product-quantity"
-              onClick={this.decreaseQuantity}
-            >
-              -
-            </button>
-            <span className="nxttendz-product-quantity-value">{quantity}</span>
-            <button
-              className="nxttendz-product-quantity"
-              onClick={this.increaseQuantity}
-            >
-              +
-            </button>
-            <br />
-            <button type="button" className="nxttrendz-shop-now-btn">
-              Add To Cart
-            </button>
+            <div className="nxttendz-product-detail-bottom">
+              <h2 className="nxttendz-similar-products">Similar Products</h2>
+              <div className="nxttendz-similar-products-container">
+                {productDetail.similarProducts.map((item) => (
+                  <SimilarProducts key={item.id} productData={item} />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="nxttendz-product-detail-bottom">
-          <h2 className="nxttendz-similar-products">Similar Products</h2>
-          <div className="nxttendz-similar-products-container">
-            {productDetail.similarProducts.map((item) => (
-              <SimilarProducts key={item.id} productData={item} />
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  };
+        );
+      }}
+    </CartContext.Consumer>
+  );
 
   renderProductDetailFailureView = () => (
     <div className="nxttendz-prodcut-detail-failure">
@@ -163,6 +183,8 @@ class ProductDetails extends Component {
         return this.renderProductDetailFailureView();
       case ApiStatusConstant.success:
         return this.renderProductDetail();
+      default:
+        return null; 
     }
   };
   render() {
