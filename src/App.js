@@ -47,6 +47,7 @@ import HamburgerMenu from './components/HamburgerMenu';
 import PrimeVideo from './components/PrimeVideo/Routes/Home';
 import JobbyApp from './components/JobbyApp';
 import LayoutBuilder from './components/LayoutBuilder/Routes/Home';
+import NavBarContext from './components/NavBarContext';
 
 
 const App=() =>{
@@ -100,6 +101,7 @@ const App=() =>{
         <Route path="/PrimeVideo" component={PrimeVideo} />
         <Route path="/JobbyApp" component={JobbyApp} />
         <Route path="/LayoutBuilder" component={LayoutBuilder} />
+        <Route path="/NavBarContext" component={NavBarContext} />
       </Switch>
     </div>
   );

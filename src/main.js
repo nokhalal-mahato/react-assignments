@@ -141,6 +141,9 @@ const MainApp=()=>{
         <li>
           <Link to="/LayoutBuilder">Layout Builder</Link>
         </li>
+        <li>
+          <Link to="/NavBarContext">NavBar with Context</Link>
+        </li>
       </ol>
     );
 }

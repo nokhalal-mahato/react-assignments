@@ -55,7 +55,7 @@ class NxtTrendzNav extends Component {
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png" />
           </Link>
 
-          <Link to="/NxtTrendz/cart">
+          <Link to="/NxtTrendz/products">
             <img src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png" />
           </Link>
           <Link to="/NxtTrendz/cart">
