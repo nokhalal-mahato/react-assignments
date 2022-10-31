@@ -4,14 +4,5 @@
   width: 90%;
 }
 .nxttrendz-cart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-.nxttrendz-cart-img{
-    max-width: 300px;
-}
-.nxttrendz-cart-img img{
-    width: 100%;
+  
 }

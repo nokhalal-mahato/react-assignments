@@ -2,6 +2,7 @@ const ApiStatusConstant={
     loading:'LOADING',
     success:'SUCCESS',
     failed:'FAILED',
-    empty:'EMPTY'
+    empty:'EMPTY',
+    initial:'Initial'
 }
 export default ApiStatusConstant;
