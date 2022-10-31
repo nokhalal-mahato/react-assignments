@@ -1,0 +1,17 @@
+.layout-content-section {
+  background-color: #f1f5f9;
+  padding: 20px;
+  color: #475569;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.layout-content-section-text {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .layout-content-section {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
