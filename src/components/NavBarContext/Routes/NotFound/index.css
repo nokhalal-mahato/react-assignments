@@ -1,0 +1,21 @@
+.navbarcontext-notfound {
+  min-height: 100%;
+  text-align: center;
+}
+.dark-navbar-notfound{
+  background-color: #000000;
+  color: white;
+}
+.navbarcontext-not-found-image {
+  margin: auto;
+  max-width: 400px;
+}
+.navbarcontext-not-found-image img {
+  width: 90%;
+}
+@media (max-width: 618px) {
+  .navbarcontext-image-contianer img {
+    width: 100%;
+  }
+
+}

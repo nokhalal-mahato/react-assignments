@@ -1,0 +1,30 @@
+.navbarcontext-home {
+  min-height: 100%;
+  color: #1e293b;
+}
+.dark-navbarcontext-home{
+  background-color: #000000;
+  color: white;
+}
+.navbarcontext-home-text{
+  margin: 10px 0px;
+  font-size:42px;
+}
+.navbarcontext-home-image-contianer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  height: 70vh;
+}
+.navbarcontext-home-image-contianer img {
+  width: 80%;
+}
+@media (max-width: 618px) {
+  .navbarcontext-home-image-contianer img {
+    width: 70%;
+  }
+}

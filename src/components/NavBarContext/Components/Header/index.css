@@ -1,0 +1,29 @@
+.navbarcontext-header {
+  padding: 0px 30px;
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dark-navbarcontext-header {
+  background-color: #333333;
+}
+.dark-navbarcontext-header a {
+  color: white;
+}
+.navbarcontext-header-nav {
+  display: flex;
+}
+.navbarcontext-nav-link {
+  text-decoration: none;
+  color: #1e293b;
+  margin-right: 10px;
+}
+.navbarcontext-header img {
+  width: 40px;
+}
+@media (max-width: 568px) {
+  .navbarcontext-nav-link {
+    font-size: 14px;
+  }
+}
