@@ -17,7 +17,7 @@ class ConfigurationControls extends Component {
           } = value;
           console.log(showContent)
           return (
-            <div className="">
+            <div className="layout-configuration-controls">
               <h1>Layouts</h1>
               <div className="layout-checkbox-item">
                 <input

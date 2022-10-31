@@ -6,11 +6,13 @@ class RightNavBar extends Component {
     return (
       <div className="right-nav-bar">
         <h3>Right NavBar</h3>
-        <div className="right-nav-ads">
-          <p>Ad 1</p>
-        </div>
-        <div className="right-nav-ads">
-          <p>Ad 2</p>
+        <div className="right-nav-ads-container">
+          <div className="right-nav-ads">
+            <p>Ad 1</p>
+          </div>
+          <div className="right-nav-ads">
+            <p>Ad 2</p>
+          </div>
         </div>
       </div>
     );

@@ -1,0 +1,12 @@
+.layout-body{
+    display: flex;
+    justify-content: space-between;
+    min-height: 543px;
+}
+
+
+@media(max-width:768px){
+    .layout-body{
+        flex-direction: column;
+    }
+}
