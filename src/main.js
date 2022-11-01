@@ -150,6 +150,9 @@ const MainApp=()=>{
         <li>
           <Link to="/GradientGenerator">Gradient Generator</Link>
         </li>
+        <li>
+          <Link to="/RockPaperScissors">Rock Paper Scissors</Link>
+        </li>
       </ol>
     );
 }
