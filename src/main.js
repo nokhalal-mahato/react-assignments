@@ -144,6 +144,9 @@ const MainApp=()=>{
         <li>
           <Link to="/NavBarContext">NavBar with Context</Link>
         </li>
+        <li>
+          <Link to="/MemeGenerator">Meme Generator</Link>
+        </li>
       </ol>
     );
 }

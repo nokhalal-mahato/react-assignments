@@ -11,7 +11,7 @@ import ProductFilter from "../ProductFilter";
 class AllProducts extends Component {
   state = {
     productsList: [],
-    apiStatus: ApiStatusConstant.loading,
+    apiStatus: ApiStatusConstant.initial,
     activeOptionId: sortbyOptions[0].optionId,
     rating: "",
     titleSearch: "",
@@ -23,7 +23,9 @@ class AllProducts extends Component {
   }
 
   getProducts = async () => {
-    const { activeOptionId, rating, titleSearch, category } = this.state;
+    const { activeOptionId, rating, titleSearch, category, apiStatus } =
+      this.state;
+    this.setState({ apiStatus: ApiStatusConstant.loading });
     try {
       const jwtToken = Cookies.get("jwt_token");
       const response = await fetch(
@@ -46,7 +48,7 @@ class AllProducts extends Component {
           rating: product.rating,
         }));
         if (responseData.products.length === 0) {
-          console.log('hi');
+          console.log("hi");
           this.setState({
             productsList: updatedData,
             apiStatus: ApiStatusConstant.empty,
@@ -153,7 +155,7 @@ class AllProducts extends Component {
     }
   };
   render() {
-    const {category}=this.state;
+    const { category } = this.state;
     return (
       <div className="nxttrendz-allproducts">
         <ProductFilter
