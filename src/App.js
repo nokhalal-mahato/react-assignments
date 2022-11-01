@@ -48,6 +48,7 @@ import PrimeVideo from './components/PrimeVideo/Routes/Home';
 import JobbyApp from './components/JobbyApp';
 import LayoutBuilder from './components/LayoutBuilder/Routes/Home';
 import NavBarContext from './components/NavBarContext';
+import MemeGenerator from './components/MemeGenerator/Routes';
 
 
 const App=() =>{
@@ -102,6 +103,7 @@ const App=() =>{
         <Route path="/JobbyApp" component={JobbyApp} />
         <Route path="/LayoutBuilder" component={LayoutBuilder} />
         <Route path="/NavBarContext" component={NavBarContext} />
+        <Route path="/MemeGenerator" component={MemeGenerator} />
       </Switch>
     </div>
   );

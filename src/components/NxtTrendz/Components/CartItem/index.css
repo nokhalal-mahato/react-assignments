@@ -18,6 +18,10 @@
   height: 100px;
   border-radius: 8px;
 }
+  .cart-item-title {
+    margin-top: 0px;
+    width: 160px;
+  }
 
 .cart-item-brand {
   color: #475569;
@@ -64,6 +68,7 @@
   }
   .cart-item-title {
     margin: 0px;
+    width: auto;
   }
   .cart-item-brand {
     margin: 10px 0px;
