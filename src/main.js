@@ -147,6 +147,9 @@ const MainApp=()=>{
         <li>
           <Link to="/MemeGenerator">Meme Generator</Link>
         </li>
+        <li>
+          <Link to="/GradientGenerator">Gradient Generator</Link>
+        </li>
       </ol>
     );
 }
