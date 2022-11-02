@@ -50,6 +50,7 @@ import LayoutBuilder from "./components/LayoutBuilder/Routes/Home";
 import NavBarContext from "./components/NavBarContext";
 import MemeGenerator from "./components/MemeGenerator/Routes";
 import GradientGenerator from "./components/GradientGenerator/Routes";
+import RockPaperScissors from "./components/RockPaperScissors/Routes";
 
 const App = () => {
   return (
@@ -105,6 +106,7 @@ const App = () => {
         <Route path="/NavBarContext" component={NavBarContext} />
         <Route path="/MemeGenerator" component={MemeGenerator} />
         <Route path="/GradientGenerator" component={GradientGenerator} />
+        <Route path="/RockPaperScissors" component={RockPaperScissors} />
       </Switch>
     </div>
   );

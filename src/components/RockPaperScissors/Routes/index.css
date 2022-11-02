@@ -1,0 +1,21 @@
+.rock-popup-content {
+  border-radius: 16px;
+  padding: 15px 20px;
+  max-width: 700px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.rock-popup-content img{
+  margin: 10px 25px;
+}
+.rock-close-popup {
+  align-self: flex-end;
+}
+@media (max-width: 568px) {
+  .rock-popup-content {
+    padding: 10px 10px;
+    height: auto;
+  }
+
+}
