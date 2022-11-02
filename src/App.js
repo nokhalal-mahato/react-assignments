@@ -51,6 +51,7 @@ import NavBarContext from "./components/NavBarContext";
 import MemeGenerator from "./components/MemeGenerator/Routes";
 import GradientGenerator from "./components/GradientGenerator/Routes";
 import RockPaperScissors from "./components/RockPaperScissors/Routes";
+import Nxtwatch from "./components/NxtWatch";
 
 const App = () => {
   return (
@@ -107,6 +108,7 @@ const App = () => {
         <Route path="/MemeGenerator" component={MemeGenerator} />
         <Route path="/GradientGenerator" component={GradientGenerator} />
         <Route path="/RockPaperScissors" component={RockPaperScissors} />
+        <Route path="/Nxtwatch" component={Nxtwatch} />
       </Switch>
     </div>
   );

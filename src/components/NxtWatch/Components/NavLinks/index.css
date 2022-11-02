@@ -1,0 +1,9 @@
+.nxtwatch-navlink{
+    text-decoration: none;
+    color: #64748b;
+    width: 100%;
+}
+.active-navlink{
+    color: #ff0000;
+    background-color: #616e7c;
+}
