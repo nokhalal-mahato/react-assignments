@@ -1,0 +1,39 @@
+.nxtwatch-video-player {
+  height: 730px !important;
+}
+@media (max-width: 1400px) {
+  .nxtwatch-video-player {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nxtwatch-video-player {
+    height: 510px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .nxtwatch-video-player {
+    height: 410px !important;
+  }
+}
+@media (max-width: 800px) {
+  .nxtwatch-video-player {
+    height: 310px !important;
+  }
+}
+@media (max-width: 768px) {
+  .nxtwatch-video-player {
+    height: 410px !important;
+  }
+}
+@media (max-width: 578px) {
+  .nxtwatch-video-player {
+    height: 300px !important;
+  }
+}
+@media (max-width: 400px) {
+  .nxtwatch-video-player {
+    height: 200px !important;
+  }
+}

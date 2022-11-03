@@ -20,6 +20,7 @@ import {
   WebsiteLogo,
 } from "./styledComponent";
 import LogoutPopup from "../LogoutPopUp";
+import NavLinks from "../NavLinks";
 
 class NavBar extends Component {
   logoutHandler = () => {
@@ -75,7 +76,9 @@ class NavBar extends Component {
                             className="hamburger-close-icon"
                           />
                         </HamburgerBtn>
-                        <NavLinkContainer></NavLinkContainer>
+                        <NavLinkContainer>
+                          <NavLinks/>
+                        </NavLinkContainer>
                       </>
                     )}
                   </Popup>

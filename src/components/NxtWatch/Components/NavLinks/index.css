@@ -1,9 +1,13 @@
 .nxtwatch-navlink{
     text-decoration: none;
     color: #64748b;
-    width: 100%;
+    padding:10px 30px;
 }
 .active-navlink{
     color: #ff0000;
-    background-color: #616e7c;
+    background-color: #d7dfe9;
+    font-weight: bold;
+}
+.dark-active-navlink{
+    background-color: #424242;
 }
