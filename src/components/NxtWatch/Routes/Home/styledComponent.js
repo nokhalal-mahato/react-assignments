@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePage = styled.div`
-  background-color: ${(props) => (props.darkMode ? "#1e293b" : "white")};
+  background-color: ${(props) => (props.darkMode ? "black" : "#f9f9f9")};
   min-height: 100%;
 `;
 export const HomePageContent = styled.div`
@@ -12,7 +12,6 @@ export const HomePageContent = styled.div`
 `;
 export const HomePageRightSection = styled.div`
   width: 100%;
-  background-color: ${(props) => (props.darkMode ? "black" : "#f9f9f9")};
   height: 92vh;
   overflow-y: auto;
 `;

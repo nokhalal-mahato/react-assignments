@@ -4,7 +4,13 @@ const NxtwatchContext = React.createContext({
   isDarkMode: false,
   toggleDarkMode: () => {},
   showBanner: true,
-  closeBanner:()=>{},
+  closeBanner: () => {},
+  savedVideo: [],
+  toggleSavedVideo: () => {},
+  likedVideo: [],
+  toggleLikedVideo: () => {},
+  dislikedVideo: [],
+  toggleDislikedVideo: () => {},
 });
 
 export default NxtwatchContext;

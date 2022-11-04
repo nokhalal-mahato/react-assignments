@@ -1,0 +1,11 @@
+.nxtwatch-savedvideo-item {
+  text-decoration: none;
+}
+.nxtwatch-video-item-dot-small {
+  display: none;
+}
+@media (max-width: 578px) {
+  .nxtwatch-video-item-dot-small {
+    display: block;
+  }
+}

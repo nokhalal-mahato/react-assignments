@@ -1,6 +1,6 @@
 import { Component } from "react";
 import NxtwatchContext from "../../Contexts/NxtwatchContext";
-import {withRouter } from "react-router-dom";
+import {Link, withRouter } from "react-router-dom";
 import Cookies from "js-cookie";
 import { FiLogOut } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
@@ -35,14 +35,16 @@ class NavBar extends Component {
           return (
             <Nav darkMode={isDarkMode}>
               <NavContent>
-                <WebsiteLogo
-                  src={
-                    isDarkMode
-                      ? "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
-                      : "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                  }
-                  alt="website logo"
-                />
+                <Link to='/Nxtwatch'>
+                  <WebsiteLogo
+                    src={
+                      isDarkMode
+                        ? "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
+                        : "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                    }
+                    alt="website logo"
+                  />
+                </Link>
                 <NavRightSection>
                   <div onClick={toggleDarkMode}>
                     {isDarkMode ? (
@@ -77,7 +79,7 @@ class NavBar extends Component {
                           />
                         </HamburgerBtn>
                         <NavLinkContainer>
-                          <NavLinks/>
+                          <NavLinks />
                         </NavLinkContainer>
                       </>
                     )}

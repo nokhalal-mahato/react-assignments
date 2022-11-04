@@ -19,8 +19,9 @@ export const VideoItemBottomRight = styled.div`
   margin-left: 20px;
 `;
 export const VideoItemActionBtn = styled.div`
+  cursor: pointer;
   margin-right: 20px;
-  display:flex;
+  display: flex;
   color: ${(props) => (props.isActive ? "#ff0b37" : "#64748b")};
 `;
 export const VideoItemActionText = styled.div`
@@ -55,10 +56,17 @@ export const VideoItemOtherDetailContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   color: ${(props) => (props.darkMode ? "#64748b" : "#64748b")};
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 export const VideoItemOtherDetailLeft = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 export const VideoItemOtherDetailRight = styled.div`
   display: flex;

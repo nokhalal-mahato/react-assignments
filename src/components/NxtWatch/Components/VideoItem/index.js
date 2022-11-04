@@ -1,9 +1,9 @@
 import { Component } from "react";
 import NxtwatchContext from "../../Contexts/NxtwatchContext";
 import {
-    VideoItemActionBtn,
-    VideoItemActionText,
-    VideoItemBottomRight,
+  VideoItemActionBtn,
+  VideoItemActionText,
+  VideoItemBottomRight,
   VideoItemBottomSection,
   VideoItemChannel,
   VideoItemChannelDetail,
@@ -29,36 +29,64 @@ import { RiPlayListAddLine } from "react-icons/ri";
 class VideoItem extends Component {
   state = { liked: false, disliked: false, saveVideo: false };
 
-  onToggleLike=()=>{
-    const {liked,disliked}=this.state;
-    if(!liked && disliked){
-        this.setState({ liked: true,disliked:false });
+  static contextType = NxtwatchContext;
+  
+  componentDidMount() {
+    const {data}=this.props;
+    const context = this.context;
+    const savedVideo=context.savedVideo;
+    if(savedVideo.find(item=>item.id===data.id)){
+      this.setState({saveVideo:true});
     }
-    else{
-        this.setState(prevState=>({liked:!prevState.liked}))
+    if (context.likedVideo.find((item) => item.id === data.id)) {
+      this.setState({ liked: true });
+    }
+    if (context.dislikedVideo.find((item) => item.id === data.id)) {
+      this.setState({ disliked: true });
     }
   }
-  onToggleDislike=()=>{
+
+  onToggleLike = () => {
+    const { liked, disliked } = this.state;
+    if (!liked && disliked) {
+      this.setState({ liked: true, disliked: false });
+    } else {
+      this.setState((prevState) => ({ liked: !prevState.liked }));
+    }
+  };
+  onToggleDislike = () => {
     const { liked, disliked } = this.state;
     if (!disliked && liked) {
       this.setState({ liked: false, disliked: true });
     } else {
       this.setState((prevState) => ({ disliked: !prevState.disliked }));
     }
-  }
-  onToggleSave=()=>{
+  };
+  onToggleSave = () => {
     this.setState((prevState) => ({ saveVideo: !prevState.saveVideo }));
-  }
+  };
   render() {
     const { data } = this.props;
-    const {liked,disliked,saveVideo}=this.state;
+    const { liked, disliked, saveVideo } = this.state;
     return (
       <NxtwatchContext.Consumer>
         {(value) => {
-          const { isDarkMode } = value;
+          const { isDarkMode, toggleSavedVideo ,toggleLikedVideo,toggleDislikedVideo} = value;
           const date = formatDistanceToNow(new Date(data.publishedAt), {
             addSuffix: true,
           });
+          const toggleSave = () => {
+            toggleSavedVideo(data);
+            this.onToggleSave();
+          };
+          const toggleLike = () => {
+            toggleLikedVideo(data);
+            this.onToggleLike();
+          };
+          const toggleDislike = () => {
+            toggleDislikedVideo(data);
+            this.onToggleDislike();
+          };
           return (
             <VideoItemContent>
               <Player
@@ -81,16 +109,25 @@ class VideoItem extends Component {
                       <VideoItemOtherDetail>{date}</VideoItemOtherDetail>
                     </VideoItemOtherDetailLeft>
                     <VideoItemOtherDetailRight>
-                      <VideoItemActionBtn isActive={liked} onClick={this.onToggleLike}>
-                        <AiOutlineLike/>
+                      <VideoItemActionBtn
+                        isActive={liked}
+                        onClick={toggleLike}
+                      >
+                        <AiOutlineLike />
                         <VideoItemActionText>Like</VideoItemActionText>
                       </VideoItemActionBtn>
-                      <VideoItemActionBtn isActive={disliked} onClick={this.onToggleDislike}>
-                        <AiOutlineDislike/>
+                      <VideoItemActionBtn
+                        isActive={disliked}
+                        onClick={toggleDislike}
+                      >
+                        <AiOutlineDislike />
                         <VideoItemActionText>Dislike</VideoItemActionText>
                       </VideoItemActionBtn>
-                      <VideoItemActionBtn isActive={saveVideo} onClick={this.onToggleSave}>
-                        <RiPlayListAddLine/>
+                      <VideoItemActionBtn
+                        isActive={saveVideo}
+                        onClick={toggleSave}
+                      >
+                        <RiPlayListAddLine />
                         <VideoItemActionText>Save</VideoItemActionText>
                       </VideoItemActionBtn>
                     </VideoItemOtherDetailRight>
