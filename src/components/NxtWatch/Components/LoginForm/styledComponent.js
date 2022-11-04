@@ -40,7 +40,7 @@ export const InputField = styled.input`
   margin-bottom: 5px;
   &:focus {
     outline: none;
-    background-color: ${(props) => (props.darkMode ? "#212121" : "#e2e8f0")};
+    background-color: ${(props) => (props.darkMode ? "#e2e8f0" : "#e2e8f0")};
   }
   &::placeholder {
     font-weight: 100;
