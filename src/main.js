@@ -153,6 +153,9 @@ const MainApp=()=>{
         <li>
           <Link to="/RockPaperScissors">Rock Paper Scissors</Link>
         </li>
+        <li>
+          <Link to="/Nxtwatch">Nxtwatch</Link>
+        </li>
       </ol>
     );
 }
