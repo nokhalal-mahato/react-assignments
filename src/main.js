@@ -162,6 +162,9 @@ const MainApp=()=>{
         <li>
           <Link to="/PasswordValidator">Password Validator</Link>
         </li>
+        <li>
+          <Link to="/CreditCard">Credit Card</Link>
+        </li>
       </ol>
     );
 }
