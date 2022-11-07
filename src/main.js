@@ -156,6 +156,9 @@ const MainApp=()=>{
         <li>
           <Link to="/Nxtwatch">Nxtwatch</Link>
         </li>
+        <li>
+          <Link to="/LockUnlock">Lock Unlock</Link>
+        </li>
       </ol>
     );
 }
