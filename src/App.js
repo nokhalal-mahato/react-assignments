@@ -54,6 +54,7 @@ import RockPaperScissors from "./components/RockPaperScissors/Routes";
 import Nxtwatch from "./components/NxtWatch";
 import LockUnlock from "./components/LockUnlock/Routes";
 import PasswordValidator from "./components/PasswordValidator";
+import CreditCard from "./components/CreditCard";
 
 const App = () => {
   return (
@@ -113,6 +114,7 @@ const App = () => {
         <Route path="/Nxtwatch" component={Nxtwatch} />
         <Route path="/LockUnlock" component={LockUnlock} />
         <Route path="/PasswordValidator" component={PasswordValidator} />
+        <Route path="/CreditCard" component={CreditCard} />
       </Switch>
     </div>
   );
