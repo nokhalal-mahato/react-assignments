@@ -56,6 +56,7 @@ import LockUnlock from "./components/LockUnlock/Routes";
 import PasswordValidator from "./components/PasswordValidator";
 import CreditCard from "./components/CreditCard";
 import ReadMore from "./components/ReadMore";
+import Notes from "./components/Notes/Routes";
 
 const App = () => {
   return (
@@ -117,6 +118,7 @@ const App = () => {
         <Route path="/PasswordValidator" component={PasswordValidator} />
         <Route path="/CreditCard" component={CreditCard} />
         <Route path="/ReadMore" component={ReadMore} />
+        <Route path="/Notes" component={Notes} />
       </Switch>
     </div>
   );

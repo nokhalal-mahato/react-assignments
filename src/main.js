@@ -168,6 +168,9 @@ const MainApp=()=>{
         <li>
           <Link to="/ReadMore">Read More/Less</Link>
         </li>
+        <li>
+          <Link to="/Notes">Notes</Link>
+        </li>
       </ol>
     );
 }
