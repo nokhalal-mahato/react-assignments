@@ -52,6 +52,7 @@ import MemeGenerator from "./components/MemeGenerator/Routes";
 import GradientGenerator from "./components/GradientGenerator/Routes";
 import RockPaperScissors from "./components/RockPaperScissors/Routes";
 import Nxtwatch from "./components/NxtWatch";
+import LockUnlock from "./components/LockUnlock/Routes";
 
 const App = () => {
   return (
@@ -109,6 +110,7 @@ const App = () => {
         <Route path="/GradientGenerator" component={GradientGenerator} />
         <Route path="/RockPaperScissors" component={RockPaperScissors} />
         <Route path="/Nxtwatch" component={Nxtwatch} />
+        <Route path="/LockUnlock" component={LockUnlock} />
       </Switch>
     </div>
   );
