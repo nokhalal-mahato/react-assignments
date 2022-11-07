@@ -55,6 +55,7 @@ import Nxtwatch from "./components/NxtWatch";
 import LockUnlock from "./components/LockUnlock/Routes";
 import PasswordValidator from "./components/PasswordValidator";
 import CreditCard from "./components/CreditCard";
+import ReadMore from "./components/ReadMore";
 
 const App = () => {
   return (
@@ -115,6 +116,7 @@ const App = () => {
         <Route path="/LockUnlock" component={LockUnlock} />
         <Route path="/PasswordValidator" component={PasswordValidator} />
         <Route path="/CreditCard" component={CreditCard} />
+        <Route path="/ReadMore" component={ReadMore} />
       </Switch>
     </div>
   );
