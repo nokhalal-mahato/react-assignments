@@ -159,6 +159,9 @@ const MainApp=()=>{
         <li>
           <Link to="/LockUnlock">Lock Unlock</Link>
         </li>
+        <li>
+          <Link to="/PasswordValidator">Password Validator</Link>
+        </li>
       </ol>
     );
 }
