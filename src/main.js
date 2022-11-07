@@ -165,6 +165,9 @@ const MainApp=()=>{
         <li>
           <Link to="/CreditCard">Credit Card</Link>
         </li>
+        <li>
+          <Link to="/ReadMore">Read More/Less</Link>
+        </li>
       </ol>
     );
 }
