@@ -53,7 +53,20 @@ export const AddBtn = styled.button`
   border: 0px;
   margin-top: 10px;
 `;
+export const FilterListContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top:40px;
 
+  @media (max-width: 568px) {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 10px;
+  }
+`;
 export const Notedescription = styled.textarea`
   width: 100%;
   border: 0px;
