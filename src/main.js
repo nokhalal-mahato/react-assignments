@@ -171,6 +171,12 @@ const MainApp=()=>{
         <li>
           <Link to="/Notes">Notes</Link>
         </li>
+        <li>
+          <Link to="/HooksTimer">Hooks Timer</Link>
+        </li>
+        <li>
+          <Link to="/TraficLight">Trafic Light</Link>
+        </li>
       </ol>
     );
 }
