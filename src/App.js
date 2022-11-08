@@ -57,6 +57,8 @@ import PasswordValidator from "./components/PasswordValidator";
 import CreditCard from "./components/CreditCard";
 import ReadMore from "./components/ReadMore";
 import Notes from "./components/Notes/Routes";
+import HooksTimer from "./components/HooksTimer";
+import TraficLight from "./components/TraficLight";
 
 const App = () => {
   return (
@@ -119,6 +121,8 @@ const App = () => {
         <Route path="/CreditCard" component={CreditCard} />
         <Route path="/ReadMore" component={ReadMore} />
         <Route path="/Notes" component={Notes} />
+        <Route path="/HooksTimer" component={HooksTimer} />
+        <Route path="/TraficLight" component={TraficLight} />
       </Switch>
     </div>
   );

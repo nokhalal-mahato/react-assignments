@@ -50,7 +50,7 @@ class Appointment extends Component {
             </div>
           </div>
           <hr />
-          <div className="appointment-contianer-header">
+          <div classNamesetItem="appointment-contianer-header">
             <h2>Appointments</h2>
             <button
               onClick={this.onfilterStar}
