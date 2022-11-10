@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const HomeVideoListContainer = styled.div`
   margin: 0px 30px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap:30px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px 20px;
   @media (max-width: 998px) {
     margin: 0px 30px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 568px) {
     margin: 0px;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 `;
 export const HomeLoaderContainer = styled.div`

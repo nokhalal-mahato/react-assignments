@@ -1,4 +1,3 @@
-import { useState } from "react";
 import NotesItem from "../Components/NotesItem";
 import {
   AddBtn,
@@ -17,81 +16,72 @@ import {
 import { v4 as uuidv4 } from "uuid";
 import filterList from "../Constants/filterList";
 import FilterItem from "../Components/filterItem";
+import notesStore from "../stores/NotesStore";
+import { observer } from "mobx-react";
 
-const Notes = () => {
-  const [notesList, setNotesList] = useState([]);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [edit, setEdit] = useState(false);
-  const [editItem, setEditItem] = useState({});
-  const [activeTab, setActiveTab] = useState(filterList[0].id);
 
+
+const NotesMobx = observer(() => {
+  const NoteStore=notesStore;
   let filterlist=[];
-  if(activeTab==='All'){
-    filterlist=notesList;
+  if(NoteStore.activeTab==='All'){
+    filterlist=NoteStore.notesList;
   }
-  else if(activeTab=='Completed'){
-    filterlist = notesList.filter((item) => item.isComplete === true);
-    console.log(filterlist);
-  }
-  else{
-    filterlist = notesList.filter((item) => item.isComplete === false);
+  else if (NoteStore.activeTab === "Completed") {
+    filterlist = NoteStore.notesList.filter((item) => item.isComplete === true);
+  } else {
+    filterlist = NoteStore.notesList.filter(
+      (item) => item.isComplete === false
+    );
   }
   const onChangeTitle = (event) => {
-    setTitle(event.target.value);
+    NoteStore.setTitle(event.target.value);
   };
 
   const onChangeDescription = (event) => {
-    setDescription(event.target.value);
+    NoteStore.setDescription(event.target.value);
   };
   const deleteHandler = (id) => {
-    setNotesList((prevData) => prevData.filter((item) => item.id !== id));
+    NoteStore.deleteNotes(id);
   };
   const completeHandler = (id) => {
-    setNotesList((prevData) =>
-      prevData.map((item) => {
-        if (item.id === id) {
-          return { ...item, isComplete: !item.isComplete };
-        }
-        return item;
-      })
-    );
+    NoteStore.toggleCompleteTask(id);
   };
   const editHandler=(data)=>{
-      setEdit(true);
-      setTitle(data.title);
-      setEditItem(data);
-      setDescription(data.description);
+      NoteStore.editNotes(data);
   }
 
   const onSelectFilter=(id)=>{
-    setActiveTab(id);
+    NoteStore.selectFilter(id);
   }
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    if(title==='' && description===''){
+    if (NoteStore.title === "" && NoteStore.description === "") {
       return;
     }
-    if(edit){
-      setNotesList((prevData)=>prevData.map(item=>{
-        if(item.id===editItem.id){
-          return {...item,title:title,description:description};
+    if (NoteStore.edit) {
+      NoteStore.notesList = NoteStore.notesList.map((item) => {
+        if (item.id === NoteStore.editItem.id) {
+          return {
+            ...item,
+            title: NoteStore.title,
+            description: NoteStore.description,
+          };
         }
         return item;
-      }))
-    }
-    else{
+      });
+    } else {
       const notes = {
         id: uuidv4(),
-        title: title,
-        description: description,
+        title: NoteStore.title,
+        description: NoteStore.description,
         isComplete: false,
       };
-      setNotesList((prevData) => [...prevData, notes]);
+      NoteStore.addNotes(notes);
     }
     
-    setTitle("");
-    setDescription("");
+    NoteStore.setTitle('');
+    NoteStore.setDescription('');
   };
 
   return (
@@ -99,33 +89,38 @@ const Notes = () => {
       <Heading>Notes</Heading>
       <InputForm onSubmit={onSubmitHandler}>
         <TitleInput
-          value={title}
+          value={NoteStore.title}
           onChange={onChangeTitle}
           placeholder="Title"
         />
         <Notedescription
-          value={description}
+          value={NoteStore.description}
           rows="4"
           onChange={onChangeDescription}
           placeholder="Take a Note"
         />
         <AddBtn>Add</AddBtn>
       </InputForm>
-      {notesList.length === 0 && (
+      {NoteStore.notesList.length === 0 && (
         <EmptyContainer>
           <EmptyImage src="https://assets.ccbp.in/frontend/hooks/empty-notes-img.png" />
           <EmptyHeading>No Notes Yet</EmptyHeading>
           <EmptyText>Notes you add appear here</EmptyText>
         </EmptyContainer>
       )}
-      {notesList.length > 0 && (
+      {NoteStore.notesList.length > 0 && (
         <FilterListContainer>
           {filterList.map((item) => (
-            <FilterItem key={item.id} data={item} isActive={activeTab===item.id}onSelectFilter={onSelectFilter} />
+            <FilterItem
+              key={item.id}
+              data={item}
+              isActive={NoteStore.activeTab === item.id}
+              onSelectFilter={onSelectFilter}
+            />
           ))}
         </FilterListContainer>
       )}
-      {notesList.length > 0 && (
+      {NoteStore.notesList.length > 0 && (
         <NotesContainer>
           {filterlist.map((item) => (
             <NotesItem
@@ -140,6 +135,6 @@ const Notes = () => {
       )}
     </NotesPage>
   );
-};
+});
 
-export default Notes;
+export default NotesMobx;
