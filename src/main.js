@@ -177,6 +177,9 @@ const MainApp=()=>{
         <li>
           <Link to="/TraficLight">Trafic Light</Link>
         </li>
+        <li>
+          <Link to="/NotesMobx">Notes Mobx</Link>
+        </li>
       </ol>
     );
 }
