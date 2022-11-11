@@ -1,5 +1,4 @@
 import { Component } from "react";
-import Cookies from "js-cookie";
 import { ThreeDots } from "react-loader-spinner";
 import "./index.css";
 import ApiStatusConstant from "../../Constants/ApiStatusConstant";
@@ -16,26 +15,8 @@ class Profile extends Component {
     this.getProfile();
   }
 
-  getProfile = async () => {
-    const jwtToken = Cookies.get("jwt_token");
-    const response = await fetch("https://apis.ccbp.in/profile", {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: "GET",
-    });
-    if (response.ok) {
-      const fetchedData = await response.json();
-      const updatedData = {
-        name: fetchedData.profile_details.name,
-        profileImageUrl: fetchedData.profile_details.profile_image_url,
-        shortBio: fetchedData.profile_details.short_bio,
-      };
-      this.profileStore.setApiStatus(ApiStatusConstant.success);
-      this.profileStore.setProfileData(updatedData);
-    } else {
-      this.profileStore.setApiStatus(ApiStatusConstant.failed);
-    }
+  getProfile = () => {
+    this.profileStore.fetchProfileData();
   };
 
   renderProfile = () => {
