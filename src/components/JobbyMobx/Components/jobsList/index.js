@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { ThreeDots } from "react-loader-spinner";
-import Cookies from "js-cookie";
 import "./index.css";
 import ApiStatusConstant from "../../Constants/ApiStatusConstant";
 import JobItem from "../JobItem";
@@ -25,46 +24,10 @@ class JobList extends Component {
       this.getJobsList();
     }
   }
-  getJobsList = async () => {
+  getJobsList = () => {
     const { searchValue, employmentFilter, salary } = this.props;
     const employmentFilterValue = employmentFilter.join(",").toUpperCase();
-    try {
-      const jwtToken = Cookies.get("jwt_token");
-      const response = await fetch(
-        `https://apis.ccbp.in/jobs?employment_type=${employmentFilterValue}&minimum_package=${salary}&search=${searchValue}`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${jwtToken}`,
-          },
-        }
-      );
-      if (response.ok) {
-        const responseData = await response.json();
-        const updatedData = responseData.jobs.map((job) => ({
-          title: job.title,
-          id: job.id,
-          rating: job.rating,
-          packagePerAnnum: job.package_per_annum,
-          location: job.location,
-          jobDescription: job.job_description,
-          employmentType: job.employment_type,
-          companyLogoUrl: job.company_logo_url,
-        }));
-        if (responseData.total === 0) {
-          this.jobsListStore.setJobsList(updatedData);
-          this.jobsListStore.setApiStatus(ApiStatusConstant.empty);
-          return;
-        }
-        this.jobsListStore.setJobsList(updatedData);
-        this.jobsListStore.setApiStatus(ApiStatusConstant.success);
-      } else {
-        this.jobsListStore.setApiStatus(ApiStatusConstant.failed);
-      }
-    } catch (err) {
-      console.log(err);
-      this.jobsListStore.setApiStatus(ApiStatusConstant.failed);
-    }
+    this.jobsListStore.fetchJobsList(employmentFilterValue,salary,searchValue);
   };
 
   renderJobsList = () => {

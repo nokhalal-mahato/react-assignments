@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { ThreeDots } from "react-loader-spinner";
-import Cookies from "js-cookie";
 import "./index.css";
 import ApiStatusConstant from "../../Constants/ApiStatusConstant";
 import JobDetail from "../../Components/JobDetail";
@@ -17,28 +16,10 @@ class JobDetailRoute extends Component {
     this.getJobDetail();
   }
 
-  getJobDetail = async () => {
+  getJobDetail = () => {
     this.jobItemDetailStore.setApiStatus(ApiStatusConstant.loading);
     const params = this.props.match.params.id;
-    try {
-      const jwtToken = Cookies.get("jwt_token");
-      const response = await fetch(`https://apis.ccbp.in/jobs/${params}`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${jwtToken}`,
-        },
-      });
-      if (response.ok) {
-        const responseData = await response.json();
-        this.jobItemDetailStore.setJobDetail(responseData);
-        this.jobItemDetailStore.setApiStatus(ApiStatusConstant.success);
-      } else {
-        this.jobItemDetailStore.setApiStatus(ApiStatusConstant.failed);
-      }
-    } catch (err) {
-      console.log(err);
-      this.jobItemDetailStore.setApiStatus(ApiStatusConstant.failed);
-    }
+    this.jobItemDetailStore.fetchJobDetail(params);
   };
 
   renderJobsList = () => {
