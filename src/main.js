@@ -180,6 +180,9 @@ const MainApp=()=>{
         <li>
           <Link to="/NotesMobx">Notes Mobx</Link>
         </li>
+        <li>
+          <Link to="/JobbyMobx">Jobby Mobx</Link>
+        </li>
       </ol>
     );
 }

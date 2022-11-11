@@ -1,0 +1,130 @@
+
+.jobby-jobItem-link{
+  text-decoration: none;
+}
+.jobby-jobItem {
+  background-color: #272727;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color:white;
+}
+.jobby-jobItem-top-section {
+  display: flex;
+  align-items: flex-start;
+}
+.jobby-jobItem-top-section img {
+  width: 80px;
+}
+.jobby-jobItem-top-right-section {
+  margin-left: 20px;
+}
+.jobby-jobItem-title {
+  margin: 0px;
+  margin-bottom: 15px;
+}
+.jobby-jobItem-rating-container {
+  display: flex;
+  align-items: center;
+}
+.jobby-jobItem-rating-icon {
+  color: orange;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+.jobby-jobItem-rating {
+  margin: 0px;
+}
+.jobby-item-divider {
+  margin: 0px;
+  border-color: #64748b;
+  border-width: 2px;
+}
+.jobby-jobItem-middle-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.jobby-jobItem-middle-left-section {
+  display: flex;
+}
+.jobby-jobItem-employment-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.jobby-jobItem-location-icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+.jobby-jobItem-location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.jobby-jobItem-employment-icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+@media (max-width: 700px) {
+  .jobby-jobItem {
+    padding: 15px;
+  }
+  .jobby-jobItem-title {
+    font-size: 20px;
+  }
+  .jobby-jobItem-salary {
+    font-size: 16px;
+  }
+}
+@media (max-width: 578px) {
+  .jobby-jobItem-top-section img {
+    width: 50px;
+  }
+  .jobby-jobItem-rating {
+    font-size: 16px;
+  }
+  .jobby-jobItem-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .jobby-jobItem-rating-icon {
+    height: 15px;
+    width: 15px;
+  }
+  .jobby-jobItem-top-right-section {
+    margin-left: 10px;
+  }
+  .jobby-jobItem-salary {
+    font-size: 14px;
+  }
+  .jobby-jobItem-employment-container {
+    margin-right: 10px;
+  }
+  .jobby-jobItem-location-icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .jobby-jobItem-employment-icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+  }
+  .jobby-jobItem-location-text{
+    margin: 0px;
+  }
+  .jobby-jobItem-employment-text{
+    margin: 0px;
+  }
+  .jobby-jobItem-description{
+    font-size: 14px
+  }
+  .jobby-jobItem-description-heading{
+    margin:15px 0px;
+    font-size: 16px;
+  }
+}
