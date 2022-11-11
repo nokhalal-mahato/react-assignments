@@ -10,7 +10,10 @@
     "date-fns": "^2.29.3",
     "gh-pages": "^4.0.0",
     "js-cookie": "^3.0.1",
-    "mobx": "^5.15.7",
+    "customize-cra": "1.0.0",
+    "mobx": "^5.15.0",
+    "mobx-react": "^6.1.4",
+    "react-app-rewired": "2.2.1",
     "react": "^18.2.0",
     "react-chrono": "^1.19.2",
     "react-dom": "^18.2.0",
@@ -29,9 +32,15 @@
     "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@babel/core": "7.7.2",
+    "@babel/plugin-proposal-decorators": "7.7.0",
+    "@babel/plugin-syntax-jsx": "7.2.0",
+    "@babel/preset-env": "7.7.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

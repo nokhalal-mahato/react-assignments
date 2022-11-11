@@ -59,6 +59,7 @@ import ReadMore from "./components/ReadMore";
 import Notes from "./components/Notes/Routes";
 import HooksTimer from "./components/HooksTimer";
 import TraficLight from "./components/TraficLight";
+import NotesMobx5 from "./components/NotesMobx5/Routes";
 
 const App = () => {
   return (
@@ -123,6 +124,7 @@ const App = () => {
         <Route path="/Notes" component={Notes} />
         <Route path="/HooksTimer" component={HooksTimer} />
         <Route path="/TraficLight" component={TraficLight} />
+        <Route path="/NotesMobx5" component={NotesMobx5} />
       </Switch>
     </div>
   );
