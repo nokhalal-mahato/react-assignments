@@ -116,7 +116,7 @@ class GamingContent extends Component {
                   <GamingFailureText darkMode={isDarkMode}>
                     Please try again.
                   </GamingFailureText>
-                  <GamingFailureRetryBtn onClick={this.getVideosList}>
+                  <GamingFailureRetryBtn onClick={this.getGamingVideosList}>
                     Retry
                   </GamingFailureRetryBtn>
                 </GamingFailureContainer>

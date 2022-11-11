@@ -118,7 +118,7 @@ class TrendingContent extends Component {
                   <TrendingFailureText darkMode={isDarkMode}>
                     Please try again.
                   </TrendingFailureText>
-                  <TrendingFailureRetryBtn onClick={this.getVideosList}>
+                  <TrendingFailureRetryBtn onClick={this.getTrendingVideosList}>
                     Retry
                   </TrendingFailureRetryBtn>
                 </TrendingFailureContainer>

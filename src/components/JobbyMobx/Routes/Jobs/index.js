@@ -1,39 +1,34 @@
+import { toJS } from "mobx";
+import { observer } from "mobx-react";
 import { Component } from "react";
 import JobFilter from "../../Components/JobFilter";
 import JobList from "../../Components/jobsList";
 import NavBar from "../../Components/NavBar";
 import Profile from "../../Components/Profile";
 import SearchBar from "../../Components/SearchBar";
+import jobsStore from "../../Stores/jobsStore";
 import "./index.css";
 
 class Jobs extends Component {
-  state = { searchValue: "", employmentFilter: [], salary: "" };
+  constructor() {
+    super();
+    this.jobsStore = jobsStore;
+  }
 
   onChangeSearch = (value) => {
-    this.setState({ searchValue: value });
+    this.jobsStore.setSearchValue(value);
   };
-  onClearInput=()=>{
-    this.setState({ searchValue: '' });
-  }
+  onClearInput = () => {
+    this.jobsStore.setSearchValue("");
+  };
   onChangeEmploymentFilter = (id) => {
-    const { employmentFilter } = this.state;
-    if (employmentFilter.find((item) => item === id)) {
-      this.setState((prevData) => ({
-        employmentFilter: prevData.employmentFilter.filter(
-          (item) => item !== id
-        ),
-      }));
-    } else {
-      this.setState((prevData) => ({
-        employmentFilter: [...prevData.employmentFilter, id],
-      }));
-    }
+    this.jobsStore.setEmploymentFilter(id);
   };
   onChangeSalaryFilter = (value) => {
-    this.setState({ salary: value },console.log(this.state.salary));
+    this.jobsStore.setSalary(value);
   };
   render() {
-    const { searchValue, employmentFilter, salary } = this.state;
+    const { searchValue, employmentFilter, salary } = this.jobsStore;
     return (
       <div className="jobby-jobs-page">
         <NavBar />
@@ -60,7 +55,7 @@ class Jobs extends Component {
             />
             <JobList
               searchValue={searchValue}
-              employmentFilter={employmentFilter}
+              employmentFilter={toJS(employmentFilter)}
               salary={salary}
             />
           </div>
@@ -70,4 +65,4 @@ class Jobs extends Component {
   }
 }
 
-export default Jobs;
+export default observer(Jobs);
