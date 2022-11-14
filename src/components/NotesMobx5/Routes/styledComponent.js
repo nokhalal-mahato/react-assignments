@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const NotesPage = styled.div`
-  min-height: 100%;
   margin: 0px auto;
   width: 80%;
+  padding:40px 0px;
   max-width: 900px;
 `;
 
@@ -71,6 +71,7 @@ export const Notedescription = styled.textarea`
   width: 100%;
   border: 0px;
   padding: 10px 5px;
+  resize: none;
   &:focus {
     outline: none;
   }
@@ -82,7 +83,7 @@ export const Notedescription = styled.textarea`
 export const Heading = styled.h1`
   color: #4c63b6;
   font-size: 36px;
-  margin: 40px 0px;
+  margin: 0px 0px 40px;
   text-align: center;
 `;
 export const EmptyContainer = styled.div`

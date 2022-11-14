@@ -1,4 +1,3 @@
-import { useState } from "react";
 import NotesItem from "../Components/NotesItem";
 import {
   AddBtn,
@@ -28,7 +27,6 @@ const NotesMobx5 = observer(() => {
   }
   else if(activeTab=='Completed'){
     filterlist = notesList.filter((item) => item.isComplete === true);
-    console.log(filterlist);
   }
   else{
     filterlist = notesList.filter((item) => item.isComplete === false);
@@ -43,8 +41,8 @@ const NotesMobx5 = observer(() => {
   const deleteHandler = (id) => {
     notesStore.deleteNotes(id);
   };
-  const completeHandler = (id) => {
-    notesStore.setCompleteNote(id)
+  const completeHandler = (data) => {
+    data.setComplete();
   };
   const editHandler=(data)=>{
       notesStore.setEdit(true);

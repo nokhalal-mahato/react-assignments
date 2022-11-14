@@ -1,3 +1,4 @@
+import { observer } from "mobx-react";
 import { CompleteBtn, DeleteBtn, EditBtn, NotesItemContainer } from "./styledComponent";
 
 const NotesItem=(props)=>{
@@ -8,7 +9,7 @@ const NotesItem=(props)=>{
     }
 
     const completeHandler=()=>{
-        props.completeHandler(data.id);
+        props.completeHandler(data);
     }
     const deleteHandler=()=>{
         props.deleteHandler(data.id);
@@ -27,4 +28,4 @@ const NotesItem=(props)=>{
     );
 }
 
-export default NotesItem;
+export default observer(NotesItem);

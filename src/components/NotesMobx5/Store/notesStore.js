@@ -11,8 +11,13 @@ class noteStore {
   @observable activeTab = filterList[0].id;
 
   @action addNotes() {
+    if(this.title==='' || this.description===''){
+      alert('Please enter all data');
+      return;
+    }
     if (this.edit) {
-        const note = this.notesList.find((item) => item.id == id);
+        const note = this.notesList.find((item) => item.id == this.editItem.id);
+        console.log(note)
         note.setTitle(this.title);
         note.setDescription(this.description);
     } else {
@@ -30,8 +35,8 @@ class noteStore {
     this.description = value;
   }
 
-  @action setEdit() {
-    this.edit = !this.edit;
+  @action setEdit(value) {
+    this.edit = value;
   }
   @action setEditItem(data) {
     this.editItem = data;
@@ -40,7 +45,7 @@ class noteStore {
     this.activeTab = id;
   }
 
-  @action deleteNote(id) {
+  @action deleteNotes(id) {
     this.notesList = this.notesList.filter((item) => item.id !== id);
   }
 

@@ -1,5 +1,6 @@
 {
-  "parser": "babel-eslint",
+  // "parser": "babel-eslint",
+  // "parser": "@babel/eslint-parser",
   // "extends": ["prettier", "plugin:flowtype/recommended"],
   "env": {
     "browser": true,
@@ -7,7 +8,7 @@
     "jest": true,
     "es6": true
   },
-  "plugins": ["react", "jsx-a11y", "flowtype", "prettier"],
+  "plugins": ["react", "jsx-a11y", "flowtype"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
