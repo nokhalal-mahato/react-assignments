@@ -1,0 +1,59 @@
+.jobby-nav-content {
+  background-color: #272727;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+.jobby-website-logo {
+  width: 150px;
+}
+.jobby-nav-menu {
+  align-self: center;
+  padding: 0px;
+  display: flex;
+  list-style: none;
+}
+.jobby-nav-link {
+  margin: 0px 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold
+}
+.jobby-logout-desktop-btn {
+  border-radius: 4px;
+  background-color: #6366f1;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  border: 0px;
+  padding: 10px 30px;
+  margin-left: 30px;
+}
+.jobby-mobile-nav {
+  display: none;
+}
+@media (max-width: 578px) {
+  .jobby-nav-menu {
+    display: none;
+  }
+  .jobby-logout-desktop-btn {
+    display: none;
+  }
+  .jobby-nav-content {
+    padding: 20px 10px;
+  }
+  .jobby-website-logo {
+    width: 90px;
+  }
+  .jobby-mobile-nav {
+    display: flex;
+    justify-content: center;
+  }
+  .jobby-mobile-nav-icon{
+    width: 25px;
+    height: 25px;
+    color: white;
+    margin-left: 20px;
+  }
+}

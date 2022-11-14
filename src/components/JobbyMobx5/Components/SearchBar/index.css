@@ -1,0 +1,54 @@
+.jobby-search-logo-container {
+  background-color: #272727;
+  padding: 10px 20px;
+}
+
+.jobby-search-input {
+  border: 0px;
+  background-color: transparent;
+  margin-left: 10px;
+  font-size: 16px;
+  width: 100%;
+  color: white;
+}
+
+.jobby-search-input:focus {
+  outline: 0px;
+}
+
+.jobby-search-input-field {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  border-radius: 4px;
+  border: 1px solid #64748b;
+  background-color: transparent;
+  display: none;
+  margin-bottom: 30px;
+}
+.jobby-search-fixed {
+  display: flex;
+  max-width: 400px;
+}
+.jobby-clear-logo{
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  display: none;
+}
+.jobby-search-input-field:hover .jobby-clear-logo{
+  display: block;
+}
+
+::placeholder {
+  color: #64748b;
+  font-weight: bold;
+}
+@media (max-width: 578px) {
+  .jobby-search-input-field {
+    display: flex;
+  }
+  .jobby-search-fixed {
+    display: none;
+  }
+}
