@@ -183,6 +183,9 @@ const MainApp=()=>{
         <li>
           <Link to="/JobbyMobx5">Jobby Mobx 5</Link>
         </li>
+        <li>
+          <Link to="/JobbyTypescript">Jobby Typescript</Link>
+        </li>
       </ol>
     );
 }

@@ -61,6 +61,7 @@ import HooksTimer from "./components/HooksTimer";
 import TraficLight from "./components/TraficLight";
 import NotesMobx5 from "./components/NotesMobx5/Routes";
 import JobbyMobx5 from "./components/JobbyMobx5";
+import JobbyTypescript from "./components/JobbyTypescript";
 
 const App = () => {
   return (
@@ -127,6 +128,7 @@ const App = () => {
         <Route path="/TraficLight" component={TraficLight} />
         <Route path="/NotesMobx5" component={NotesMobx5} />
         <Route path="/JobbyMobx5" component={JobbyMobx5} />
+        <Route path="/JobbyTypescript" component={JobbyTypescript} />
       </Switch>
     </div>
   );
