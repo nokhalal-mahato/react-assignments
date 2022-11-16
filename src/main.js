@@ -186,6 +186,9 @@ const MainApp=()=>{
         <li>
           <Link to="/JobbyTypescript">Jobby Typescript</Link>
         </li>
+        <li>
+          <Link to="/NotesI18n">Notes I18n</Link>
+        </li>
       </ol>
     );
 }
