@@ -32,6 +32,7 @@ class noteStore {
       console.log(note);
       note.setTitle(this.title);
       note.setDescription(this.description);
+      this.setEdit(false);
     } else {
       this.notesList.push(new noteItemStore(this.title, this.description));
     }
