@@ -21,16 +21,6 @@ import { observer } from "mobx-react"
 const NotesMobx5 = observer(() => {
   const notesStore=noteStore;
   const {activeTab,notesList}=notesStore;
-  let filterlist=[];
-  if(activeTab==='All'){
-    filterlist=notesList;
-  }
-  else if(activeTab=='Completed'){
-    filterlist = notesList.filter((item) => item.isComplete === true);
-  }
-  else{
-    filterlist = notesList.filter((item) => item.isComplete === false);
-  }
   const onChangeTitle = (event) => {
     notesStore.setTitle(event.target.value);
   };
@@ -97,7 +87,7 @@ const NotesMobx5 = observer(() => {
       )}
       {notesList.length > 0 && (
         <NotesContainer>
-          {filterlist.map((item) => (
+          {notesStore.filterList.map((item) => (
             <NotesItem
               key={item.id}
               data={item}

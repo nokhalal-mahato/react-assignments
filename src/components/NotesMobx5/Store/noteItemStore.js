@@ -1,4 +1,4 @@
-import { action,observable } from "mobx";
+import { action,computed,observable } from "mobx";
 import {v4 as uuidv4} from 'uuid';
 
 class noteItemStore {
@@ -6,7 +6,6 @@ class noteItemStore {
   @observable isComplete = false;
   @observable title = "";
   @observable description = "";
-
   constructor(title, description) {
     this.title = title;
     this.description = description;
