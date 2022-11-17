@@ -1,0 +1,134 @@
+.jobby-similarJob-link {
+  text-decoration: none;
+}
+.jobby-similarJob {
+  background-color: #272727;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: white;
+  max-width: 350px;
+  margin-right: 30px;
+}
+.jobby-similarJob-top-section {
+  display: flex;
+  align-items: flex-start;
+}
+.jobby-similarJob-top-section img {
+  width: 80px;
+}
+.jobby-similarJob-top-right-section {
+  margin-left: 20px;
+}
+.jobby-similarJob-title {
+  margin: 0px;
+  margin-bottom: 15px;
+}
+.jobby-similarJob-rating-container {
+  display: flex;
+  align-items: center;
+}
+.jobby-similarJob-rating-icon {
+  color: orange;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+.jobby-similarJob-rating {
+  margin: 0px;
+}
+.jobby-similarJob-divider {
+  margin: 0px;
+  border-color: #64748b;
+  border-width: 2px;
+}
+.jobby-similarJob-middle-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.jobby-similarJob-middle-left-section {
+  display: flex;
+}
+.jobby-similarJob-employment-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.jobby-similarJob-location-icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+.jobby-similarJob-location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.jobby-similarJob-employment-icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+@media (max-width: 700px) {
+  .jobby-similarJob {
+    padding: 15px;
+  }
+  .jobby-similarJob-title {
+    font-size: 20px;
+  }
+  .jobby-similarJob-salary {
+    font-size: 16px;
+  }
+}
+@media (max-width: 578px) {
+  .jobby-similarJob {
+    margin-right: 0px;
+  }
+  .jobby-similarJob-top-section img {
+    width: 50px;
+  }
+  .jobby-similarJob-rating {
+    font-size: 16px;
+  }
+  .jobby-similarJob-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .jobby-similarJob-rating-icon {
+    height: 15px;
+    width: 15px;
+  }
+  .jobby-similarJob-top-right-section {
+    margin-left: 10px;
+  }
+  .jobby-similarJob-salary {
+    font-size: 14px;
+  }
+  .jobby-similarJob-employment-container {
+    margin-right: 10px;
+  }
+  .jobby-similarJob-location-icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .jobby-similarJob-employment-icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+  }
+  .jobby-similarJob-location-text {
+    margin: 0px;
+  }
+  .jobby-similarJob-employment-text {
+    margin: 0px;
+  }
+  .jobby-similarJob-description {
+    font-size: 14px;
+  }
+  .jobby-similarJob-description-heading {
+    margin: 15px 0px;
+    font-size: 16px;
+  }
+}

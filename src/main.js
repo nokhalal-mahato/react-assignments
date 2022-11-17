@@ -41,7 +41,6 @@ const MainApp=()=>{
         <li>
           <Link to="/CashWithdrawal">CashWithdrawal</Link>
         </li>
-
         <li>
           <Link to="/GoogleSearch">GoogleSearch</Link>
         </li>
@@ -188,6 +187,12 @@ const MainApp=()=>{
         </li>
         <li>
           <Link to="/NotesI18n">Notes I18n</Link>
+        </li>
+        <li>
+          <Link to="/JobbyI18n">Jobby I18n</Link>
+        </li>
+        <li>
+          <Link to="/JobbyTypescriptI18n">Jobby Typescript I18n</Link>
         </li>
       </ol>
     );

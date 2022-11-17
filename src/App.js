@@ -62,7 +62,9 @@ import TraficLight from "./components/TraficLight";
 import NotesMobx5 from "./components/NotesMobx5/Routes";
 import JobbyMobx5 from "./components/JobbyMobx5";
 import JobbyTypescript from "./components/JobbyTypescript";
-import NotesI18n from "./components/NotesI18n/Routes";
+// import NotesI18n from "./components/NotesI18n/Routes";
+// import JobbyI18n from "./components/JobbyI18n";
+import JobbyTypescriptI18n from "./components/JobbyTypescriptI18n";
 
 const App = () => {
   return (
@@ -130,7 +132,9 @@ const App = () => {
         <Route path="/NotesMobx5" component={NotesMobx5} />
         <Route path="/JobbyMobx5" component={JobbyMobx5} />
         <Route path="/JobbyTypescript" component={JobbyTypescript} />
-        <Route path="/NotesI18n" component={NotesI18n} />
+        {/* <Route path="/NotesI18n" component={NotesI18n} /> */}
+        {/* <Route path="/JobbyI18n" component={JobbyI18n} /> */}
+        <Route path="/JobbyTypescriptI18n" component={JobbyTypescriptI18n} />
       </Switch>
     </div>
   );
