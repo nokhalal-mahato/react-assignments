@@ -1,4 +1,5 @@
-import { action, computed, observable } from "mobx";
+import { action, computed, observable, reaction, toJS } from "mobx";
+import { toast } from "react-toastify";
 import filterList from "../Constants/filterList";
 import noteItemStore from "./noteItemStore";
 
@@ -9,7 +10,27 @@ class noteStore {
   @observable edit = false;
   @observable editItem = {};
   @observable activeTab = filterList[0].id;
+  @observable notesLength= 0;
 
+  constructor(){
+        reaction(
+          () => this.notesList.length,
+          (notesList,oldNotesList,reaction) => {
+            console.log(notesList,oldNotesList,reaction);
+            if (notesList > this.notesLength) {
+              this.setNotesLength(1);
+              toast("New Notes Added");
+            }
+            if (notesList < this.notesLength) {
+              this.setNotesLength(-1);
+              toast("A Notes deleted");
+            }
+          }
+        );
+  }
+  @action setNotesLength(value){
+    this.notesLength=this.notesLength +value
+  }
   @computed get filterList() {
     let Filterlist = [];
     if (this.activeTab === "All") {
@@ -66,6 +87,9 @@ class noteStore {
     const note = this.notesList.find((item) => item.id == id);
     note.setComplete();
   }
-}
 
-export default new noteStore();
+}
+const obj1 = new noteStore();
+
+
+export default obj1;

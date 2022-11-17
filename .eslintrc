@@ -1,6 +1,6 @@
 {
   // "parser": "babel-eslint",
-  // "parser": "@babel/eslint-parser",
+  "parser": "@babel/eslint-parser",
   // "extends": ["prettier", "plugin:flowtype/recommended"],
   "env": {
     "browser": true,
@@ -13,7 +13,8 @@
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "experimentalObjectRestSpread": true
     }
   },
   "rules": {

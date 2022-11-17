@@ -17,6 +17,9 @@ import filterList from "../Constants/filterList";
 import FilterItem from "../Components/filterItem";
 import noteStore from "../Store/notesStore";
 import { observer } from "mobx-react"
+import { ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { reaction } from "mobx";
 
 const NotesMobx5 = observer(() => {
   const notesStore=noteStore;
@@ -51,6 +54,16 @@ const NotesMobx5 = observer(() => {
 
   return (
     <NotesPage>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        theme="light"
+      />
+      <ToastContainer />
       <Heading>Notes</Heading>
       <InputForm onSubmit={onSubmitHandler}>
         <TitleInput
