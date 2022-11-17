@@ -2,12 +2,14 @@ import { Component } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import "./index.css";
 import ApiStatusConstant from "../../Constants/ApiStatusConstant";
-import {observer} from 'mobx-react';
+import {inject, observer} from 'mobx-react';
 import ProfileStore from "../../Stores/profileStore";
 
+@inject("profileStore")
 @observer
 class Profile extends Component {
-  profileStore=ProfileStore;
+  // profileStore=ProfileStore;
+  profileStore=this.props.profileStore;
   componentDidMount() {
     this.getProfile();
   }

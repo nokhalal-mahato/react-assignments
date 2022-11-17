@@ -1,5 +1,5 @@
-import { toJS } from "mobx";
-import { observer } from "mobx-react";
+import { observable, toJS } from "mobx";
+import { observer, Provider } from "mobx-react";
 import { Component } from "react";
 import JobFilter from "../../Components/JobFilter";
 import JobList from "../../Components/jobsList";
@@ -7,6 +7,7 @@ import NavBar from "../../Components/NavBar";
 import Profile from "../../Components/Profile";
 import SearchBar from "../../Components/SearchBar";
 import jobsStore from "../../Stores/jobsStore";
+import profileStore from "../../Stores/profileStore";
 import "./index.css";
 
 class Jobs extends Component {
@@ -39,7 +40,9 @@ class Jobs extends Component {
               onChangeSearch={this.onChangeSearch}
               clearInput={this.onClearInput}
             />
-            <Profile />
+            <Provider profileStore={profileStore}>
+              <Profile />
+            </Provider>
             <hr className="jobby-filter-divider" />
             <JobFilter
               onChangeEmploymentFilter={this.onChangeEmploymentFilter}
