@@ -3,8 +3,9 @@ import "./index.css";
 import Cookies from "js-cookie";
 import { Redirect, withRouter } from "react-router-dom";
 import LoginFormStore from "../../Stores/LoginFormStore";
-import {observer} from 'mobx-react';
+import {inject, observer} from 'mobx-react';
 
+@inject("loginStore")
 @observer
 class LoginForm extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class LoginForm extends Component {
   }
 
   onSubmitSuccess = (jwt_token) => {
+    this.props.loginStore.setLogin();
     Cookies.set("jwt_token", jwt_token, { expires: 1 });
     const { history } = this.props;
     history.replace("/JobbyMobx5");
@@ -53,7 +55,7 @@ class LoginForm extends Component {
 
   render() {
     if (Cookies.get("jwt_token")) {
-      return <Redirect to="/JobbyApp" />;
+      return <Redirect to="/JobbyMobx5" />;
     }
     const { username, password, error, error_msg } = this.loginFormStore;
     return (

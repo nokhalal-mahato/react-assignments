@@ -1,12 +1,55 @@
+import { reaction } from "mobx";
+import { inject, observer } from "mobx-react";
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import Popup from "reactjs-popup";
+import LoginForm from "../../Components/LoginForm";
+
 import NavBar from "../../Components/NavBar";
 import "./index.css";
 
+@inject("loginStore")
+@observer
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    // reaction(
+    //   () => this.props.loginStore.isClicked,
+    //   () => {
+    //     console.log("fsfsdfs");
+    //     this.props.loginStore.showPopup = !this.props.loginStore.showPopup;
+    //   }
+    // );
+  }
+  jobsHandler = () => {
+    if (this.props.loginStore.isLogin) {
+      this.props.history.push("/JobbyMobx5/jobs");
+    } else {
+      this.props.loginStore.setClicked();
+    }
+  };
   render() {
+    console.log(
+      this.props.loginStore.isLogin,
+      this.props.loginStore.showPopup,
+      this.props.loginStore.isClicked
+    );
     return (
       <div className="jobby-home-page">
+        {!this.props.loginStore.isLogin && (
+          <Popup
+            modal
+            className="jobby-popup"
+            open={this.props.loginStore.showPopup}
+            onClose={this.props.loginStore.closePopup}
+          >
+            {
+              <>
+                <LoginForm></LoginForm>
+              </>
+            }
+          </Popup>
+        )}
+
         <NavBar />
         <div className="jobby-home-page-content">
           <h1 className="jobby-home-heading">
@@ -17,9 +60,10 @@ class Home extends Component {
             company reviews. Find the job that fits your abilities and
             potential.
           </p>
-          <Link to="/JobbyMobx5/jobs">
-            <button className="jobby-find-job-button">Find Jobs</button>
-          </Link>
+          {/* <Link to="/JobbyMobx5/jobs"> */}
+          <button className="jobby-find-job-button" onClick={this.jobsHandler}>
+            Find Jobs
+          </button>
         </div>
       </div>
     );
