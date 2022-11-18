@@ -7,13 +7,13 @@ class LoginStore {
   @observable showPopup=false;
   constructor() {
     this.isLogin = Cookies.get("jwt_token") ? true : false;
-    reaction(
-      () => this.isClicked,
-      () => {
-        console.log("fsfsdfs");
-        this.showPopup = !this.showPopup;
-      }
-    );
+    // reaction(
+    //   () => this.isClicked,
+    //   () => {
+    //     console.log("fsfsdfs");
+    //     this.showPopup = !this.showPopup;
+    //   }
+    // );
   }
   @action.bound setLogin() {
     this.isLogin = !this.isLogin;

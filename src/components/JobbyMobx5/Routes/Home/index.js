@@ -12,13 +12,16 @@ import "./index.css";
 class Home extends Component {
   constructor(props) {
     super(props);
-    // reaction(
-    //   () => this.props.loginStore.isClicked,
-    //   () => {
-    //     console.log("fsfsdfs");
-    //     this.props.loginStore.showPopup = !this.props.loginStore.showPopup;
-    //   }
-    // );
+    this.reation1=reaction(
+      () => this.props.loginStore.isClicked,
+      () => {
+        console.log("fsfsdfs");
+        this.props.loginStore.showPopup = !this.props.loginStore.showPopup;
+      }
+    );
+  }
+  componentWillUnmount(){
+    this.reation1();
   }
   jobsHandler = () => {
     if (this.props.loginStore.isLogin) {
