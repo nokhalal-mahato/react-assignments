@@ -77,7 +77,7 @@ const NotesMobx5 = observer(() => {
           onChange={onChangeDescription}
           placeholder="Take a Note"
         />
-        <AddBtn>Add</AddBtn>
+        <AddBtn data-testId="Add-btn">Add</AddBtn>
       </InputForm>
       {notesList.length === 0 && (
         <EmptyContainer>
