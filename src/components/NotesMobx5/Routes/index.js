@@ -70,24 +70,26 @@ const NotesMobx5 = observer(() => {
           value={notesStore.title}
           onChange={onChangeTitle}
           placeholder="Title"
+          data-testid="titleInput"
         />
         <Notedescription
           value={notesStore.description}
           rows="4"
           onChange={onChangeDescription}
           placeholder="Take a Note"
+          data-testid="descriptionInput"
         />
-        <AddBtn data-testId="Add-btn">Add</AddBtn>
+        <AddBtn data-testid="Add-btn">Add</AddBtn>
       </InputForm>
       {notesList.length === 0 && (
-        <EmptyContainer>
+        <EmptyContainer data-testid="empty-container">
           <EmptyImage src="https://assets.ccbp.in/frontend/hooks/empty-notes-img.png" />
           <EmptyHeading>No Notes Yet</EmptyHeading>
           <EmptyText>Notes you add appear here</EmptyText>
         </EmptyContainer>
       )}
       {notesList.length > 0 && (
-        <FilterListContainer>
+        <FilterListContainer data-testid="filterContainer">
           {filterList.map((item) => (
             <FilterItem
               key={item.id}
@@ -99,7 +101,7 @@ const NotesMobx5 = observer(() => {
         </FilterListContainer>
       )}
       {notesList.length > 0 && (
-        <NotesContainer>
+        <NotesContainer data-testid="NotesContainer">
           {notesStore.filterList.map((item) => (
             <NotesItem
               key={item.id}
@@ -107,6 +109,7 @@ const NotesMobx5 = observer(() => {
               deleteHandler={deleteHandler}
               completeHandler={completeHandler}
               editHandler={editHandler}
+              data-testid='notesItem'
             />
           ))}
         </NotesContainer>

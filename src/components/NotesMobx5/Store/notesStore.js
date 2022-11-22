@@ -45,7 +45,7 @@ class noteStore {
 
   @action addNotes() {
     if (this.title === "" || this.description === "") {
-      alert("Please enter all data");
+      toast("Enter valid data");
       return;
     }
     if (this.edit) {

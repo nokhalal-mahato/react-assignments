@@ -16,7 +16,7 @@ const NotesItem=(props)=>{
     }
     return (
       <NotesItemContainer isComplete={data.isComplete}>
-        <h2>{data.title}</h2>
+        <h2 data-testid='item-title'>{data.title}</h2>
         <p>{data.description}</p>
 
         <EditBtn onClick={editHandler}>Edit</EditBtn>
