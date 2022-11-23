@@ -15,7 +15,7 @@ class jobsStore {
       this.employmentFilter = this.employmentFilter.filter(
         (item) => item !== id
       );
-      console.log(this.employmentFilter);
+      // console.log(this.employmentFilter);
     } else {
       this.employmentFilter.push(id);
     }

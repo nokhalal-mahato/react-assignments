@@ -6,7 +6,7 @@ import "./index.css";
 class Home extends Component {
   render() {
     return (
-      <div className="jobby-home-page">
+      <div className="jobby-home-page" data-testid='homepage'>
         <NavBar />
         <div className="jobby-home-page-content">
           <h1 className="jobby-home-heading">

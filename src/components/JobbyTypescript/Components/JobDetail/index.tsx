@@ -48,10 +48,14 @@ class JobDetail extends Component<propsType> {
           <div className="jobby-jobDetail-top-section">
             <img src={jobDetail.company_logo_url} alt={jobDetail.title} />
             <div className="jobby-jobDetail-top-right-section">
-              <h3 className="jobby-jobDetail-title">{jobDetail.title}</h3>
+              <h3 className="jobby-jobDetail-title" data-testid="title">
+                {jobDetail.title}
+              </h3>
               <div className="jobby-jobDetail-rating-container">
                 <AiFillStar className="jobby-jobDetail-rating-icon" />
-                <h3 className="jobby-jobDetail-rating">{jobDetail.rating}</h3>
+                <h3 className="jobby-jobDetail-rating" data-testid="rating">
+                  {jobDetail.rating}
+                </h3>
               </div>
             </div>
           </div>
@@ -111,7 +115,7 @@ class JobDetail extends Component<propsType> {
         </div>
         <h1>Similar Jobs</h1>
         <div className="similar-job-container">
-          {similarJobs.map((item:similarJobs) => (
+          {similarJobs.map((item: similarJobs) => (
             <SimilarJob key={item.id} data={item} />
           ))}
         </div>

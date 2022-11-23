@@ -51,7 +51,7 @@ class LoginForm extends Component<RouteComponentProps> {
 
   render() {
     if (Cookies.get("jwt_token")) {
-      return <Redirect to="/JobbyApp" />;
+      return <Redirect to="/JobbyTypescript" />;
     }
     const { username, password, error, error_msg } = this.loginFormStore;
     return (
