@@ -1,30 +1,24 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import NotesMobx5 from "../Routes";
+import obj1 from "../Store/notesStore";
 
-
+beforeEach(()=>{
+  render(<NotesMobx5 notesStore={obj1} />);
+})
 afterEach(cleanup);
 
-test('to check notes component render',()=>{
-    render(<NotesMobx5/>)
-    const addBtn = screen.getByTestId("Add-btn");
-    expect(addBtn).toBeInTheDocument();
-});
-
 test("on starting empty container should be there ", () => {
-  render(<NotesMobx5 />);
   const emptyContainer = screen.getByTestId("empty-container");
   expect(emptyContainer).toBeInTheDocument();
 });
 
 test("empty input does not add notes in list ", () => {
-  render(<NotesMobx5 />);
   const emptyContainer = screen.getByTestId("empty-container");
   const addBtn = screen.getByTestId("Add-btn"); 
   fireEvent.click(addBtn);
   expect(emptyContainer).toBeInTheDocument();
 });
 test("empty title does not add notes in list ", () => {
-  render(<NotesMobx5 />);
   const emptyContainer = screen.getByTestId("empty-container");
   const addBtn = screen.getByTestId("Add-btn");
   const descriptionInput = screen.getByTestId("descriptionInput");
@@ -33,8 +27,7 @@ test("empty title does not add notes in list ", () => {
   expect(emptyContainer).toBeInTheDocument();
 });
 
-test("empty description add notes in list ", () => {
-  render(<NotesMobx5 />);
+test("empty description does not add notes in list ", () => {
   const emptyContainer = screen.getByTestId("empty-container");
   const addBtn = screen.getByTestId("Add-btn");
   const titleInput = screen.getByTestId("titleInput");
@@ -46,7 +39,6 @@ test("empty description add notes in list ", () => {
 });
 
 test("adding notes in list ", () => {
-  render(<NotesMobx5 />);
   const addBtn = screen.getByTestId("Add-btn");
   const titleInput = screen.getByTestId("titleInput");
   const descriptionInput = screen.getByTestId("descriptionInput");

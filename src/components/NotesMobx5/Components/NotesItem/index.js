@@ -16,14 +16,18 @@ const NotesItem=(props)=>{
     }
     return (
       <NotesItemContainer isComplete={data.isComplete}>
-        <h2 data-testid='item-title'>{data.title}</h2>
+        <h2 data-testid="item-title">{data.title}</h2>
         <p>{data.description}</p>
 
-        <EditBtn onClick={editHandler}>Edit</EditBtn>
+        <EditBtn onClick={editHandler} data-testid="edit">
+          Edit
+        </EditBtn>
         <CompleteBtn isComplete={data.isComplete} onClick={completeHandler}>
           {data.isComplete ? "Incomplete" : "Complete"}
         </CompleteBtn>
-        <DeleteBtn onClick={deleteHandler}>Delete</DeleteBtn>
+        <DeleteBtn onClick={deleteHandler} data-testid="delete">
+          Delete
+        </DeleteBtn>
       </NotesItemContainer>
     );
 }

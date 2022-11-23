@@ -15,14 +15,13 @@ import {
 } from "./styledComponent";
 import filterList from "../Constants/filterList";
 import FilterItem from "../Components/filterItem";
-import noteStore from "../Store/notesStore";
-import { observer } from "mobx-react"
-import { ToastContainer,toast } from "react-toastify";
+import { inject, observer } from "mobx-react"
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { reaction } from "mobx";
 
-const NotesMobx5 = observer(() => {
-  const notesStore=noteStore;
+
+const NotesMobx5 = inject('notesStore')(observer((props) => {
+  const notesStore = props.notesStore;
   const {activeTab,notesList}=notesStore;
   const onChangeTitle = (event) => {
     notesStore.setTitle(event.target.value);
@@ -116,6 +115,6 @@ const NotesMobx5 = observer(() => {
       )}
     </NotesPage>
   );
-});
+}));
 
 export default NotesMobx5;

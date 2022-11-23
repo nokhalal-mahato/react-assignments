@@ -60,6 +60,8 @@ import Notes from "./components/Notes/Routes";
 import HooksTimer from "./components/HooksTimer";
 import TraficLight from "./components/TraficLight";
 import NotesMobx5 from "./components/NotesMobx5/Routes";
+import { Provider } from "mobx-react";
+import obj1 from "./components/NotesMobx5/Store/notesStore";
 
 const App = () => {
   return (
@@ -124,7 +126,9 @@ const App = () => {
         <Route path="/Notes" component={Notes} />
         <Route path="/HooksTimer" component={HooksTimer} />
         <Route path="/TraficLight" component={TraficLight} />
-        <Route path="/NotesMobx5" component={NotesMobx5} />
+        <Provider notesStore={obj1}>
+          <Route path="/NotesMobx5" component={NotesMobx5} />
+        </Provider>
       </Switch>
     </div>
   );
