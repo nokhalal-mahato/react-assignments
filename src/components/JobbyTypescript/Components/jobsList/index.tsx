@@ -3,13 +3,21 @@ import { ThreeDots } from "react-loader-spinner";
 import "./index.css";
 import ApiStatusConstant from "../../Constants/ApiStatusConstant";
 import JobItem from "../JobItem";
-import jobsListStore from "../../Stores/jobsListStore";
-import { observer } from "mobx-react";
+import { inject, observer } from "mobx-react";
 
 type PropsType = {
   salary: string;
   searchValue: string;
-  employmentFilter:string[];
+  employmentFilter: string[];
+  jobsListStore?: {
+    apiStatus: string;
+    fetchJobsList: (
+      employmentFilterValue: string,
+      salary: string,
+      searchValue: string
+    ) => {};
+    jobsList:[];
+  };
 };
 
 type JobsType = {
@@ -22,14 +30,15 @@ type JobsType = {
     packagePerAnnum: string;
     jobDescription: string;
 };
-
+@inject("jobsListStore")
+@observer
 class JobList extends Component<PropsType> {
-  jobsListStore = jobsListStore;
+  jobsListStore = this.props.jobsListStore;
 
   componentDidMount() {
     this.getJobsList();
   }
-  componentDidUpdate(prevProps:PropsType) {
+  componentDidUpdate(prevProps: PropsType) {
     if (
       prevProps.salary !== this.props.salary ||
       prevProps.searchValue !== this.props.searchValue ||
@@ -41,7 +50,7 @@ class JobList extends Component<PropsType> {
   getJobsList = () => {
     const { searchValue, employmentFilter, salary } = this.props;
     const employmentFilterValue = employmentFilter.join(",").toUpperCase();
-    this.jobsListStore.fetchJobsList(
+    this.jobsListStore?.fetchJobsList(
       employmentFilterValue,
       salary,
       searchValue
@@ -49,10 +58,10 @@ class JobList extends Component<PropsType> {
   };
 
   renderJobsList = () => {
-    const { jobsList } = this.jobsListStore;
+    const { jobsList } = this.jobsListStore!;
     return (
       <div className="jobby-jobslist-container">
-        {jobsList.map((job:JobsType) => (
+        {jobsList.map((job: JobsType) => (
           <JobItem key={job.id} data={job} />
         ))}
       </div>
@@ -60,7 +69,7 @@ class JobList extends Component<PropsType> {
   };
 
   renderContent = () => {
-    const { apiStatus } = this.jobsListStore;
+    const { apiStatus } = this.jobsListStore!;
     switch (apiStatus) {
       case ApiStatusConstant.loading:
         return (
@@ -112,4 +121,4 @@ class JobList extends Component<PropsType> {
     return <>{this.renderContent()}</>;
   }
 }
-export default observer(JobList);
+export default JobList;

@@ -4,8 +4,8 @@ import "./index.css";
 import ApiStatusConstant from "../../Constants/ApiStatusConstant";
 import JobDetail from "../../Components/JobDetail";
 import NavBar from "../../Components/NavBar";
-import { observer } from "mobx-react";
-import jobItemDetailStore from "../../Stores/jobItemDetailStore";
+import { inject, observer } from "mobx-react";
+import { JobType } from "../../Stores/jobItemDetailStore";
 import { RouteComponentProps } from "react-router-dom";
 
 type propsType = RouteComponentProps & {
@@ -15,22 +15,30 @@ type propsType = RouteComponentProps & {
       id: string;
     };
   };
+  jobItemDetailStore?: {
+    setApiStatus: (value: string) => {};
+    fetchJobDetail: (params: string) => {};
+    jobDetail: JobType;
+    apiStatus:string;
+  };
 };
 
+@inject("jobItemDetailStore")
+@observer
 class JobDetailRoute extends Component<propsType> {
-  jobItemDetailStore = jobItemDetailStore;
+  jobItemDetailStore = this.props.jobItemDetailStore;
 
   componentDidMount() {
     this.getJobDetail();
   }
   getJobDetail = () => {
-    this.jobItemDetailStore.setApiStatus(ApiStatusConstant.loading);
+    this.jobItemDetailStore?.setApiStatus(ApiStatusConstant.loading);
     const params = this.props.match.params.id;
-    this.jobItemDetailStore.fetchJobDetail(params);
+    this.jobItemDetailStore?.fetchJobDetail(params);
   };
 
   renderJobsList = () => {
-    const { jobDetail } = this.jobItemDetailStore;
+    const { jobDetail } = this.jobItemDetailStore!;
     return (
       <div className="jobby-jobDetail-container">
         <JobDetail data={jobDetail} />
@@ -39,7 +47,7 @@ class JobDetailRoute extends Component<propsType> {
   };
 
   renderContent = () => {
-    const { apiStatus } = this.jobItemDetailStore;
+    const { apiStatus } = this.jobItemDetailStore!;
     switch (apiStatus) {
       case ApiStatusConstant.loading:
         return (
@@ -83,4 +91,4 @@ class JobDetailRoute extends Component<propsType> {
     );
   }
 }
-export default observer(JobDetailRoute);
+export default JobDetailRoute;

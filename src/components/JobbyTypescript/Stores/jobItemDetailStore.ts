@@ -1,8 +1,10 @@
 import { action, observable } from "mobx";
 import ApiStatusConstant from "../Constants/ApiStatusConstant";
 import Cookies from "js-cookie";
+import fetchData from "../services/getJobItemDetails/index.api";
+import fetchMockData from "../services/getJobItemDetails/index.fixture";
 
-type JobType={
+export type JobType={
     id:string,
     similar_jobs:[],
     job_details:{
@@ -21,37 +23,34 @@ type JobType={
       }
     }
 }
-
 class jobItemDetailStore {
   @observable jobDetail = <JobType>{};
   @observable apiStatus = ApiStatusConstant.loading;
+  isJestRuning = process.env.JEST_WORKER_ID !== undefined;
 
-  @action setApiStatus(value:string){
-    this.apiStatus=value
+  @action setApiStatus(value: string) {
+    this.apiStatus = value;
   }
-  @action setJobDetail(data:JobType){
-    this.jobDetail=data;
+  @action setJobDetail(data: JobType) {
+    this.jobDetail = data;
   }
-  @action async fetchJobDetail(params:string){
+  @action async fetchJobDetail(params: string) {
     try {
       const jwtToken = Cookies.get("jwt_token");
-      const response = await fetch(`https://apis.ccbp.in/jobs/${params}`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${jwtToken}`,
-        },
-      });
-      if (response.ok) {
-        const responseData = await response.json();
-        this.setJobDetail(responseData);
-        this.setApiStatus(ApiStatusConstant.success);
-      } else {
-        this.setApiStatus(ApiStatusConstant.failed);
-      }
+      await (this.isJestRuning
+        ? fetchMockData(this.onSuccess)
+        : fetchData(params, jwtToken, this.onSuccess, this.onFailure));
     } catch (err) {
       console.log(err);
       this.setApiStatus(ApiStatusConstant.failed);
     }
+  }
+  @action onSuccess=(responseData:JobType) =>{
+    this.setJobDetail(responseData);
+    this.setApiStatus(ApiStatusConstant.success);
+  }
+  @action onFailure=()=> {
+    this.setApiStatus(ApiStatusConstant.failed);
   }
 }
 

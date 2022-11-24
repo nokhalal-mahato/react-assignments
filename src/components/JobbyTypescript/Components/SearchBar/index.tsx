@@ -25,6 +25,7 @@ class SearchBar extends Component<PropsType> {
           value={searchValue}
           onChange={this.onChangeInput}
           type="text"
+          data-testid='search'
         />
         {searchValue.length > 0 && (
           <MdOutlineClear className="jobby-clear-logo" onClick={clearInput} />

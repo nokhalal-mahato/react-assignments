@@ -1,8 +1,10 @@
 import {action, observable } from "mobx";
 import ApiStatusConstant from "../Constants/ApiStatusConstant";
 import Cookies from "js-cookie";
+import fetchData from "../services/getProfile/index.api";
+import fetchMockData from "../services/getProfile/index.fixture";
 
-type ProfileType={
+export type ProfileType={
   name:string;
   profileImageUrl:string;
   shortBio:string;
@@ -10,40 +12,33 @@ type ProfileType={
 class ProfileStore {
   @observable profileData = {} as ProfileType;
   @observable apiStatus = ApiStatusConstant.loading;
+  isJestRuning = process.env.JEST_WORKER_ID !== undefined;
 
-  @action setApiStatus(value:string) {
+  @action.bound setApiStatus(value: string) {
     this.apiStatus = value;
   }
-  @action setProfileData(data:ProfileType) {
+  @action.bound setProfileData(data: ProfileType) {
     this.profileData = data;
   }
 
-  @action async fetchProfileData() {
+  @action.bound async fetchProfileData() {
     try {
       const jwtToken = Cookies.get("jwt_token");
-      const response = await fetch("https://apis.ccbp.in/profile", {
-        headers: {
-          Authorization: `Bearer ${jwtToken}`,
-        },
-        method: "GET",
-      });
-      if (response.ok) {
-        const fetchedData = await response.json();
-        const updatedData:ProfileType = {
-          name: fetchedData.profile_details.name,
-          profileImageUrl: fetchedData.profile_details.profile_image_url,
-          shortBio: fetchedData.profile_details.short_bio,
-        };
-        this.setApiStatus(ApiStatusConstant.success);
-        this.setProfileData(updatedData);
-      } else {
-        this.setApiStatus(ApiStatusConstant.failed);
-      }
+      await (this.isJestRuning
+        ? fetchMockData(this.onSuccess)
+        : fetchData(jwtToken, this.onSuccess, this.onFailure));
     } catch (err) {
       console.log(err);
       this.setApiStatus(ApiStatusConstant.failed);
     }
   }
+  @action.bound onSuccess = (responseData: ProfileType) => {
+    this.setProfileData(responseData);
+    this.setApiStatus(ApiStatusConstant.success);
+  };
+  @action.bound onFailure = () => {
+    this.setApiStatus(ApiStatusConstant.failed);
+  };
 }
 
 export default new ProfileStore();

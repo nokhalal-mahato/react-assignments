@@ -23,6 +23,7 @@ class JobFilter extends Component<PropsType> {
           <div className="jobby-checkbox-item" key={item.id}>
             <input
               type="checkbox"
+              data-testid={item.id}
               id={item.id}
               value={item.value}
               onChange={this.onChangeEmployment}
@@ -37,6 +38,7 @@ class JobFilter extends Component<PropsType> {
             <input
               type="radio"
               id={item.id}
+              data-testid={item.id}
               name="salary-item"
               value={item.value}
               onChange={this.onChangeSalary}

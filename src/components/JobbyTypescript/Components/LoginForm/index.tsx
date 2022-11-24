@@ -2,58 +2,50 @@ import { ChangeEvent, Component, FormEvent } from "react";
 import "./index.css";
 import Cookies from "js-cookie";
 import { Redirect, RouteComponentProps, withRouter } from "react-router-dom";
-import LoginFormStore from "../../Stores/LoginFormStore";
-import { observer } from "mobx-react";
+import { inject, observer } from "mobx-react";
 
-
+type PropsType = RouteComponentProps & {
+  LoginFormStore?: {
+    username: string;
+    password: string;
+    error: string;
+    error_msg: string;
+    setError: (value: boolean) => void;
+    setErrorMsg: (value: string) => {};
+    setPassword: (value: string) => {};
+    setUserName: (value: string) => {};
+    submitForm:(f:Function)=>void;
+  };
+};
+@inject("LoginFormStore")
 @observer
-class LoginForm extends Component<RouteComponentProps> {
-  loginFormStore = LoginFormStore;
+class LoginForm extends Component<PropsType> {
+  loginFormStore = this.props.LoginFormStore;
 
   onSubmitSuccess = (jwt_token: string) => {
     Cookies.set("jwt_token", jwt_token, { expires: 1 });
     const { history } = this.props;
     history.replace("/JobbyTypescript");
   };
-  onSubmitFail = (error_msg: string) => {
-    this.loginFormStore.setError(true);
-    this.loginFormStore.setErrorMsg(error_msg);
-  };
 
   submitForm = async (event: FormEvent) => {
     event.preventDefault();
-    const { username, password } = this.loginFormStore;
-    try {
-      const userDetails = { username, password };
-      const response = await fetch("https://apis.ccbp.in/login", {
-        method: "POST",
-        body: JSON.stringify(userDetails),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        this.onSubmitSuccess(data.jwt_token);
-      } else {
-        this.onSubmitFail(data.error_msg);
-      }
-    } catch (err: any) {
-      console.log(err);
-      this.onSubmitFail(err.message);
-    }
+    this.loginFormStore?.submitForm(this.onSubmitSuccess);
   };
 
   onChangeUsername = (event: ChangeEvent<HTMLInputElement>) => {
-    this.loginFormStore.setUserName(event.target.value);
+    this.loginFormStore?.setUserName(event.target.value);
   };
 
   onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
-    this.loginFormStore.setPassword(event.target.value);
+    this.loginFormStore?.setPassword(event.target.value);
   };
 
   render() {
     if (Cookies.get("jwt_token")) {
       return <Redirect to="/JobbyTypescript" />;
     }
-    const { username, password, error, error_msg } = this.loginFormStore;
+    const { username, password, error, error_msg } = this.loginFormStore!;
     return (
       <form className="jobby-form-container" onSubmit={this.submitForm}>
         <div className="jobby-login-website-logo">

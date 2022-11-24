@@ -1,36 +1,59 @@
-import { cleanup, render, screen } from "@testing-library/react";
-import Enzyme, { shallow, mount} from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { Provider } from "mobx-react";
+import { BrowserRouter } from "react-router-dom";
 import Jobs from "../Routes/Jobs";
+import jobsListStore from "../Stores/jobsListStore";
+import jobsStore from "../Stores/jobsStore";
+import profileStore from "../Stores/profileStore";
 
-Enzyme.configure({ adapter: new Adapter() });
+const store = jobsStore;
 
 afterEach(cleanup);
+beforeEach(() => {
+  render(
+    <Provider profileStore={profileStore} jobsListStore={jobsListStore}>
+      <BrowserRouter>
+        <Jobs jobsStore={jobsStore} />
+      </BrowserRouter>
+    </Provider>
+  );
+});
 
 test("checking search input", () => {
-  const JobsPage = shallow(<Jobs />);
-  const JobsInstance = JobsPage.instance();
-  JobsInstance.onChangeSearch("nokhalal");
-  expect(JobsInstance.jobsStore.searchValue).toBe("nokhalal");
-  JobsInstance.onClearInput();
-  expect(JobsInstance.jobsStore.searchValue).toBe("");
+  store.setSearchValue("nokhalal");
+  expect(store.searchValue).toBe("nokhalal");
 });
 
 test("checking employment filter", () => {
-  const JobsPage = shallow(<Jobs />);
-  const JobsInstance = JobsPage.instance();
-  JobsInstance.onChangeEmploymentFilter("nokhalal");
-  expect(JobsInstance.jobsStore.employmentFilter[0]).toBe("nokhalal");
-  JobsInstance.onChangeEmploymentFilter("mahato");
-  expect(JobsInstance.jobsStore.employmentFilter[1]).toBe("mahato");
-  JobsInstance.onChangeEmploymentFilter("nokhalal");
-  expect(JobsInstance.jobsStore.employmentFilter[0]).toBe("mahato");
+  store.setEmploymentFilter("nokhalal");
+  expect(store.employmentFilter[0]).toBe("nokhalal");
+  store.setEmploymentFilter("mahato");
+  expect(store.employmentFilter[1]).toBe("mahato");
+  store.setEmploymentFilter("nokhalal");
+  expect(store.employmentFilter[0]).toBe("mahato");
 });
 
 test("checking salary filter", () => {
-  const JobsPage = shallow(<Jobs />);
-  const JobsInstance = JobsPage.instance();
-  JobsInstance.onChangeSalaryFilter("nokhalal");
-  expect(JobsInstance.jobsStore.salary).toBe("nokhalal");
+  store.setSalary("nokhalal");
+  expect(store.salary).toBe("nokhalal");
 });
 
+test("checking search input integration", () => {
+  const searchInput = screen.getAllByTestId("search");
+  fireEvent.change(searchInput[0], { target: { value: "nokhalal" } });
+  expect(store.searchValue).toBe("nokhalal");
+});
+
+test("checking salary input integration", () => {
+  const salaryInput = screen.getByTestId("id-1000000");
+  fireEvent.click(salaryInput);
+  expect(store.salary).toBe("1000000");
+});
+test("checking employment input integration", () => {
+  store.employmentFilter = [];
+  const EmploymentInput = screen.getByTestId("FullTime");
+  fireEvent.click(EmploymentInput);
+  expect(store.employmentFilter[0]).toBe("FullTime");
+  fireEvent.click(EmploymentInput);
+  expect(store.employmentFilter.length).toBe(0);
+});

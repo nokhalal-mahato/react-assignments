@@ -1,6 +1,8 @@
 import { action, observable } from "mobx";
 import ApiStatusConstant from "../Constants/ApiStatusConstant";
 import Cookies from "js-cookie";
+import fetchData from "../services/getJobList/index.api";
+import fetchMockData from "../services/getJobList/index.fixture";
 
 type jobtype = {
   id: string;
@@ -27,6 +29,7 @@ type JoblistType = {
 class jobsListStore {
   @observable jobsList: JoblistType[] = [];
   @observable apiStatus = ApiStatusConstant.loading;
+  isJestRuning = process.env.JEST_WORKER_ID !== undefined;
 
   @action setApiStatus(value: string) {
     this.apiStatus = value;
@@ -41,42 +44,33 @@ class jobsListStore {
   ) {
     try {
       const jwtToken = Cookies.get("jwt_token");
-      const response = await fetch(
-        `https://apis.ccbp.in/jobs?employment_type=${employmentFilterValue}&minimum_package=${salary}&search=${searchValue}`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${jwtToken}`,
-          },
-        }
-      );
-      if (response.ok) {
-        const responseData = await response.json();
-        const updatedData = responseData.jobs.map((job: jobtype) => ({
-          title: job.title,
-          id: job.id,
-          rating: job.rating,
-          packagePerAnnum: job.package_per_annum,
-          location: job.location,
-          jobDescription: job.job_description,
-          employmentType: job.employment_type,
-          companyLogoUrl: job.company_logo_url,
-        }));
-        if (responseData.total === 0) {
-          this.setJobsList(updatedData);
-          this.setApiStatus(ApiStatusConstant.empty);
-          return;
-        }
-        this.setJobsList(updatedData);
-        this.setApiStatus(ApiStatusConstant.success);
-      } else {
-        this.setApiStatus(ApiStatusConstant.failed);
-      }
+      await (this.isJestRuning
+        ? fetchMockData(this.onSuccess)
+        : fetchData(
+            jwtToken,
+            employmentFilterValue,
+            salary,
+            searchValue,
+            this.onSuccess,
+            this.onFailure,
+            this.onEmpty
+          ));
     } catch (err) {
       console.log(err);
       this.setApiStatus(ApiStatusConstant.failed);
     }
   }
+  @action onSuccess = (responseData: JoblistType[]) => {
+    this.setJobsList(responseData);
+    this.setApiStatus(ApiStatusConstant.success);
+  };
+  @action onFailure = () => {
+    this.setApiStatus(ApiStatusConstant.failed);
+  };
+  @action onEmpty = (responseData: JoblistType[]) => {
+    this.setJobsList(responseData);
+    this.setApiStatus(ApiStatusConstant.empty);
+  };
 }
 
 export default new jobsListStore();

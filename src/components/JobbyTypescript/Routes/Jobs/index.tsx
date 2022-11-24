@@ -1,31 +1,42 @@
 import { toJS } from "mobx";
-import { observer } from "mobx-react";
+import { inject, observer, Provider } from "mobx-react";
 import { Component } from "react";
 import JobFilter from "../../Components/JobFilter";
 import JobList from "../../Components/jobsList";
 import NavBar from "../../Components/NavBar";
 import Profile from "../../Components/Profile";
 import SearchBar from "../../Components/SearchBar";
-import jobsStore from "../../Stores/jobsStore";
 import "./index.css";
 
-class Jobs extends Component {
-  jobsStore = jobsStore;
+type PropsType = {
+  jobsStore?: {
+    setSearchValue: (value: string) => {};
+    setEmploymentFilter: (id: string) => {};
+    searchValue: string;
+    setSalary: (value: string) => {};
+    employmentFilter: [];
+    salary: string;
+  };
+};
+@inject("jobsStore")
+@observer
+class Jobs extends Component<PropsType> {
+  jobsStore = this.props.jobsStore;
 
-  onChangeSearch = (value:string) => {
-    this.jobsStore.setSearchValue(value);
+  onChangeSearch = (value: string) => {
+    this.jobsStore?.setSearchValue(value);
   };
   onClearInput = () => {
-    this.jobsStore.setSearchValue("");
+    this.jobsStore?.setSearchValue("");
   };
   onChangeEmploymentFilter = (id: string) => {
-    this.jobsStore.setEmploymentFilter(id);
+    this.jobsStore?.setEmploymentFilter(id);
   };
   onChangeSalaryFilter = (value: string) => {
-    this.jobsStore.setSalary(value);
+    this.jobsStore?.setSalary(value);
   };
   render() {
-    const { searchValue, employmentFilter, salary } = this.jobsStore;
+    const { searchValue, employmentFilter, salary } = this.jobsStore!;
     return (
       <div className="jobby-jobs-page">
         <NavBar />
@@ -62,4 +73,4 @@ class Jobs extends Component {
   }
 }
 
-export default observer(Jobs);
+export default Jobs;
