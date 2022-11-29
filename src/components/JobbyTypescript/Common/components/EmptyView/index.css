@@ -1,0 +1,16 @@
+.jobby-joblists-empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.jobby-joblists-empty-container img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.jobby-joblists-empty-text {
+  margin-top: 0px;
+}

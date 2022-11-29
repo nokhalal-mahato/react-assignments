@@ -1,0 +1,11 @@
+.jobby-joblists-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+@media (max-width: 578px) {
+  .jobby-joblists-loader-container {
+    min-height: 100px;
+  }
+}

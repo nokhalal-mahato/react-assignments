@@ -2,7 +2,6 @@ import Cookies from "js-cookie";
 import { ComponentClass } from "react";
 import { Redirect, Route } from "react-router-dom";
 
-
 type PropsType = {
   exact: boolean;
   path: string;
