@@ -1,6 +1,6 @@
 import ProfileService from "./";
 import { ProfileResponseType } from "../../stores/types/ProfileRepsonseType";
-import resolveApiCall from "../../../Common/utils/resolveApicall";
+import resolveApiCall from "../../../Common/utils/ResolveApiCall";
 
 class ProfileServiceApi implements ProfileService {
   async getProfileDetails(token:string): Promise<ProfileResponseType | unknown> {

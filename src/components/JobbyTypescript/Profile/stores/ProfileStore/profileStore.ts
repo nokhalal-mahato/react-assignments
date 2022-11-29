@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 import ApiStatusConstant from "../../../Common/constants/ApiStatusConstant";
 import ProfileService from "../../services/ProfileService";
-import { bindPromiseWithOnSuccess } from "../../../Common/utils/bindPromiseWithOnSuccess";
+import { bindPromiseWithOnSuccess } from "../../../Common/utils/BindPromiseWithOnSuccess";
 import { ProfileResponseType } from "../types/ProfileRepsonseType";
 import Profile from "../models/ProfileModel";
 

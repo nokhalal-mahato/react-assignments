@@ -1,5 +1,5 @@
 import JobListService from ".";
-import { resolveWithTimeout } from "../../../Common/utils/resolveWithTimeout";
+import { resolveWithTimeout } from "../../../Common/utils/ResolveWithTimeout";
 import JobListData from '../../fixtures/getJobDetail.json'
 import { JoblistResponseType } from "../../stores/types/JobListResponseType";
 

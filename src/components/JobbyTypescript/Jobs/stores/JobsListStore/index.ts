@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 import ApiStatusConstant from "../../../Common/constants/ApiStatusConstant";
 import JobListService from "../../services/JobListService";
-import { bindPromiseWithOnSuccess } from "../../../Common/utils/bindPromiseWithOnSuccess";
+import { bindPromiseWithOnSuccess } from "../../../Common/utils/BindPromiseWithOnSuccess";
 import { JoblistResponseType } from "./../types/JobListResponseType";
 import JobListItem from "./../models/JobItemModel";
 

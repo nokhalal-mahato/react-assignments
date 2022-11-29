@@ -1,5 +1,5 @@
 import LoginUserService from ".";
-import { resolveWithTimeout } from "../../../Common/utils/resolveWithTimeout";
+import { resolveWithTimeout } from "../../../Common/utils/ResolveWithTimeout";
 import { UserDetailType } from "../../stores/types/UserDetailTypes";
 
 class LoginUserFixture implements LoginUserService {

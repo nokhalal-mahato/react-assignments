@@ -1,5 +1,5 @@
 import JobItemService from ".";
-import resolveApiCall from "../../../Common/utils/resolveApicall";
+import resolveApiCall from "../../../Common/utils/ResolveApiCall";
 import { JobType } from "../../stores/types/JobType";
 
 class JobItemServiceApi implements JobItemService {

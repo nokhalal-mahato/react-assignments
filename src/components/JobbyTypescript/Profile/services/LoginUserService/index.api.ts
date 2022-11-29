@@ -1,4 +1,4 @@
-import resolveApiCall from "../../../Common/utils/resolveApicall";
+import resolveApiCall from "../../../Common/utils/ResolveApiCall";
 import { UserDetailType } from "../../stores/types/UserDetailTypes";
 import LoginUserService from "./";
 

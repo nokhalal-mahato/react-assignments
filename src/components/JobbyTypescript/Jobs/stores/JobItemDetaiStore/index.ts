@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 import ApiStatusConstant from "../../../Common/constants/ApiStatusConstant";
 import { JobType } from "./../types/JobType";
 import JobItemService from "../../services/JobItemService";
-import { bindPromiseWithOnSuccess } from "../../../Common/utils/bindPromiseWithOnSuccess";
+import { bindPromiseWithOnSuccess } from "../../../Common/utils/BindPromiseWithOnSuccess";
 
 
 class JobItemDetailStore {

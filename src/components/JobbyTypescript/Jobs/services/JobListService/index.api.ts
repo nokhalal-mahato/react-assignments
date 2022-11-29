@@ -1,5 +1,5 @@
 import JobListService from ".";
-import resolveApiCall from "../../../Common/utils/resolveApicall";
+import resolveApiCall from "../../../Common/utils/ResolveApiCall";
 import { JoblistResponseType } from "../../stores/types/JobListResponseType";
 
 class JobListServiceApi implements JobListService {

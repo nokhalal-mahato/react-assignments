@@ -1,5 +1,5 @@
 import { action, observable } from "mobx";
-import { bindPromiseWithOnSuccess } from "../../../Common/utils/bindPromiseWithOnSuccess";
+import { bindPromiseWithOnSuccess } from "../../../Common/utils/BindPromiseWithOnSuccess";
 import LoginUserService from "../../services/LoginUserService";
 
 class LoginFormStore {

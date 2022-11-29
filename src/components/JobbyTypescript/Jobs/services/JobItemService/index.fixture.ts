@@ -1,4 +1,4 @@
-import { resolveWithTimeout } from "../../../Common/utils/resolveWithTimeout";
+import { resolveWithTimeout } from "../../../Common/utils/ResolveWithTimeout";
 import { JobType } from "../../stores/types/JobType";
 import JobItemService from "./index";
 import JobItemDetail from'../../fixtures/getJobItemDetail.json'
